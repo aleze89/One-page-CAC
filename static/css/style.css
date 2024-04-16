@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding: 100px 0 50px 0;
+    background-color: #3d3d49;
+}
+
+.footer-link {
+    display: flex;
+    padding: 30PX;
+    justify-content: center;
+}
+
+.link {
+    width: 300px;
+    text-align: center;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: #d6d6e2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.link a {
+    font-size: 17px;
+    color: #b7b8be;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.link a:hover {
+    color: #00c3ff;
+}
+
+.link p {
+    font-size: 17px;
+    color: #b7b8be;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.socials {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.socials a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: #00c3ff;
+    margin: 0 10px 0 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+.socials a:hover {
+    background-color: #ffffff;
+} 
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: transparent;
+    padding: 14px;
+    outline: none;
+    border: 2px solid #5f5f6e;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #b7b8be;
+}
+
+::placeholder {
+    color: #b7b8be;
+}
+
+.btn {
+    background-color: #00c3ff;
+    color: #ffffff;
+    border: 0;
+}
+
+hr {
+    border: 1px solid #5f5f6e;
+    margin: 35px 0;
+}
+
+.footer-text {
+    display:flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.footer-text a {
+    font-size: 15px;
+    color: #b7b8be;
+}
+
+.footer-text a:hover {
+    color: #00c3ff;
+}
+
+@media(max-width:991px) {
+
+    .footer {
+        padding: 30px;
+    }    
+
+    .footer-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
