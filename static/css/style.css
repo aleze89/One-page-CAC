@@ -22,7 +22,7 @@ body {
 .footer-link {
     display: flex;
     padding: 30PX;
-    justify-content: center;
+    justify-content:space-evenly;
 }
 
 .link {
@@ -113,7 +113,7 @@ hr {
 
 .footer-text {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 30px;
 }
 

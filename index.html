@@ -9,10 +9,188 @@
 </head>
 <body>
     <header>
+        <nav>
+            <!-- logo -->
+            <div id="logo">
+                <a href="/">
+                    <span>CAC-Movies</span>
+                </a>
+            </div>
+            <!-- Hipervinculos para el menu -->
+            <div id="links">
+                <ul>
+                    <li><a href="#nosotros">¿Por qué elergirnos?</a></li>
+                    <li><a href="#nuestros-cursos">Cursos</a></li>
+                    <!-- <li><a href="#testimonios">Testimonnios</a></li> -->
+                    <li><a href="./templates/login.html"><span>Iniciar Sesión</span></a></li>
+                    <li><a href="./templates/register.html"><span>Registrarse</span></a></li>
+            </ul>
+            </div>
 
+            <div id="cursos-web">
+                <h1>
+                    Título principal de la marca
+                </h1>
+
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, deleniti?
+                </p>
+            </div>
+
+        </nav>
     </header>
 
     <main>
+        
+        <section id="nosotros">
+            
+            <div class="conteiner-nosotros">
+                
+                <h2>Nosotros</h2>
+                <div class="nosotros-video">
+                    <iframe src="/" alt="video-para-conocernos">Video presentación.</iframe>
+                </div>
+
+                <div class="nosotros-text">
+                    <h3>
+                        Conócenos y sé parte de nuestra comunidad.
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nobis eum error aperiam expedita nulla, amet veniam itaque harum molestiae ratione, laboriosam asperiores vel ipsum?</p>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <section id="nuestros-cursos">
+
+            <div class="conteiner-nuestros-cursos">
+
+                <h2>Nuestros Cursos</h2>
+                
+                <div class="curso-inicial">
+
+                    <h3>Curso inicial</h3>
+                    <img src="static/img/curso inicial.jpg" alt="Curso Inicial" width="250" >
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ea a architecto ipsum aperiam perspiciatis.
+                    </p>
+
+                </div>
+
+                <div class="Curso intermedio">
+
+                    <h3>Curso Intermedio</h3>
+                    <img src="static/img/curso-intermedio.jpg" alt="Curso Intermedio" width="250">
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ea a architecto ipsum aperiam perspiciatis.
+                    </p>
+                </div>
+
+                <div class="curso-experto">
+
+                    <h3>Curso Experto</h3>
+                    <img src="static/img/curso-experto.jpg" alt="Curso experto" width="250">
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ea a architecto ipsum aperiam perspiciatis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="detalle-curso-inicial">
+
+            <div class="conteiner-detalle-curso-inicial">
+
+                <h2>Curso Inicial</h2>
+                <div class="imagen-curso-inicial">
+                    <img src="static/img/curso inicial.jpg" alt="Curso Inicial" width="250">
+                </div>
+
+                <div class="text-curso-inicial">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem asperiores similique porro error neque quibusdam.
+                    </p>
+                </div>
+            
+            </div>
+
+        </section>
+
+        <section class="formulario">
+
+            <div class="conteiner-formulario">
+
+                <h2>Formulario de Contacto</h2>
+
+                <div class="imagen-formulario">
+                    <img src="" alt="">
+                </div>
+
+                <form action="#" id="formregister" method="get" novalidate>
+                    <div class="form-control">
+                        <label for="firstname">Nombre</label>
+                        <input type="text" id="firstname" name="firstname" required placeholder="Alejandro">
+                    </div>
+                    <div class="error" id="error-firstname"></div>
+
+                    <div class="form-control">
+                        <label for="lastname">Apellido</label>
+                        <input type="text" id="lastname" name="lastname" required placeholder="Ponce">
+                    </div>
+                    <div class="error" id="error-lastname"></div>
+
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="ejemplo@gmail.com">
+                    </div>
+                    <div class="error" id="error-email"></div>
+
+                    <div class="form-control">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required placeholder="1234">
+                    </div>
+                    <div class="error" id="error-password"></div>
+
+                    <div class="form-control">
+                        <label for="birthdate" id="label-birthdate">Fecha de Nacimiento</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                
+                    <div class="form-control">
+                        <select name="country" id="country" class="form-select">
+                            <option value="">Pais</option>
+                            <option value="AR">Argentina</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BR">Brasil</option>
+                            <option value="CH">Chile</option>
+                            <option value="CO">Colombia</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="VE">Venezuela</option>
+                        </select>
+                    </div>
+
+                    <div class="form-terms">
+                        <div class="terms">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">Acepto terminos y condiciones</label>
+                        </div>
+                    </div>
+                    <button type="button">Registrate</button>
+                    <div class="form-help">
+                        <a href="#">Necesitas ayuda?</a>
+                    </div>
+                </form>  
+
+            </div>
+
+        </section>
 
     </main>
 
@@ -29,7 +207,7 @@
 
                 <div class="link">
                     <h3>Contáctanos</h3>
-                    <a href="#">mail</a>
+                    <a href="/">mail</a>
                 </div>
 
                 <div class="link">
