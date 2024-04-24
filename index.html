@@ -285,13 +285,14 @@
                     </div>
                     <div class="error" id="error-email"></div>
 
-                    <div class="form-control">
-                        <label for="phone">Número de teléfono*</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
-                    </div>
-                    <div class="error" id="error-phone"></div>
-                
-                    <div class="form-control">
+                    <!-- En los formularios de contacto dan la opcion de elegir el pais para determinar el GTM para responder y precargar el código de acceso internacional.
+
+                    Muchas veces se conjugan estos 2 casilleros en una misma linea, bajo el titulo "Numero de telefono.
+                    
+                    Por el momento, voy a comentar esta parte del código en caso de que alguien se anime a hacer el script en JS"-->
+
+                    <!-- <div class="form-control">
+                        <label for="country">País</label>
                         <select name="country" id="country" class="form-select">
                             <option value="">Pais</option>
                             <option value="AR">Argentina</option>
@@ -305,7 +306,13 @@
                             <option value="UY">Uruguay</option>
                             <option value="VE">Venezuela</option>
                         </select>
+                    </div> -->
+
+                    <div class="form-control">
+                        <label for="phone">Número de teléfono*</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
                     </div>
+                    <div class="error" id="error-phone"></div>
 
                     <div class="form-terms">
                         <div class="terms">
