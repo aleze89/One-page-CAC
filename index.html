@@ -268,19 +268,19 @@
 
                 <form action="#" id="formregister" method="get" novalidate>
                     <div class="form-control">
-                        <label for="firstname">Nombre*</label>
+                        <label for="firstname">Nombre *</label>
                         <input type="text" id="firstname" name="firstname" required placeholder="Hugo">
                     </div>
                     <div class="error" id="error-firstname"></div>
 
                     <div class="form-control">
-                        <label for="lastname">Apellido*</label>
+                        <label for="lastname">Apellido *</label>
                         <input type="text" id="lastname" name="lastname" required placeholder="Gonzalez">
                     </div>
                     <div class="error" id="error-lastname"></div>
 
                     <div class="form-control">
-                        <label for="email">Correo electrónico*</label>
+                        <label for="email">Correo electrónico *</label>
                         <input type="email" id="email" name="email" required placeholder="hugo@ejemplo.com">
                     </div>
                     <div class="error" id="error-email"></div>
@@ -309,7 +309,7 @@
                     </div> -->
 
                     <div class="form-control">
-                        <label for="phone">Número de teléfono*</label>
+                        <label for="phone">Número de teléfono *</label>
                         <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
                     </div>
                     <div class="error" id="error-phone"></div>
@@ -321,7 +321,7 @@
                     -->
                     <!-- <fieldset>
 
-                        <legend>¿Cómo nos comunicamos?</legend>
+                        <legend>¿Cómo nos comunicamos? *</legend>
 
                         <div class="Form-control">
 
@@ -340,12 +340,21 @@
 
                      <div class="form-control">
                         <label for="product">¿Qué curso te interesa? *</label>
-                        <select name="product" id="product" class="form-select">
+                        <select name="product" id="product" class="form-select" required>
                             <option value="">Seleccioná un curso...</option>
                             <option value="N1">Fundamentos</option>
                             <option value="N2">Front End</option>
                             <option value="N3">Full Stack</option>
                         </select>
+                    </div>
+
+                    <!-- Espacio para escribir un mensaje inicial de contacto -->
+                    <!-- Le puse clase 'form-control' por inercia. ***Revisar si debe ser asi*** -->
+                    <div class="form-control">
+
+                        <label for="message">Comentanos tu duda *</label>
+                        <textarea id="message" name="message" required cols="30" rows="10" placeholder="Hola, necesito ayuda para..."></textarea>
+
                     </div>
 
                     <div class="form-terms">
