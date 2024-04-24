@@ -268,22 +268,28 @@
 
                 <form action="#" id="formregister" method="get" novalidate>
                     <div class="form-control">
-                        <label for="firstname">Nombre</label>
+                        <label for="firstname">Nombre*</label>
                         <input type="text" id="firstname" name="firstname" required placeholder="Hugo">
                     </div>
                     <div class="error" id="error-firstname"></div>
 
                     <div class="form-control">
-                        <label for="lastname">Apellido</label>
+                        <label for="lastname">Apellido*</label>
                         <input type="text" id="lastname" name="lastname" required placeholder="Gonzalez">
                     </div>
                     <div class="error" id="error-lastname"></div>
 
-                    <div class="form-control">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="hugogonzalez@ejemplo.com">
+                                        <div class="form-control">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" name="email" required placeholder="hugo@ejemplo.com">
                     </div>
                     <div class="error" id="error-email"></div>
+
+                    <div class="form-control">
+                        <label for="phone">Número de teléfono*</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
+                    </div>
+                    <div class="error" id="error-phone"></div>
 
                     <div class="form-control">
                         <label for="password">Contraseña</label>
