@@ -17,7 +17,23 @@
     text-decoration: none;
 }
 
-/* Etiquetas generales */
+/* Estilos */
+
+.filled {
+    border: 2px solid var(--color-terciario);
+    background-color: var(--color-terciario);
+    color: var(--color-primario)
+}
+
+.outlined {
+    border: 2px solid var(--color-terciario);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: var(--color-terciario);
+}
+
+/* Elementos de la pagina */
 
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
@@ -28,14 +44,15 @@ body {
     margin: 0 auto;
 }
 
+
+/* Componentes */
+
 /* Botones */
 
-button, input {
-    border:none;
+button {
     border-radius: 10px;
     padding: 16px 32px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
@@ -43,18 +60,37 @@ button, input {
     cursor: pointer;
 }
 
-.filled {
-    border: 2px solid var(--color-terciario);
-    background-color: var(--color-terciario);
+/* Formulario */
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.outlined {
-    border: 2px solid var(--color-terciario);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    color: var(--color-terciario);
+input, select, textarea {
+    background-color: var(--color-primario);
+    padding: 14px;
+    border: 2px solid var(--color-neutral80);
+    border-radius: 7px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--color-secundario);
 }
+
+textarea {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+input.outlined {
+    border-color: var(--color-neutral50);
+}
+
+::placeholder, .placeholder {
+    color: var(--color-neutral50);
+    font-weight: 400;
+}
+
+
 
 /* Pie de página */
 
@@ -107,8 +143,6 @@ button, input {
     color: var(--color-terciario);
 }
 
-
-
 .socials {
     display: flex;
     margin-bottom: 15px;
@@ -134,25 +168,6 @@ button, input {
 .socials a:hover {
     background-color: transparent;
 } 
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    background-color: transparent;
-    padding: 14px;
-    outline: none;
-    border: 2px solid var(--color-neutral80);
-    font-size: 17px;
-    margin-bottom: 15px;
-    color: var(--color-neutral80);
-}
-
-::placeholder {
-    color: var(--color-neutral50);
-}
 
 hr {
     border: 1px solid var(--color-neutral30);
@@ -195,7 +210,6 @@ hr {
     }
 
 }
-
 
 
 
