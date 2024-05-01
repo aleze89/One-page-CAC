@@ -2,6 +2,7 @@
     --primary-color: white;
     --secondary-color: #1b1d20;
     --tertiary-color: #00b7ff;
+    --tertiary-color-focus: rgba(0, 183, 255, 0.3);
     --error-color: #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-80: LightGrey;
@@ -38,7 +39,7 @@
 }
 
 button:focus, input:focus, select:focus, textarea:focus {
-    box-shadow: 0 0 7px var(--tertiary-color);
+    box-shadow: 0 0 7px var(--tertiary-color-focus);
 }
 
 /* Elementos de la pagina */
