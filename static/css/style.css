@@ -12,6 +12,8 @@
     text-decoration: none;
 }
 
+/* Etiquetas generales */
+
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
@@ -48,6 +50,8 @@ button {
     overflow: hidden;
     color: var(--color-terciario);
 }
+
+/* Pie de página */
 
 .footer {
     padding: 100px 0 50px 0;
