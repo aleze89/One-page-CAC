@@ -32,6 +32,10 @@
     color: var(--tertiary-color);
 }
 
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+}
+
 /* Elementos de la pagina */
 
 body {
