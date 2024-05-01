@@ -32,6 +32,15 @@
     color: var(--tertiary-color);
 }
 
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+    outline: transparent;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 7px var(--tertiary-color);
+}
+
 /* Elementos de la pagina */
 
 body {
