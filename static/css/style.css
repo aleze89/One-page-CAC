@@ -66,7 +66,7 @@ form {
     flex-direction: column;
 }
 
-.form-control input, select, textarea {
+input, select, textarea {
     background-color: var(--primary-color);
     padding: 14px;
     border: 2px solid var(--color-neutral-80);
@@ -74,6 +74,13 @@ form {
     font-size: 16px;
     margin-bottom: 15px;
     color: var(--secondary-color);
+}
+
+input.outlined {
+    border-color: var(--color-neutral-60);
+}
+
+.form-control input, select, textarea {
     display: flex;
     flex-direction: column;
 }
@@ -82,9 +89,7 @@ textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
-input.outlined {
-    border-color: var(--color-neutral-60);
-}
+
 
 ::placeholder, .placeholder {
     color: var(--color-neutral-60);
