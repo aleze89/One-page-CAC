@@ -1,3 +1,10 @@
+:root {
+    --color-primario: white;
+    --color-secundario: #1b1d20;
+    --color-terciario: #00b7ff;
+    --color-error: #ba1a1a;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +13,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 .container {
