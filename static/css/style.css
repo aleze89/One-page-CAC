@@ -1,3 +1,15 @@
+:root {
+    --color-primario: white;
+    --color-secundario: #1b1d20;
+    --color-terciario: #00b7ff;
+    --color-error: #ba1a1a;
+    --color-neutral95: GhostWhite;
+    --color-neutral80: LightGrey;
+    --color-neutral50: DarkGrey;
+    --color-neutral30: DimGrey;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +17,26 @@
     text-decoration: none;
 }
 
+/* Estilos */
+
+.filled {
+    border: 2px solid var(--color-terciario);
+    background-color: var(--color-terciario);
+    color: var(--color-primario)
+}
+
+.outlined {
+    border: 2px solid var(--color-terciario);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: var(--color-terciario);
+}
+
+/* Elementos de la pagina */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -14,9 +44,59 @@ body {
     margin: 0 auto;
 }
 
+
+/* Componentes */
+
+/* Botones */
+
+button {
+    border-radius: 10px;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 16px 8px;
+    cursor: pointer;
+}
+
+/* Formulario */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    background-color: var(--color-primario);
+    padding: 14px;
+    border: 2px solid var(--color-neutral80);
+    border-radius: 7px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--color-secundario);
+}
+
+textarea {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+input.outlined {
+    border-color: var(--color-neutral50);
+}
+
+::placeholder, .placeholder {
+    color: var(--color-neutral50);
+    font-weight: 400;
+}
+
+
+
+/* Pie de página */
+
 .footer {
     padding: 100px 0 50px 0;
-    background-color: #3d3d49;
+    background-color: var(--color-secundario);
 }
 
 .footer-link {
@@ -27,32 +107,40 @@ body {
 
 .link {
     width: 300px;
+    /*
+    Responsive <--------------------------
+    En tamaño escritorio deberia visualizarse con:
+    text-align: left; 
+    */
     text-align: center;
 }
 
 .link h3 {
     font-size: 18px;
-    color: #d6d6e2;
+    line-height: 24px;
+    margin: 10px;
+    color: var(--color-neutral95);
     text-transform: uppercase;
+
+}
+
+.link p {
+    font-size: 14px;
+    line-heigth: 24px;
+    color: var(--color-neutral50);
+    display: block;
     margin-bottom: 20px;
 }
 
 .link a {
-    font-size: 17px;
-    color: #b7b8be;
+    font-size: 14px;
+    color: var(--color-neutral50);
     display: block;
     margin-bottom: 20px;
 }
 
 .link a:hover {
-    color: #00c3ff;
-}
-
-.link p {
-    font-size: 17px;
-    color: #b7b8be;
-    display: block;
-    margin-bottom: 20px;
+    color: var(--color-terciario);
 }
 
 .socials {
@@ -65,12 +153,12 @@ body {
     display: inline-block;
     min-height: 40px;
     width: 40px;
-    background-color: #00c3ff;
+    background-color: transparent;
     margin: 0 10px 0 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #ffffff;
+    color: var(--color-neutral95);
     font-size: 20px;
     padding: 0;
     justify-content: center;
@@ -78,36 +166,11 @@ body {
 }
 
 .socials a:hover {
-    background-color: #ffffff;
+    background-color: transparent;
 } 
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    background-color: transparent;
-    padding: 14px;
-    outline: none;
-    border: 2px solid #5f5f6e;
-    font-size: 17px;
-    margin-bottom: 15px;
-    color: #b7b8be;
-}
-
-::placeholder {
-    color: #b7b8be;
-}
-
-.btn {
-    background-color: #00c3ff;
-    color: #ffffff;
-    border: 0;
-}
-
 hr {
-    border: 1px solid #5f5f6e;
+    border: 1px solid var(--color-neutral30);
     margin: 35px 0;
 }
 
@@ -119,11 +182,11 @@ hr {
 
 .footer-text a {
     font-size: 15px;
-    color: #b7b8be;
+    color: var(--color-neutral50);
 }
 
 .footer-text a:hover {
-    color: #00c3ff;
+    color: var(--color-terciario);
 }
 
 @media(max-width:991px) {
@@ -147,7 +210,6 @@ hr {
     }
 
 }
-
 
 
 
