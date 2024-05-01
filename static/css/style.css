@@ -30,7 +30,7 @@ body {
 
 /* Botones */
 
-button {
+button, input {
     border:none;
     border-radius: 10px;
     padding: 16px 32px;
@@ -152,12 +152,6 @@ input {
 
 ::placeholder {
     color: var(--color-neutral50);
-}
-
-.btn {
-    background-color: var(--color-terciario);
-    color: var(--color-primario);
-    border: 0;
 }
 
 hr {
