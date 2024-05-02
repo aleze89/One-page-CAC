@@ -38,12 +38,22 @@ body {
     color: var(--primary-color)
 }
 
+.filled:hover {
+    background-color: var(--tertiary-color-hover);
+    border-color: var(--tertiary-color-hover);
+}
+
 .outlined {
     border: 2px solid var(--color-neutral-40);
     background-color: transparent;
     background-repeat: no-repeat;
     overflow: hidden;
     color: var(--color-neutral-40);
+}
+
+.outlined:hover {
+    color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
 }
 
 :focus, :focus-visible {
@@ -53,16 +63,6 @@ body {
 
 button:focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 7px var(--tertiary-color-focus);
-}
-
-.filled:hover {
-    background-color: var(--tertiary-color-hover);
-    border-color: var(--tertiary-color-hover);
-}
-
-.outlined:hover {
-    color: var(--secondary-color-hover);
-    border-color: var(--secondary-color-hover);
 }
 
 /* # Componentes */
