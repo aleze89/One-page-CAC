@@ -1,7 +1,16 @@
 :root {
-    --primary-color: white;
+    --primary-color: #ffffff;
+    --primary-color-hover: hsl(0, 0%, 97%);
+    --primary-color-focus: hwb(0 100% 0% / 0.302);
+    --primary-color-active: hsl(0, 0%, 94%);
     --secondary-color: #1b1d20;
+    --secondary-color-hover: hsl(216, 8%, 9%);
+    --secondary-color-focus: hwb(216 11% 87% / 0.302); 
+    --secondary-color-active: hsl(216, 8%, 6%);
     --tertiary-color: #00b7ff;
+    --tertiary-color-hover: hsl(197, 100%, 47%);
+    --tertiary-color-focus: hwb(197 0% 0% / 0.302);
+    --tertiary-color-hover: hsl(197, 100%, 44%);
     --error-color: #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-80: LightGrey;
@@ -16,31 +25,6 @@
     text-decoration: none;
 }
 
-/* Estilos */
-
-.filled {
-    border: 2px solid var(--tertiary-color);
-    background-color: var(--tertiary-color);
-    color: var(--primary-color)
-}
-
-.outlined {
-    border: 2px solid var(--tertiary-color);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    color: var(--tertiary-color);
-}
-
-:focus, :focus-visible {
-    border-color: var(--tertiary-color);
-    outline: transparent;
-}
-
-button:focus, input:focus, select:focus, textarea:focus {
-    box-shadow: 0 0 7px var(--tertiary-color);
-}
-
 /* Elementos de la pagina */
 
 body {
@@ -52,10 +36,43 @@ body {
     margin: 0 auto;
 }
 
+/* Estilos  generales*/
 
-/* Componentes */
+.filled {
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color)
+}
 
-/* Botones */
+.filled:hover {
+    background-color: var(--tertiary-color-hover);
+    border-color: var(--tertiary-color-hover);
+}
+
+.outlined {
+    border: 2px solid var(--color-neutral-40);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: var(--color-neutral-40);
+}
+
+.outlined:hover {
+    color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+}
+
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+    outline: transparent;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 7px var(--tertiary-color-focus);
+}
+
+/* # Componentes */
+/* ## Botones */
 
 button {
     border-radius: 10px;
@@ -83,10 +100,6 @@ input, select, textarea {
     font-size: 16px;
     margin-bottom: 15px;
     color: var(--secondary-color);
-}
-
-input.outlined {
-    border-color: var(--color-neutral-60);
 }
 
 .form-control input, select, textarea {
@@ -225,8 +238,6 @@ hr {
     }
 
 }
-
-
 
 
 
