@@ -3,6 +3,7 @@
     --secondary-color: #1b1d20;
     --tertiary-color: #00b7ff;
     --tertiary-color-focus: rgba(0, 183, 255, 0.3);
+    --tertiary-color-hover: hsl(197, 100%, 45%);
     --error-color: #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-80: LightGrey;
@@ -17,7 +18,20 @@
     text-decoration: none;
 }
 
-/* Estilos */
+
+
+/* Elementos de la pagina */
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos  generales*/
 
 .filled {
     border: 2px solid var(--tertiary-color);
@@ -42,21 +56,18 @@ button:focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 7px var(--tertiary-color-focus);
 }
 
-/* Elementos de la pagina */
-
-body {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+.filled:hover {
+    background-color: var(--tertiary-color-hover);
+    border-color: var(--tertiary-color-hover);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.outlined:hover {
+    color: var(--tertiary-color-hover);
+    border-color: var(--tertiary-color-hover);
 }
 
-
-/* Componentes */
-
-/* Botones */
+/* # Componentes */
+/* ## Botones */
 
 button {
     border-radius: 10px;
@@ -226,8 +237,6 @@ hr {
     }
 
 }
-
-
 
 
 
