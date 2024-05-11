@@ -25,58 +25,19 @@
     text-decoration: none;
 }
 
-/* Elementos de la pagina */
+/* Estilo general */
 
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 section {
-    padding: 50px 100px;
-
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilos  generales*/
-
-.filled {
-    border: 2px solid var(--tertiary-color);
-    background-color: var(--tertiary-color);
-    color: var(--primary-color)
-}
-
-.filled:hover {
-    background-color: var(--tertiary-color-hover);
-    border-color: var(--tertiary-color-hover);
-}
-
-.outlined {
-    border: 2px solid var(--color-neutral-40);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    color: var(--color-neutral-40);
-}
-
-.outlined:hover {
-    color: var(--secondary-color-hover);
-    border-color: var(--secondary-color-hover);
-}
-
-:focus, :focus-visible {
-    border-color: var(--tertiary-color);
-    outline: transparent;
-}
-
-button:focus, input:focus, select:focus, textarea:focus {
-    box-shadow: 0 0 7px var(--tertiary-color-focus);
+    padding: 70px 20px;
+    position: relative;
 }
 
 /* # Componentes */
+
 /* ## Botones */
 
 button {
@@ -116,13 +77,10 @@ textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
-
-
 ::placeholder, .placeholder {
     color: var(--color-neutral-60);
     font-weight: 400;
 }
-
 
 
 /* Pie de página */
@@ -242,6 +200,41 @@ hr {
         text-align: center;
     }
 
+}
+
+/* Comportamientos*/
+
+.filled {
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color)
+}
+
+.filled:hover {
+    background-color: var(--tertiary-color-hover);
+    border-color: var(--tertiary-color-hover);
+}
+
+.outlined {
+    border: 2px solid var(--color-neutral-40);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: var(--color-neutral-40);
+}
+
+.outlined:hover {
+    color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+}
+
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+    outline: transparent;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 7px var(--tertiary-color-focus);
 }
 
 
