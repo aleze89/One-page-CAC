@@ -10,11 +10,13 @@
     --tertiary-color: #00b7ff;
     --tertiary-color-hover: hsl(197, 100%, 47%);
     --tertiary-color-focus: hwb(197 0% 0% / 0.302);
-    --tertiary-color-hover: hsl(197, 100%, 44%);
+    --tertiary-color-active: hsl(197, 100%, 44%);
     --error-color: #ba1a1a;
     --color-neutral-99: GhostWhite;
+    --color-neutral-95: hsl(216, 8%, 95%);
     --color-neutral-80: LightGrey;
     --color-neutral-60: DarkGrey;
+    --color-neutral-50: hsl(0, 0%, 50%);
     --color-neutral-40: DimGrey;
 }
 
@@ -25,7 +27,8 @@
     text-decoration: none;
 }
 
-/* Estilo general */
+
+/* Elementos */
 
 body {
     font-family: Inter, system-ui, Helvetica, sans-serif;
@@ -53,29 +56,29 @@ h4 {
 }
 
 li {
-    color: green;
+    
 }
+
+img {
+
+}
+
+
+/* # Componentes */
+
+/* # Contenedores */
 
 section {
     padding: 70px 20px;
-    position: relative;
 }
 
-/* # temas */
+.tarjetas {
 
-.tema-claro {
-    background: var(--color-neutral-99)
 }
 
-.tema-claro-alt {
-    background-color: var(--color-neutral-80);
-}
+.tarjeta {
 
-.tema-oscuro {
-    background-color: var(--secondary-color);
 }
-
-/* # Componentes */
 
 /* ## Botones */
 
@@ -90,6 +93,42 @@ button {
     cursor: pointer;
 }
 
+/* ### Comportamientos*/
+
+.filled {
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color)
+}
+
+.filled:hover {
+    background-color: var(--tertiary-color-hover);
+    border-color: var(--tertiary-color-hover);
+}
+
+.outlined {
+    border: 2px solid var(--color-neutral-50);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: var(--color-neutral-40);
+}
+
+.outlined:hover {
+    color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+}
+
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+    outline: transparent;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 7px var(--tertiary-color-focus);
+}
+
+
 /* Formulario */
 
 form {
@@ -98,7 +137,6 @@ form {
 }
 
 input, select, textarea {
-    background-color: var(--primary-color);
     padding: 14px;
     border: 2px solid var(--color-neutral-80);
     border-radius: 7px;
@@ -126,7 +164,6 @@ textarea {
 
 .footer {
     padding: 100px 0 50px 0;
-    background-color: var(--secondary-color);
 }
 
 .footer-link {
@@ -149,7 +186,6 @@ textarea {
     font-size: 18px;
     line-height: 24px;
     margin: 10px;
-    color: var(--color-neutral-99);
     text-transform: uppercase;
 
 }
@@ -241,40 +277,48 @@ hr {
 
 }
 
-/* Comportamientos*/
 
-.filled {
-    border: 2px solid var(--tertiary-color);
+
+
+/* # temas */
+
+/* ## tema claro */
+
+.tema-claro {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
+.tonal {
+    background-color: var(--color-neutral-95);
+    color: var(--secondary-color);
+}
+
+/* ## tema oscuro */
+
+.tema-oscuro {
+    background-color: var(--secondary-color);
+    color: var(--color-neutral-99);
+}
+
+.tema-oscuro .filled {
+    background-color: var(--tertiary-color-active);
+    border-color: var(--tertiary-color-active);
+    color: var(--secondary-color)
+}
+
+.tema-oscuro .filled:hover {
     background-color: var(--tertiary-color);
-    color: var(--primary-color)
-}
-
-.filled:hover {
-    background-color: var(--tertiary-color-hover);
-    border-color: var(--tertiary-color-hover);
-}
-
-.outlined {
-    border: 2px solid var(--color-neutral-40);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    color: var(--color-neutral-40);
-}
-
-.outlined:hover {
-    color: var(--secondary-color-hover);
-    border-color: var(--secondary-color-hover);
-}
-
-:focus, :focus-visible {
     border-color: var(--tertiary-color);
-    outline: transparent;
 }
 
-button:focus, input:focus, select:focus, textarea:focus {
-    box-shadow: 0 0 7px var(--tertiary-color-focus);
+.tema-oscuro .outlined {
+    border: 2px solid var(--color-neutral-50);
+    color: var(--color-neutral-60);
 }
 
-
+.tema-oscuro .outlined:hover {
+    color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
+}
 
