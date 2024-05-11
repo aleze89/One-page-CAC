@@ -28,7 +28,8 @@
 /* Estilo general */
 
 body {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: Inter, system-ui, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 section {
