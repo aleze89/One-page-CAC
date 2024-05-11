@@ -32,9 +32,47 @@ body {
     font-size: 1rem;
 }
 
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+li {
+    color: green;
+}
+
 section {
     padding: 70px 20px;
     position: relative;
+}
+
+/* # temas */
+
+.tema-claro {
+    background: var(--color-neutral-99)
+}
+
+.tema-claro-alt {
+    background-color: var(--color-neutral-80);
+}
+
+.tema-oscuro {
+    background-color: var(--secondary-color);
 }
 
 /* # Componentes */
