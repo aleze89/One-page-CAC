@@ -167,12 +167,45 @@ section {
 
 /* ### Tarjetas */
 
-.tarjetas {
+#nuestros-cursos .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px
+}
 
+.descripcion {
+    max-width: 720px;
+    text-align: center;
+}
+
+.tarjetas {
+    display:flex;
+    gap: 24px
+}
+
+.tarjetas > * {
+    flex-basis: 100%;
 }
 
 .tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 24px;
+}
 
+/* Estoy tratando de que queden en la misma linea y se visualicen como pastillas. */
+.tarjeta li {
+    display; flex;
+    flex-direction: row;
+    color: red;
+    text-decoration: none;
+    border: red solid 1px;
+    border-radius: 10px;
+    
 }
 
 
