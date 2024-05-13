@@ -66,11 +66,24 @@ img {
 
 /* # Componentes */
 
-/* # Contenedores */
+/* ## Barra de navegacion */
+
+header {
+
+}
+
+nav #links {
+
+}
+
+
+/* ## Contenedores */
 
 section {
     padding: 70px 20px;
 }
+
+/* ### Tarjetas */
 
 .tarjetas {
 
@@ -79,6 +92,7 @@ section {
 .tarjeta {
 
 }
+
 
 /* ## Botones */
 
@@ -129,7 +143,12 @@ button:focus, input:focus, select:focus, textarea:focus {
 }
 
 
-/* Formulario */
+/* Secciones de la pagina */
+
+/* # Hero-banner */
+
+
+/* # Formulario */
 
 form {
     display: flex;
@@ -160,7 +179,7 @@ textarea {
 }
 
 
-/* Pie de página */
+/* # Pie de página */
 
 .footer {
     padding: 100px 0 50px 0;
@@ -190,16 +209,9 @@ textarea {
 
 }
 
-.link p {
+.link p, .link a {
     font-size: 14px;
     line-height: 24px;
-    color: var(--color-neutral-60);
-    display: block;
-    margin-bottom: 20px;
-}
-
-.link a {
-    font-size: 14px;
     color: var(--color-neutral-60);
     display: block;
     margin-bottom: 20px;
@@ -278,9 +290,7 @@ hr {
 }
 
 
-
-
-/* # temas */
+/* Estilos particulares */
 
 /* ## tema claro */
 
@@ -301,6 +311,8 @@ hr {
     color: var(--color-neutral-99);
 }
 
+/* ### Comportamientos botones */
+
 .tema-oscuro .filled {
     background-color: var(--tertiary-color-active);
     border-color: var(--tertiary-color-active);
@@ -319,6 +331,6 @@ hr {
 
 .tema-oscuro .outlined:hover {
     color: var(--primary-color-hover);
-    border-color: var(--primary-color-hover);
+    border-color: var(--color-neutral-80);
 }
 
