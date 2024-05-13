@@ -345,7 +345,7 @@ hr {
     color: var(--tertiary-color);
 }
 
-@media(max-width:991px) {
+@media(max-width:720px) {
 
     #footer {
         padding: 30px;
