@@ -127,6 +127,10 @@ nav {
     font-weight: 600;
 }
 
+.imagen-curso {
+
+}
+
 /* ### Comportamientos */
 
 #logo:hover {
@@ -234,6 +238,9 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 /* # Detalle curso nivel inicial */
 
+#detalle-curso-inicial .container {
+    background-color: red;
+}
 
 /* # Detalle curso nivel intermedio */
 
