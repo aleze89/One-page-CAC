@@ -253,13 +253,14 @@ button:focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .imagen-curso {
     margin-right: 48px;
     border-radius: 20px;
 }
 
+.texto-curso {
+    
+}
 
 /* # Formulario */
 
