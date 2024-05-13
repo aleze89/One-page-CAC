@@ -83,6 +83,11 @@ section {
     padding: 70px 20px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
 /* ### Tarjetas */
 
 .tarjetas {
