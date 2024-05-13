@@ -63,13 +63,13 @@ h4 {
     font-weight: 400;
 }
 
-li {
+/* li {
     
-}
+} */
 
-img {
+/* img {
 
-}
+} */
 
 
 /* # Componentes */
@@ -127,9 +127,9 @@ nav {
     font-weight: 600;
 }
 
-.imagen-curso {
+/* .imagen-curso {
 
-}
+} */
 
 /* ### Comportamientos */
 
@@ -199,7 +199,7 @@ section {
 
 /* Estoy tratando de que queden en la misma linea y se visualicen como pastillas. */
 .tarjeta li {
-    display; flex;
+    display: flex;
     flex-direction: row;
     color: red;
     text-decoration: none;
@@ -291,9 +291,9 @@ button:focus, input:focus, select:focus, textarea:focus {
     border-radius: 20px;
 }
 
-.texto-curso {
+/* .texto-curso {
     
-}
+} */
 
 /* # Formulario */
 
