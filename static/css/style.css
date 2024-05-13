@@ -35,6 +35,10 @@ body {
     font-size: 1rem;
 }
 
+a{
+    text-decoration: none;
+}
+
 #logo {
     font-weight: bold;
 }
@@ -73,7 +77,8 @@ img {
 /* ## Barra de navegacion */
 
 header {
-    background-color: transparent;
+    /* background-color: transparent; */
+        /* Agregar un script en JS para que pase de Transparente al color secundariuo al abandonar la pocision inicial; usar la regla '.scrolled' */
     color: var(--primary-color);
     position: fixed;
     top: 0;
@@ -90,13 +95,12 @@ nav {
     padding: 0px 50px;
 }
 
+/* Agregar un script en JS para que al abandonar el banner hero, el fondo se tiña del color secundario. */
+.scrolled {
+    background-color: var(--secondary-color);
+}
 
 /* ### Botones */
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
 
 .nav-links {
     display: flex;
@@ -104,14 +108,29 @@ nav {
     gap: 30px;
 }
 
-.button-cta {
+.nav-links a {
+    color: var(--primary-color);
+}
+
+.nav-links .button-cta {
     padding: 10px 15px; 
     border-radius: 10px;
     cursor: pointer;
+    background-color: var(--tertiary-color-active);
+    border-color: var(--tertiary-color-active);
+    color: var(--secondary-color);
+    font-weight: 600;
 }
 
-.scrolled {
+/* ### Comportamientos */
+
+.nav-links a:hover{
+    color: var(--tertiary-color);
+}
+
+.nav-links .button-cta:hover{
     background-color: var(--tertiary-color);
+    color: var(--secondary-color);
 }
 
 /* ## Contenedores */
