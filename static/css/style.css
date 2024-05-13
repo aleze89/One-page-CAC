@@ -82,14 +82,26 @@ header {
     z-index: 9999;
 }
 
-.scrolled {
-    background-color: var(--tertiary-color);
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0px 50px;
 }
+
 
 /* ### Botones */
 
-nav #links {
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
 .button-cta {
@@ -98,6 +110,9 @@ nav #links {
     cursor: pointer;
 }
 
+.scrolled {
+    background-color: var(--tertiary-color);
+}
 
 /* ## Contenedores */
 
