@@ -236,9 +236,15 @@ button:focus, input:focus, select:focus, textarea:focus {
 /* # Nuestros cursos */
 
 
-/* # Detalle cursos */
+/* # Detalles cursos */
 
-#detalle-curso-inicial .container, #detalle-curso-intermedio .container, #detalle-curso-avanzado .container {
+#detalles-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 35px ;
+}
+
+#detalles-cursos .container {
     max-width: 1080px;
     background-color: var(--primary-color);
     display: flex;
@@ -247,8 +253,11 @@ button:focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+
+
 .imagen-curso {
     margin-right: 48px;
+    border-radius: 20px;
 }
 
 
