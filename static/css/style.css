@@ -35,6 +35,10 @@ body {
     font-size: 1rem;
 }
 
+#logo {
+    font-weight: bold;
+}
+
 h1 {
     font-size: 48px;
     font-weight: 900;
@@ -69,11 +73,29 @@ img {
 /* ## Barra de navegacion */
 
 header {
-
+    background-color: transparent;
+    color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
+
+.scrolled {
+    background-color: var(--tertiary-color);
+}
+
+/* ### Botones */
 
 nav #links {
 
+}
+
+.button-cta {
+    padding: 10px 15px; 
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
