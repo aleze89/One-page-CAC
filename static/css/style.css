@@ -236,16 +236,20 @@ button:focus, input:focus, select:focus, textarea:focus {
 /* # Nuestros cursos */
 
 
-/* # Detalle curso nivel inicial */
+/* # Detalle cursos */
 
-#detalle-curso-inicial .container {
-    background-color: red;
+#detalle-curso-inicial .container, #detalle-curso-intermedio .container, #detalle-curso-avanzado .container {
+    max-width: 1080px;
+    background-color: var(--primary-color);
+    display: flex;
+    padding: 48px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* # Detalle curso nivel intermedio */
-
-
-/* # Detalle curso nivel avanzado */
+.imagen-curso {
+    margin-right: 48px;
+}
 
 
 /* # Formulario */
