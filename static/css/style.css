@@ -331,6 +331,6 @@ hr {
 
 .tema-oscuro .outlined:hover {
     color: var(--primary-color-hover);
-    border-color: var(--primary-color-hover);
+    border-color: var(--color-neutral-80);
 }
 
