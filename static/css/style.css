@@ -83,6 +83,11 @@ section {
     padding: 70px 20px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
 /* ### Tarjetas */
 
 .tarjetas {
@@ -181,7 +186,7 @@ textarea {
 
 /* # Pie de página */
 
-.footer {
+#footer {
     padding: 100px 0 50px 0;
 }
 
@@ -269,7 +274,7 @@ hr {
 
 @media(max-width:991px) {
 
-    .footer {
+    #footer {
         padding: 30px;
     }    
 
