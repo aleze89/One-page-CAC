@@ -225,10 +225,16 @@ button:focus, input:focus, select:focus, textarea:focus {
 #acerca-de .container {
     display: flex;
     flex-direction: column;
+    gap: 48px;
 }
 
 #acerca-de .acerca-de-texto {
     display: flex;
+}
+
+#acerca-de .video {
+    width: 100%;
+    height: auto;
 }
 
 /* # Nuestros cursos */
@@ -298,6 +304,16 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 
 /* # Formulario */
+
+#contacto .container {
+    display:flex;
+}
+
+#contacto .descripcion {
+    text-align: left;
+    padding: 0 48px 0 0;
+}
+
 
 form {
     display: flex;
