@@ -69,8 +69,8 @@ dsafdf<!DOCTYPE html>
                     </p>
                </div>     
                 <div class="acerca-de-video">
-                    <!-- Por el momento puse un video similar al que iria -->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6sREQNasl7o?si=lZM9ipcrGlkOVvWK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!-- Hay que averiguar el modo de que el tamaño sea controlado por la hoja de estilo-->
+                    <iframe width="720px" height="480px" src="https://www.youtube.com/embed/6sREQNasl7o?si=lZM9ipcrGlkOVvWK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </iframe>
                 </div>
 
@@ -84,87 +84,93 @@ dsafdf<!DOCTYPE html>
 
             <div class="container">
 
-                <h4>Nuestros Cursos</h4>
-                <h2>Desarrollo web: de cero a especialista</h2>
-                <p>
-                    Ofrecemos una variedad de opciones para que puedas elegir el camino de aprendizaje que mejor se adapte a tus necesidades y objetivo:
-                </p>
+                <div class="descripcion">
+
+                    <h4>Nuestros Cursos</h4>
+                    <h2>Desarrollo web: de cero a especialista</h2>
+                    <p>
+                        Ofrecemos una variedad de opciones para que puedas elegir el camino de aprendizaje que mejor se adapte a tus necesidades y objetivo:
+                    </p>
+
+                </div>
                 
-                <div class="curso-inicial">
-                    <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
-                    <h4>Nivel inicial</h4>
-                    <h3>Fundamentos</h3>
-                    <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
-                    Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
-                    <ul class="">
-                        <li>90 hs</li>
-                        <li>Asincrónico</li>
-                    </ul>
-                    <p>
-                        Aprende los fundamentos de la programación, domina el lenguaje nativo de Internet e ingresa al mundo del desarrollo web.
-                    </p>
-                    <a href="#container-detalle-curso-inicial">
-                        <button class="outlined" type="button">Más información</button>
-                    </a>
+                <div class="tarjetas">
+
+                    <div class="curso-inicial tarjeta">
+                        <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
+                        <h4>Nivel inicial</h4>
+                        <h3>Fundamentos</h3>
+                        <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
+                        Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
+                        <ul class="">
+                            <li>90 hs</li>
+                            <li>Asincrónico</li>
+                        </ul>
+                        <p>
+                            Aprende los fundamentos de la programación, domina el lenguaje nativo de Internet e ingresa al mundo del desarrollo web.
+                        </p>
+                        <a href="#curso-inicial">
+                            <button class="outlined" type="button">Más información</button>
+                        </a>
+    
+                    </div>
+    
+                    <div class="curso-intermedio tarjeta">
+                        <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
+                        <h4>Nivel intermedio</h4>
+                        <h3>Front-end</h3>
+                        <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
+                        Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
+                        <ul class="">
+                            <li>120 hs</li>
+                            <li>Sincrónico</li>
+                        </ul>
+                        <p>
+                            Domina el desarrollo del lado del cliente y descubre cómo crear interfaces impactantes, profesionales y optimizadas. Aprende a utilizar JavaScript para crear experiencias altamente interactivas.
+                        </p>
+                        <a href="#curso-intermedio">
+                            <button class="outlined" type="button">Más información</button>
+                        </a>
+                    </div>
+    
+                    <div class="curso-avanzado tarjeta">
+                        <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
+                        <h4>Nivel avanzado</h4>
+                        <h3>Full stack</h3>
+                        <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
+                        Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
+                        <ul class="">
+                            <li>240 hs</li>
+                            <li>Sincrónico</li>
+                        </ul>
+                        <p>
+                            Domina las tecnologías del front-end y del back-end; aprende a trabajar con bases de datos, APIs y herramientas profesionales para crear proyectos complejos y de alto impacto.
+                        </p>
+                        
+                        <a href="#curso-avanzado">
+                            <button class="outlined" type="button">Más información</button>
+                        </a>
+    
+                    </div>
 
                 </div>
 
-                <div class="curso-intermedio">
-                    <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
-                    <h4>Nivel intermedio</h4>
-                    <h3>Front-end</h3>
-                    <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
-                    Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
-                    <ul class="">
-                        <li>120 hs</li>
-                        <li>Sincrónico</li>
-                    </ul>
-                    <p>
-                        Domina el desarrollo del lado del cliente y descubre cómo crear interfaces impactantes, profesionales y optimizadas. Aprende a utilizar JavaScript para crear experiencias altamente interactivas.
-                    </p>
-                    <a href="#container-detalle-curso-intermedio">
-                        <button class="outlined" type="button">Más información</button>
-                    </a>
-                </div>
-
-                <div class="curso-avanzado">
-                    <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
-                    <h4>Nivel avanzado</h4>
-                    <h3>Full stack</h3>
-                    <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
-                    Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
-                    <ul class="">
-                        <li>240 hs</li>
-                        <li>Sincrónico</li>
-                    </ul>
-                    <p>
-                        Domina las tecnologías del front-end y del back-end; aprende a trabajar con bases de datos, APIs y herramientas profesionales para crear proyectos complejos y de alto impacto.
-                    </p>
-                    
-                    <a href="#container-detalle-curso-avanzado">
-                        <button class="outlined" type="button">Más información</button>
-                    </a>
-
-                </div>
 
             </div>  
 
         </section>
 
-        <section id="detalle-curso-inicial" class="tema-claro">
+        <section id="detalles-cursos" class="tema-claro">
 
-            <div class="container">
+            <div id="curso-inicial" class="container">
 
-                <div class="imagen-curso-inicial">
-                    <!-- No necesariamente tiene que ser una imagen; bien podria mostrarse la tecnologia que se va a aprender, o bien una lista con los beneficios. Lo veremos bien en el segundo sprint. -->
-                    <img src="static/img/curso-inicial.jpg" alt="Curso Inicial" width="250">
+                <div class="imagen-curso">
+                    <img src="static/img/curso-nivel-inicial-mediana.jpg" alt="Curso Inicial" width="250">
                 </div>
 
-                 <!-- El contenido se actualizara al finalizar el segundo sprint, en funcion de la info que sea conveniente agregar una vez resuelto el desarrollo movil. -->
-                <div class="text-curso-inicial">
+                <div class="text-curso">
                     <h4>Nivel inicial</h4>
                     <h2>Fundamentos</h2>
-                    <!-- Lo desarrolle como una lista desordenada por el momento, pero podria cambiar mas adelante-->
                     <ul id="">
                         <li>Modalidad: 100% Virtual | Asincrónica</li>
                         <li>Duracion 90 hs</li>
@@ -182,24 +188,18 @@ dsafdf<!DOCTYPE html>
                                         
                 </div>
                             
-            </div>
+            </div>       
 
-        </section>
+            <div id="curso-intermedio" class="container">
 
-        <section id="detalle-curso-intermedio" class="tema-claro">
-
-            <div class="container">
-
-                <div class="imagen-curso-intermedio">
-                    <!-- No necesariamente tiene que ser una imagen; bien podria mostrarse la tecnologia que se va a aprender, o bien una lista con los beneficios. Lo veremos bien en el segundo sprint. -->
-                    <img src="static/img/curso-intermedio.jpg" alt="Curso Intermedio" width="250">
+                <div class="imagen-curso">
+                    <img src="static/img/curso-nivel-intermedio-mediana.jpg" alt="Curso Intermedio" width="250">
                 </div>
 
-                 <!-- El contenido se actualizara al finalizar el segundo sprint, en funcion de la info que sea conveniente agregar una vez resuelto el desarrollo movil. -->
-                <div class="text-curso-intermedio">
+                <div class="text-curso">
                     <h4>Nivel: Intermedio</h4>
                     <h2>Front-End</h2>
-                    <!-- Lo desarrolle como una lista desordenada por el momento, pero podria cambiar mas adelante-->
+
                     <ul id="">
                         <li>Modalidad: 100% Virtual | Sincrónica</li>
                         <li>Duracion 120 hs</li>
@@ -219,22 +219,15 @@ dsafdf<!DOCTYPE html>
                             
             </div>
 
-        </section>
+            <div id="curso-avanzado" class="container">
 
-        <section id="detalle-curso-avanzado" class="tema-claro">
-
-            <div class="container">
-
-                <div class="imagen-curso-avanzado">
-                    <!-- No necesariamente tiene que ser una imagen; bien podria mostrarse la tecnologia que se va a aprender, o bien una lista con los beneficios. Lo veremos bien en el segundo sprint. -->
-                    <img src="static/img/curso-avanzado.jpg" alt="Curso Avanzado" width="250">
+                <div class="imagen-curso">
+                    <img src="static/img/curso-nivel-avanzado-mediana.jpg" alt="Curso Avanzado" width="250">
                 </div>
 
-                 <!-- El contenido se actualizara al finalizar el segundo sprint, en funcion de la info que sea conveniente agregar una vez resuelto el desarrollo movil. -->
-                <div class="text-curso-avanzado">
+                <div class="text-curso">
                     <h4>Nivel: Avanzado</h4>
                     <h2>Full Stack</h2>
-                    <!-- Lo desarrolle como una lista desordenada por el momento, pero podria cambiar mas adelante-->
                     <ul id="">
                         <li>Modalidad: 100% Virtual | Sincrónica</li>
                         <li>Duracion 190 hs</li>
@@ -260,134 +253,142 @@ dsafdf<!DOCTYPE html>
 
             <div class="container">
 
-                <h2>¿Hablamos?</h2>
-                <p>
-                    Si realmente estás dispuesto a cambiar tu futuro y convertirte en el profesional IT que siempre has querido ser, no pierdas más el tiempo y ponte en contacto con nosotros. Vamos a resolver todas tus dudas y te asesoraremos sobre cuál es el itinerario formativo y la modalidad más acorde a tus necesidades y objetivos.
-                </p>
+                <div class="descripcion">
 
-                <div class="imagen-contacto">
-                    <img src="" alt="">
-                </div>
-
-                <form action="#" id="formregister" method="get" novalidate>
-                    <div class="form-control">
-                        <label for="firstname">Nombre *</label>
-                        <input type="text" id="firstname" name="firstname" required placeholder="Hugo">
-                    </div>
-                    <div class="error" id="error-firstname"></div>
-
-                    <div class="form-control">
-                        <label for="lastname">Apellido *</label>
-                        <input type="text" id="lastname" name="lastname" required placeholder="Gonzalez">
-                    </div>
-                    <div class="error" id="error-lastname"></div>
-
-                    <div class="form-control">
-                        <label for="email">Correo electrónico *</label>
-                        <input type="email" id="email" name="email" required placeholder="hugo-gonzalez@ejemplo.com">
-                    </div>
-                    <div class="error" id="error-email"></div>
-
-                    <!-- En los formularios de contacto dan la opcion de elegir el pais para determinar el GTM para responder y precargar el código de acceso internacional.
-
-                    Muchas veces se conjugan estos 2 casilleros en una misma linea, bajo el titulo "Numero de telefono.
-                    
-                    Por el momento, voy a comentar esta parte del código en caso de que alguien se anime a hacer el script en JS"-->
-
-                    <!-- <div class="form-control">
-                        <label for="country">País</label>
-                        <select name="country" id="country" class="form-select">
-                            <option value="">Pais</option>
-                            <option value="AR">Argentina</option>
-                            <option value="BO">Bolivia</option>
-                            <option value="BR">Brasil</option>
-                            <option value="CH">Chile</option>
-                            <option value="CO">Colombia</option>
-                            <option value="EC">Ecuador</option>
-                            <option value="PY">Paraguay</option>
-                            <option value="PE">Peru</option>
-                            <option value="UY">Uruguay</option>
-                            <option value="VE">Venezuela</option>
-                        </select>
-                    </div> -->
-
-                    <div class="form-control">
-                        <label for="phone">Número de teléfono *</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
-                    </div>
-                    <div class="error" id="error-phone"></div>
-
-                    <!--  En el form de contacto de esta pagina https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' tienen un fieldset interesante debajo del item del telefono, que sirve para que el usuario seleccione su preferencia en cuanto al contacto.
-
-                    Me parecio interesante de incluir, pero de desarrollarse sera recien en el sprint 3.
-                    Documentacion MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
-                    -->
-                    <!-- <fieldset>
-
-                        <legend>¿Cómo nos comunicamos? *</legend>
-
-                        <div class="Form-control">
-
-                            <label for="contact-choice-1">Whatsapp</label>
-                            <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
-                        
-                            <label for="contact-choice-2">Correo electrónico</label>
-                            <input type="radio" id="contact-choice-2" name="contact-choice" value="email">
-
-                        </div>
-
-                    </fieldset> -->
-
-                    <!-- Item para consultar / pedir asesoria sobre un curso
-                    Ref: https://codespaceacademy.com/contacto/ -->
-
-                     <div class="form-control">
-                        <label for="product">¿Qué curso te interesa? *</label>
-                        <select name="product" id="product" class="form-select" required>
-                            <option value="" class="placeholder">Seleccioná un curso...</option>
-                            <option value="N1">Fundamentos</option>
-                            <option value="N2">Front End</option>
-                            <option value="N3">Full Stack</option>
-                        </select>
-                    </div>
-
-                    <!-- Espacio para escribir un mensaje inicial de contacto -->
-                    <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
-                    <div class="form-control">
-
-                        <label for="message">Comentanos tu duda *</label>
-                        <textarea id="message" name="message" required cols="30" rows="10" placeholder="Hola, necesito ayuda para..."></textarea>
-
-                    </div>
-
-                    <!-- Descargo de responsabilidad -->
+                    <h2>¿Hablamos?</h2>
                     <p>
-                        Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. No vamos a enviarte promociones ni mensajes de otro tipo.
+                        Si realmente estás dispuesto a cambiar tu futuro y convertirte en el profesional IT que siempre has querido ser, no pierdas más el tiempo y ponte en contacto con nosotros. Vamos a resolver todas tus dudas y te asesoraremos sobre cuál es el itinerario formativo y la modalidad más acorde a tus necesidades y objetivos.
                     </p>
-
-                    <div class="form-terms">
-
-                        <div class="terms">
-
-                            <input type="checkbox" id="terms">
-                            <label for="terms">Estoy de acuerdo con la <a href="templates/privacy.html">política de privacidad</a>
-                            </label>
-
-                        </div>
+    
+                    <div class="imagen-contacto">
+                        <img src="" alt="">
                     </div>
 
-                    <!-- Aca deberia ir la imagen para controlar que no es un bot.
-                    Si mal no me acuerdo, es parte de la consigna del TP ***REVISAR*** -->
-                    <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
-
-                    <!-- <div class="form-control">
+                </div>
+    
+                <div class="contenido">
+    
+                    <form action="#" id="formregister" method="get" novalidate>
+                        <div class="form-control">
+                            <label for="firstname">Nombre *</label>
+                            <input type="text" id="firstname" name="firstname" required placeholder="Hugo">
+                        </div>
+                        <div class="error" id="error-firstname"></div>
+    
+                        <div class="form-control">
+                            <label for="lastname">Apellido *</label>
+                            <input type="text" id="lastname" name="lastname" required placeholder="Gonzalez">
+                        </div>
+                        <div class="error" id="error-lastname"></div>
+    
+                        <div class="form-control">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required placeholder="hugo-gonzalez@ejemplo.com">
+                        </div>
+                        <div class="error" id="error-email"></div>
+    
+                        <!-- En los formularios de contacto dan la opcion de elegir el pais para determinar el GTM para responder y precargar el código de acceso internacional.
+    
+                        Muchas veces se conjugan estos 2 casilleros en una misma linea, bajo el titulo "Numero de telefono.
                         
-                    </div> -->                   
-
-                    <!-- Bóton para enviar consulta -->
-                    <button class="filled" type="button">Ponerse en contacto</button>
-                    
-                </form>  
+                        Por el momento, voy a comentar esta parte del código en caso de que alguien se anime a hacer el script en JS"-->
+    
+                        <!-- <div class="form-control">
+                            <label for="country">País</label>
+                            <select name="country" id="country" class="form-select">
+                                <option value="">Pais</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BR">Brasil</option>
+                                <option value="CH">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div> -->
+    
+                        <div class="form-control">
+                            <label for="phone">Número de teléfono *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
+                        </div>
+                        <div class="error" id="error-phone"></div>
+    
+                        <!--  En el form de contacto de esta pagina https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' tienen un fieldset interesante debajo del item del telefono, que sirve para que el usuario seleccione su preferencia en cuanto al contacto.
+    
+                        Me parecio interesante de incluir, pero de desarrollarse sera recien en el sprint 3.
+                        Documentacion MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+                        -->
+                        <!-- <fieldset>
+    
+                            <legend>¿Cómo nos comunicamos? *</legend>
+    
+                            <div class="Form-control">
+    
+                                <label for="contact-choice-1">Whatsapp</label>
+                                <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
+                            
+                                <label for="contact-choice-2">Correo electrónico</label>
+                                <input type="radio" id="contact-choice-2" name="contact-choice" value="email">
+    
+                            </div>
+    
+                        </fieldset> -->
+    
+                        <!-- Item para consultar / pedir asesoria sobre un curso
+                        Ref: https://codespaceacademy.com/contacto/ -->
+    
+                         <div class="form-control">
+                            <label for="product">¿Qué curso te interesa? *</label>
+                            <select name="product" id="product" class="form-select" required>
+                                <option value="" class="placeholder">Seleccioná un curso...</option>
+                                <option value="N1">Fundamentos</option>
+                                <option value="N2">Front End</option>
+                                <option value="N3">Full Stack</option>
+                            </select>
+                        </div>
+    
+                        <!-- Espacio para escribir un mensaje inicial de contacto -->
+                        <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
+                        <div class="form-control">
+    
+                            <label for="message">Comentanos tu duda *</label>
+                            <textarea id="message" name="message" required cols="30" rows="10" placeholder="Hola, necesito ayuda para..."></textarea>
+    
+                        </div>
+    
+                        <!-- Descargo de responsabilidad -->
+                        <p>
+                            Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. No vamos a enviarte promociones ni mensajes de otro tipo.
+                        </p>
+    
+                        <div class="form-terms">
+    
+                            <div class="terms">
+    
+                                <input type="checkbox" id="terms">
+                                <label for="terms">Estoy de acuerdo con la <a href="templates/privacy.html">política de privacidad</a>
+                                </label>
+    
+                            </div>
+                        </div>
+    
+                        <!-- Aca deberia ir la imagen para controlar que no es un bot.
+                        Si mal no me acuerdo, es parte de la consigna del TP ***REVISAR*** -->
+                        <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
+    
+                        <!-- <div class="form-control">
+                            
+                        </div> -->                   
+    
+                        <!-- Bóton para enviar consulta -->
+                        <button class="filled" type="button">Ponerse en contacto</button>
+                        
+                    </form>  
+    
+                </div>
 
             </div>
 

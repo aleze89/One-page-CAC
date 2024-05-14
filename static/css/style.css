@@ -63,13 +63,13 @@ h4 {
     font-weight: 400;
 }
 
-li {
+/* li {
     
-}
+} */
 
-img {
+/* img {
 
-}
+} */
 
 
 /* # Componentes */
@@ -102,6 +102,11 @@ nav {
 
 /* ### Botones */
 
+#logo a{
+    color: white;
+    text-decoration: none;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -122,7 +127,23 @@ nav {
     font-weight: 600;
 }
 
+/* .imagen-curso {
+
+} */
+
 /* ### Comportamientos */
+
+#logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
 
 .nav-links a:hover{
     color: var(--tertiary-color);
@@ -142,16 +163,6 @@ section {
 .container {
     max-width: 1200px;
     margin: 0px auto;
-}
-
-/* ### Tarjetas */
-
-.tarjetas {
-
-}
-
-.tarjeta {
-
 }
 
 
@@ -209,7 +220,100 @@ button:focus, input:focus, select:focus, textarea:focus {
 /* # Hero-banner */
 
 
+/* # Acerca de */
+
+#acerca-de .container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+#acerca-de .acerca-de-texto {
+    display: flex;
+}
+
+#acerca-de .video {
+    width: 100%;
+    height: auto;
+}
+
+/* # Nuestros cursos */
+
+#nuestros-cursos .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px
+}
+
+.descripcion {
+    max-width: 720px;
+    text-align: center;
+}
+
+.tarjetas {
+    display:flex;
+    gap: 24px
+}
+
+.tarjetas > * {
+    flex-basis: 100%;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 24px;
+}
+
+/* Estoy tratando de que queden en la misma linea y se visualicen como pastillas. */
+.tarjeta li {
+    display: flex;
+    flex-direction: row;
+    color: red;
+    text-decoration: none;
+    border: red solid 1px;
+    border-radius: 10px;
+    
+}
+
+/* # Detalles cursos */
+
+#detalles-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 35px ;
+}
+
+#detalles-cursos .container {
+    max-width: 1080px;
+    background-color: var(--primary-color);
+    display: flex;
+    padding: 48px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-curso {
+    margin-right: 48px;
+    border-radius: 20px;
+}
+
+
 /* # Formulario */
+
+#contacto .container {
+    display:flex;
+}
+
+#contacto .descripcion {
+    text-align: left;
+    padding: 0 48px 0 0;
+}
+
 
 form {
     display: flex;
@@ -328,7 +432,7 @@ hr {
     color: var(--tertiary-color);
 }
 
-@media(max-width:991px) {
+@media(max-width:720px) {
 
     #footer {
         padding: 30px;
