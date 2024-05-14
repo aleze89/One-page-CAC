@@ -222,8 +222,13 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 /* # Acerca de */
 
-#acerca-de {
-    align-items: center;
+#acerca-de .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#acerca-de .acerca-de-texto {
+    display: flex;
 }
 
 /* # Nuestros cursos */
