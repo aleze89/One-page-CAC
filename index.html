@@ -253,134 +253,144 @@ dsafdf<!DOCTYPE html>
 
             <div class="container">
 
-                <h2>¿Hablamos?</h2>
-                <p>
-                    Si realmente estás dispuesto a cambiar tu futuro y convertirte en el profesional IT que siempre has querido ser, no pierdas más el tiempo y ponte en contacto con nosotros. Vamos a resolver todas tus dudas y te asesoraremos sobre cuál es el itinerario formativo y la modalidad más acorde a tus necesidades y objetivos.
-                </p>
+                <div class="imagen">
 
-                <div class="imagen-contacto">
-                    <img src="" alt="">
+                
+
                 </div>
-
-                <form action="#" id="formregister" method="get" novalidate>
-                    <div class="form-control">
-                        <label for="firstname">Nombre *</label>
-                        <input type="text" id="firstname" name="firstname" required placeholder="Hugo">
-                    </div>
-                    <div class="error" id="error-firstname"></div>
-
-                    <div class="form-control">
-                        <label for="lastname">Apellido *</label>
-                        <input type="text" id="lastname" name="lastname" required placeholder="Gonzalez">
-                    </div>
-                    <div class="error" id="error-lastname"></div>
-
-                    <div class="form-control">
-                        <label for="email">Correo electrónico *</label>
-                        <input type="email" id="email" name="email" required placeholder="hugo-gonzalez@ejemplo.com">
-                    </div>
-                    <div class="error" id="error-email"></div>
-
-                    <!-- En los formularios de contacto dan la opcion de elegir el pais para determinar el GTM para responder y precargar el código de acceso internacional.
-
-                    Muchas veces se conjugan estos 2 casilleros en una misma linea, bajo el titulo "Numero de telefono.
-                    
-                    Por el momento, voy a comentar esta parte del código en caso de que alguien se anime a hacer el script en JS"-->
-
-                    <!-- <div class="form-control">
-                        <label for="country">País</label>
-                        <select name="country" id="country" class="form-select">
-                            <option value="">Pais</option>
-                            <option value="AR">Argentina</option>
-                            <option value="BO">Bolivia</option>
-                            <option value="BR">Brasil</option>
-                            <option value="CH">Chile</option>
-                            <option value="CO">Colombia</option>
-                            <option value="EC">Ecuador</option>
-                            <option value="PY">Paraguay</option>
-                            <option value="PE">Peru</option>
-                            <option value="UY">Uruguay</option>
-                            <option value="VE">Venezuela</option>
-                        </select>
-                    </div> -->
-
-                    <div class="form-control">
-                        <label for="phone">Número de teléfono *</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
-                    </div>
-                    <div class="error" id="error-phone"></div>
-
-                    <!--  En el form de contacto de esta pagina https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' tienen un fieldset interesante debajo del item del telefono, que sirve para que el usuario seleccione su preferencia en cuanto al contacto.
-
-                    Me parecio interesante de incluir, pero de desarrollarse sera recien en el sprint 3.
-                    Documentacion MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
-                    -->
-                    <!-- <fieldset>
-
-                        <legend>¿Cómo nos comunicamos? *</legend>
-
-                        <div class="Form-control">
-
-                            <label for="contact-choice-1">Whatsapp</label>
-                            <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
-                        
-                            <label for="contact-choice-2">Correo electrónico</label>
-                            <input type="radio" id="contact-choice-2" name="contact-choice" value="email">
-
-                        </div>
-
-                    </fieldset> -->
-
-                    <!-- Item para consultar / pedir asesoria sobre un curso
-                    Ref: https://codespaceacademy.com/contacto/ -->
-
-                     <div class="form-control">
-                        <label for="product">¿Qué curso te interesa? *</label>
-                        <select name="product" id="product" class="form-select" required>
-                            <option value="" class="placeholder">Seleccioná un curso...</option>
-                            <option value="N1">Fundamentos</option>
-                            <option value="N2">Front End</option>
-                            <option value="N3">Full Stack</option>
-                        </select>
-                    </div>
-
-                    <!-- Espacio para escribir un mensaje inicial de contacto -->
-                    <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
-                    <div class="form-control">
-
-                        <label for="message">Comentanos tu duda *</label>
-                        <textarea id="message" name="message" required cols="30" rows="10" placeholder="Hola, necesito ayuda para..."></textarea>
-
-                    </div>
-
-                    <!-- Descargo de responsabilidad -->
+    
+                <div class="contenido">
+    
+                    <h2>¿Hablamos?</h2>
                     <p>
-                        Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. No vamos a enviarte promociones ni mensajes de otro tipo.
+                        Si realmente estás dispuesto a cambiar tu futuro y convertirte en el profesional IT que siempre has querido ser, no pierdas más el tiempo y ponte en contacto con nosotros. Vamos a resolver todas tus dudas y te asesoraremos sobre cuál es el itinerario formativo y la modalidad más acorde a tus necesidades y objetivos.
                     </p>
-
-                    <div class="form-terms">
-
-                        <div class="terms">
-
-                            <input type="checkbox" id="terms">
-                            <label for="terms">Estoy de acuerdo con la <a href="templates/privacy.html">política de privacidad</a>
-                            </label>
-
-                        </div>
+    
+                    <div class="imagen-contacto">
+                        <img src="" alt="">
                     </div>
-
-                    <!-- Aca deberia ir la imagen para controlar que no es un bot.
-                    Si mal no me acuerdo, es parte de la consigna del TP ***REVISAR*** -->
-                    <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
-
-                    <!-- <div class="form-control">
+    
+                    <form action="#" id="formregister" method="get" novalidate>
+                        <div class="form-control">
+                            <label for="firstname">Nombre *</label>
+                            <input type="text" id="firstname" name="firstname" required placeholder="Hugo">
+                        </div>
+                        <div class="error" id="error-firstname"></div>
+    
+                        <div class="form-control">
+                            <label for="lastname">Apellido *</label>
+                            <input type="text" id="lastname" name="lastname" required placeholder="Gonzalez">
+                        </div>
+                        <div class="error" id="error-lastname"></div>
+    
+                        <div class="form-control">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required placeholder="hugo-gonzalez@ejemplo.com">
+                        </div>
+                        <div class="error" id="error-email"></div>
+    
+                        <!-- En los formularios de contacto dan la opcion de elegir el pais para determinar el GTM para responder y precargar el código de acceso internacional.
+    
+                        Muchas veces se conjugan estos 2 casilleros en una misma linea, bajo el titulo "Numero de telefono.
                         
-                    </div> -->                   
-
-                    <!-- Bóton para enviar consulta -->
-                    <button class="filled" type="button">Ponerse en contacto</button>
-                    
-                </form>  
+                        Por el momento, voy a comentar esta parte del código en caso de que alguien se anime a hacer el script en JS"-->
+    
+                        <!-- <div class="form-control">
+                            <label for="country">País</label>
+                            <select name="country" id="country" class="form-select">
+                                <option value="">Pais</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BR">Brasil</option>
+                                <option value="CH">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div> -->
+    
+                        <div class="form-control">
+                            <label for="phone">Número de teléfono *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
+                        </div>
+                        <div class="error" id="error-phone"></div>
+    
+                        <!--  En el form de contacto de esta pagina https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' tienen un fieldset interesante debajo del item del telefono, que sirve para que el usuario seleccione su preferencia en cuanto al contacto.
+    
+                        Me parecio interesante de incluir, pero de desarrollarse sera recien en el sprint 3.
+                        Documentacion MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+                        -->
+                        <!-- <fieldset>
+    
+                            <legend>¿Cómo nos comunicamos? *</legend>
+    
+                            <div class="Form-control">
+    
+                                <label for="contact-choice-1">Whatsapp</label>
+                                <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
+                            
+                                <label for="contact-choice-2">Correo electrónico</label>
+                                <input type="radio" id="contact-choice-2" name="contact-choice" value="email">
+    
+                            </div>
+    
+                        </fieldset> -->
+    
+                        <!-- Item para consultar / pedir asesoria sobre un curso
+                        Ref: https://codespaceacademy.com/contacto/ -->
+    
+                         <div class="form-control">
+                            <label for="product">¿Qué curso te interesa? *</label>
+                            <select name="product" id="product" class="form-select" required>
+                                <option value="" class="placeholder">Seleccioná un curso...</option>
+                                <option value="N1">Fundamentos</option>
+                                <option value="N2">Front End</option>
+                                <option value="N3">Full Stack</option>
+                            </select>
+                        </div>
+    
+                        <!-- Espacio para escribir un mensaje inicial de contacto -->
+                        <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
+                        <div class="form-control">
+    
+                            <label for="message">Comentanos tu duda *</label>
+                            <textarea id="message" name="message" required cols="30" rows="10" placeholder="Hola, necesito ayuda para..."></textarea>
+    
+                        </div>
+    
+                        <!-- Descargo de responsabilidad -->
+                        <p>
+                            Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. No vamos a enviarte promociones ni mensajes de otro tipo.
+                        </p>
+    
+                        <div class="form-terms">
+    
+                            <div class="terms">
+    
+                                <input type="checkbox" id="terms">
+                                <label for="terms">Estoy de acuerdo con la <a href="templates/privacy.html">política de privacidad</a>
+                                </label>
+    
+                            </div>
+                        </div>
+    
+                        <!-- Aca deberia ir la imagen para controlar que no es un bot.
+                        Si mal no me acuerdo, es parte de la consigna del TP ***REVISAR*** -->
+                        <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
+    
+                        <!-- <div class="form-control">
+                            
+                        </div> -->                   
+    
+                        <!-- Bóton para enviar consulta -->
+                        <button class="filled" type="button">Ponerse en contacto</button>
+                        
+                    </form>  
+    
+                </div>
 
             </div>
 
