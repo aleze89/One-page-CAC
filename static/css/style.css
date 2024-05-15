@@ -280,6 +280,16 @@ button:focus, input:focus, select:focus, textarea:focus {
     
 }
 
+
+/* # Test nivel */
+
+#test-nivel {
+    background-image: url(../img/curso-nivel-inicial-grande.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+}
+
 /* # Detalles cursos */
 
 #detalles-cursos {
