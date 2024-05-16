@@ -41,7 +41,20 @@ a{
 
 #logo {
     font-weight: bold;
+    display:flex;
+    align-items: center;
 }
+
+#logo img {
+    width: 36px;
+    margin-right: 8px;
+}
+
+#logo a {
+    font-size: 18px;
+}
+
+
 
 h1 {
     font-size: 72px;
