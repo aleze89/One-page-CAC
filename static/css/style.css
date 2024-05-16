@@ -132,6 +132,7 @@ nav hr {
         position: relative;
         visibility: visible;
         filter: invert();
+        cursor: pointer;
     }
     nav .top-bar {
         display: flex;
@@ -145,7 +146,7 @@ nav hr {
     nav .nav-links {
         display: flex;
         flex-direction: column;
-        margin: 36px 0;
+        margin: 24px 0;
         width: fit-content;
     }
 
