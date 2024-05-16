@@ -111,6 +111,11 @@ nav hr {
     visibility: hidden;
 }
 
+.menu-hamburguesa {
+    position: fixed;
+    visibility: hidden;
+}
+
 /* Agregar un script en JS para que al abandonar el banner hero, el fondo se tiña del color secundario. */
 .scrolled {
     background-color: var(--secondary-color);
@@ -123,7 +128,17 @@ nav hr {
         width: 100%;
     } 
 
-    nav #logo {
+    .menu-hamburguesa {
+        position: relative;
+        visibility: visible;
+        filter: invert();
+    }
+    nav .top-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav #logo, .menu-hamburguesa {
         margin-block: 28px;
     }
 
@@ -136,6 +151,8 @@ nav hr {
 
     nav hr {
         visibility: visible;
+        margin: 0 0 0 0;
+        
     }
 }
 
