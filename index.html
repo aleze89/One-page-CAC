@@ -3,23 +3,38 @@ dsafdf<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="static/css/style.css">
-    <title>Cursos - Web</title>
+    <title>AprenDEV</title>
 </head>
 <body>
     <header >
-        <!-- Agregar script con JS para que se apliquen las reglas '.scrolled' al abandonar la seccion #hero-banner -->
-        <nav class="scrolled">
-            <!-- logo -->
-            <div id="logo">
-                <a href="/">
-                    <span>DEVledge</span>
-                </a>
+
+        <nav class="nav-bar scrolled">
+
+            <div class="top-bar">
+
+                <!-- logo -->
+                <div id="logo">
+                    <img src="static\img\logo.svg" alt="Signo gráfico de la marca">
+                    <a href="/">
+                        <span>aprenDEV</span>
+                    </a>
+                </div>
+                <!-- Icono menu hamburguesa. Estado inicial: Hidden -->
+                <div class="menu-hamburguesa">
+                    <img src="static\img\menu.svg" alt="Icono menu hamburguesa">
+                </div>
+
             </div>
+
+            <!-- Separador (Menu responsive) -->
+            <hr>
             <!-- Hipervinculos para el menu -->
             <div id="links">
                 <ul class="nav-links">
@@ -29,7 +44,7 @@ dsafdf<!DOCTYPE html>
                     <li><a href="#contacto" class="button-cta filled">¡Asesorate!</a></li>
             </ul>
             </div>
-
+        <!-- Agregar script con JS para que se apliquen las reglas '.scrolled' al abandonar la seccion #hero-banner -->
         </nav>
     </header>
 
