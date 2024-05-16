@@ -44,7 +44,8 @@ a{
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 72px;
+    line-height: 72px;
     font-weight: 900;
 }
 
@@ -219,22 +220,58 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 /* # Hero-banner */
 
+#hero-banner {
+    background-image: url(../img/banner-hero-grande.jpg);
+    background-size: cover;
+    background-position: Center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+}
+
+#hero-banner .container {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 
 /* # Acerca de */
 
 #acerca-de .container {
+    max-width: 1080px;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 36px;
+    width: 100%;
 }
 
-#acerca-de .acerca-de-texto {
+#acerca-de .texto {
+    align-items: center;
     display: flex;
+    gap: 36px;
 }
 
 #acerca-de .video {
+    aspect-ratio: 16 / 9;
     width: 100%;
-    height: auto;
+}
+
+#acerca-de iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:720px) {
+    #acerca-de .texto {
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+        gap: 16px;
+    }
 }
 
 /* # Nuestros cursos */
