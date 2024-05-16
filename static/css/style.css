@@ -41,8 +41,8 @@ a{
 
 #logo {
     font-weight: bold;
-    display:flex;
-    align-items: center;
+    display: flex;
+    align-self: center;
 }
 
 #logo img {
@@ -53,8 +53,6 @@ a{
 #logo a {
     font-size: 18px;
 }
-
-
 
 h1 {
     font-size: 72px;
@@ -109,6 +107,10 @@ nav {
     padding: 0px 50px;
 }
 
+nav hr {
+    visibility: hidden;
+}
+
 /* Agregar un script en JS para que al abandonar el banner hero, el fondo se tiña del color secundario. */
 .scrolled {
     background-color: var(--secondary-color);
@@ -119,18 +121,21 @@ nav {
         display: inline-block;
         height: fit-content; 
         width: 100%;
-        gap: 36px
     } 
 
     nav #logo {
-        margin-block: 27px;
+        margin-block: 28px;
     }
 
     nav .nav-links {
         display: flex;
         flex-direction: column;
-        margin: 48px 0;
+        margin: 36px 0;
         width: fit-content;
+    }
+
+    nav hr {
+        visibility: visible;
     }
 }
 
