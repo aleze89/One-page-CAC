@@ -449,6 +449,16 @@ button:focus, input:focus, select:focus, textarea:focus {
     flex-basis: 100%;
 }
 
+#contacto :is(h2, p)   {
+    padding-bottom: 16px;
+}
+
+#ponete-en-contacto {
+    margin-top: 24px;
+}
+
+
+
 /* #contacto .container {
     display:flex;
 } */
