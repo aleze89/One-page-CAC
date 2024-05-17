@@ -27,6 +27,43 @@
     text-decoration: none;
 }
 
+/* Efectos */
+
+/* Elevaciones */
+
+.elevacion-1 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.elevacion-2 {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.elevacion-3 {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Iconos pequeños */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Iconos grandes */
+.iconos-grandes {
+    color: var(--tertiary-color);
+    font-size: 36px; 
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 36
+}
+
 
 /* Elementos */
 
@@ -220,6 +257,22 @@ section {
     margin-top: 20px;
 }
 
+.tarjetas {
+    display:flex;
+    gap: 24px
+}
+
+.tarjetas > * {
+    flex-basis: 100%;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 24px;
+}
 
 /* ## Botones */
 
@@ -265,7 +318,7 @@ button {
     outline: transparent;
 }
 
-button:focus, input:focus, select:focus, textarea:focus {
+button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus {
     box-shadow: 0 0 7px var(--tertiary-color-focus);
 }
 
@@ -343,24 +396,6 @@ button:focus, input:focus, select:focus, textarea:focus {
     margin-top: 20px;
 }
 
-.tarjetas {
-    display:flex;
-    gap: 24px
-}
-
-.tarjetas > * {
-    flex-basis: 100%;
-}
-
-.tarjeta {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 24px;
-}
-
 /* Estoy tratando de que queden en la misma linea y se visualicen como pastillas. */
 .tarjeta li {
     display: flex;
@@ -431,7 +466,6 @@ button:focus, input:focus, select:focus, textarea:focus {
     display: flex;
     padding: 48px;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .imagen-curso {
@@ -443,32 +477,62 @@ button:focus, input:focus, select:focus, textarea:focus {
 /* # Formulario */
 
 #contacto .container {
-    display:flex;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
 }
 
-#contacto .descripcion {
-    text-align: left;
-    padding: 0 48px 0 0;
+#contacto .container > * {
+    flex-basis: 100%;
 }
 
+#contacto :is(h2, p)  {
+    padding-bottom: 16px;
+}
 
-form {
+#ponete-en-contacto {
+    margin-top: 24px;
+}
+
+#ponete-en-contacto .nuestros-datos {
+    display: block;
+}
+
+#ponete-en-contacto .tarjeta {
+    margin: 8px 0;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#ponete-en-contacto  .dato-contacto  {
+    display: flex;
+    flex-direction: row;
+    gap: 16px; 
+    /* padding-bottom: 16px; */
+}
+
+/* Parche texto */
+#ponete-en-contacto  .dato-contacto p  {
+    padding-bottom: 0px;
+}
+
+#te-contactamos :is(.form-control, textarea) {
     display: flex;
     flex-direction: column;
 }
 
-input, select, textarea {
+#te-contactamos .letra-chica{
+    font-size: small;
+}
+
+input, select, textarea, fieldset {
     padding: 14px;
     border: 2px solid var(--color-neutral-80);
     border-radius: 7px;
     font-size: 16px;
     margin-bottom: 15px;
     color: var(--secondary-color);
-}
-
-.form-control input, select, textarea {
-    display: flex;
-    flex-direction: column;
+    cursor: pointer;
 }
 
 textarea {
@@ -480,6 +544,39 @@ textarea {
     font-weight: 400;
 }
 
+@media(max-width:720px) {
+    #contacto .container {
+        display: inline;
+    }
+
+    #ponete-en-contacto {
+        text-align: center;
+    }
+
+    #ponete-en-contacto .nuestros-datos {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 48px;
+    }
+
+    #ponete-en-contacto  .dato-contacto  {
+        display: block;
+        padding-bottom: 16px;
+    }
+}
+
+/* ## Comportamientos */
+
+#ponete-en-contacto  .dato-contacto:hover {
+    background-color: var(--primary-color-hover);
+    color:black;
+}
+
+#ponete-en-contacto  .dato-contacto:hover  span {
+    color:var(--tertiary-color-hover);
+}
 
 /* # Pie de página */
 

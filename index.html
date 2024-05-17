@@ -8,6 +8,7 @@ dsafdf<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="static/css/style.css">
     <title>AprenDEV</title>
@@ -292,20 +293,41 @@ dsafdf<!DOCTYPE html>
 
             <div class="container">
 
-                <div class="descripcion">
+                <div id="ponete-en-contacto">
+                    <h2>Ponete en contacto</h2>
+                    <p>
+                        Estamos aca para atenderte, llamanos o mandanos un correo y te respondemos <strong>lo antes posible</strong>.
+                    </p>
+
+                    <!-- Agregar más adelante un script para copiar el dato al hacer click -->
+                    <div class="nuestros-datos">
+
+                        <div class="dato-contacto tarjeta elevacion-1">
+                            <span class="material-symbols-outlined iconos-grandes">call</span>
+                            <div class="dato">
+                                <p><b>Número de telefono</b></p>
+                                <p>+54 9 011 1234-567</p>
+                            </div>
+                        </div>
+                        <div class="dato-contacto tarjeta elevacion-1">
+                            <span class="material-symbols-outlined iconos-grandes">mail</span>
+                            <div class="dato">
+                                <p><b>Buzón de correo</b></p>
+                                <p>Hola!@aprenDEV.com.ar</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div id="te-contactamos" class="tarjeta elevacion-2">
 
                     <h2>¿Hablamos?</h2>
                     <p>
-                        Si realmente estás dispuesto a cambiar tu futuro y convertirte en el profesional IT que siempre has querido ser, no pierdas más el tiempo y ponte en contacto con nosotros. Vamos a resolver todas tus dudas y te asesoraremos sobre cuál es el itinerario formativo y la modalidad más acorde a tus necesidades y objetivos.
+                        Si lo prefieres, puedes completar este formulario y nosotros nos ponemos en contacto con vos. Es <strong>sin cargo</strong> y <strong>libre de compromiso!</strong>
                     </p>
-    
-                    <div class="imagen-contacto">
-                        <img src="" alt="">
-                    </div>
-
-                </div>
-    
-                <div class="contenido">
     
                     <form action="#" id="formregister" method="get" novalidate>
                         <div class="form-control">
@@ -355,16 +377,13 @@ dsafdf<!DOCTYPE html>
                         </div>
                         <div class="error" id="error-phone"></div>
     
-                        <!--  En el form de contacto de esta pagina https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' tienen un fieldset interesante debajo del item del telefono, que sirve para que el usuario seleccione su preferencia en cuanto al contacto.
+                        <!-- Input para elegir la preferencia de contacto. 
+                        Ref: https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' -->
+                        <fieldset>
     
-                        Me parecio interesante de incluir, pero de desarrollarse sera recien en el sprint 3.
-                        Documentacion MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
-                        -->
-                        <!-- <fieldset>
+                            <legend>¿Cómo nos comunicamos?</legend>
     
-                            <legend>¿Cómo nos comunicamos? *</legend>
-    
-                            <div class="Form-control">
+                            <div class="Form-control-preference">
     
                                 <label for="contact-choice-1">Whatsapp</label>
                                 <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
@@ -374,11 +393,10 @@ dsafdf<!DOCTYPE html>
     
                             </div>
     
-                        </fieldset> -->
+                        </fieldset>
     
                         <!-- Item para consultar / pedir asesoria sobre un curso
                         Ref: https://codespaceacademy.com/contacto/ -->
-    
                          <div class="form-control">
                             <label for="product">¿Qué curso te interesa? *</label>
                             <select name="product" id="product" class="form-select" required>
@@ -390,7 +408,6 @@ dsafdf<!DOCTYPE html>
                         </div>
     
                         <!-- Espacio para escribir un mensaje inicial de contacto -->
-                        <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
                         <div class="form-control">
     
                             <label for="message">Comentanos tu duda *</label>
@@ -399,8 +416,8 @@ dsafdf<!DOCTYPE html>
                         </div>
     
                         <!-- Descargo de responsabilidad -->
-                        <p>
-                            Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. No vamos a enviarte promociones ni mensajes de otro tipo.
+                        <p class="letra-chica">
+                            Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. <strong>No vamos a enviarte promociones ni mensajes de otro tipo</strong>.
                         </p>
     
                         <div class="form-terms">
