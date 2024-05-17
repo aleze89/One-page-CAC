@@ -442,6 +442,7 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 #contacto .container {
     display: flex;
+    justify-content: space-between;
     gap: 48px;
 }
 
@@ -449,7 +450,7 @@ button:focus, input:focus, select:focus, textarea:focus {
     flex-basis: 100%;
 }
 
-#contacto :is(h2, p)   {
+#contacto :is(h2, p)  {
     padding-bottom: 16px;
 }
 
@@ -457,11 +458,20 @@ button:focus, input:focus, select:focus, textarea:focus {
     margin-top: 24px;
 }
 
+#ponete-en-contacto .dato-contacto {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#contacto  .dato-contacto p  {
+    padding-bottom: 0px;
+}
+
 #te-contactamos :is(.form-control, textarea) {
     display: flex;
     flex-direction: column;
 }
-
 
 #te-contactamos .letra-chica{
     font-size: small;
@@ -476,11 +486,6 @@ input, select, textarea, fieldset {
     color: var(--secondary-color);
 }
 
-/* .form-control input, select, textarea {
-    display: flex;
-    flex-direction: column;
-} */
-
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
@@ -488,6 +493,26 @@ textarea {
 ::placeholder, .placeholder {
     color: var(--color-neutral-60);
     font-weight: 400;
+}
+
+@media(max-width:720px) {
+    #contacto .container {
+        display: inline;
+    }
+
+    #ponete-en-contacto {
+        text-align: center;
+    }
+
+    #ponete-en-contacto .nuestros-datos {
+        display: flex;
+        justify-content:center;
+        padding-bottom: 48px;
+    }
+
+    #ponete-en-contacto .dato-contacto {
+        gap: 4px;
+    }
 }
 
 
