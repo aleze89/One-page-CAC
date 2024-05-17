@@ -457,38 +457,15 @@ button:focus, input:focus, select:focus, textarea:focus {
     margin-top: 24px;
 }
 
-#te-contactamos {
-
+#te-contactamos :is(.form-control, textarea) {
+    display: flex;
+    flex-direction: column;
 }
 
-#te-contactamos fieldset {
-    padding: 16px;
-}
-
-#te-contactamos fieldset input {
-    display:inline;
-    padding: 16px;
-}
 
 #te-contactamos .letra-chica{
     font-size: small;
 }
-
-
-/* #contacto .container {
-    display:flex;
-} */
-
-/* #contacto .descripcion {
-    text-align: left;
-    padding: 0 48px 0 0;
-} */
-
-
-/* form {
-    display: flex;
-    flex-direction: column;
-} */
 
 input, select, textarea, fieldset {
     padding: 14px;
@@ -499,10 +476,10 @@ input, select, textarea, fieldset {
     color: var(--secondary-color);
 }
 
-.form-control input, select, textarea {
+/* .form-control input, select, textarea {
     display: flex;
     flex-direction: column;
-}
+} */
 
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
