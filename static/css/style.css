@@ -442,7 +442,7 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 #contacto .container {
     display: flex;
-    gap; 48px;
+    gap: 48px;
 }
 
 #contacto .container > * {
@@ -457,6 +457,22 @@ button:focus, input:focus, select:focus, textarea:focus {
     margin-top: 24px;
 }
 
+#te-contactamos {
+
+}
+
+#te-contactamos fieldset {
+    padding: 16px;
+}
+
+#te-contactamos fieldset input {
+    display:inline;
+    padding: 16px;
+}
+
+#te-contactamos .letra-chica{
+    font-size: small;
+}
 
 
 /* #contacto .container {
@@ -474,7 +490,7 @@ button:focus, input:focus, select:focus, textarea:focus {
     flex-direction: column;
 } */
 
-input, select, textarea {
+input, select, textarea, fieldset {
     padding: 14px;
     border: 2px solid var(--color-neutral-80);
     border-radius: 7px;

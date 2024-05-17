@@ -314,7 +314,7 @@ dsafdf<!DOCTYPE html>
 
                 </div>
 
-                <div id="te-contactamos">
+                <div id="te-contactamos" class="tarjeta">
 
                     <h2>¿Hablamos?</h2>
                     <p>
@@ -369,12 +369,9 @@ dsafdf<!DOCTYPE html>
                         </div>
                         <div class="error" id="error-phone"></div>
     
-                        <!--  En el form de contacto de esta pagina https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' tienen un fieldset interesante debajo del item del telefono, que sirve para que el usuario seleccione su preferencia en cuanto al contacto.
-    
-                        Me parecio interesante de incluir, pero de desarrollarse sera recien en el sprint 3.
-                        Documentacion MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
-                        -->
-                        <!-- <fieldset>
+                        <!-- Input para elegir la preferencia de contacto. 
+                        Ref: https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' -->
+                        <fieldset>
     
                             <legend>¿Cómo nos comunicamos? *</legend>
     
@@ -388,11 +385,10 @@ dsafdf<!DOCTYPE html>
     
                             </div>
     
-                        </fieldset> -->
+                        </fieldset>
     
                         <!-- Item para consultar / pedir asesoria sobre un curso
                         Ref: https://codespaceacademy.com/contacto/ -->
-    
                          <div class="form-control">
                             <label for="product">¿Qué curso te interesa? *</label>
                             <select name="product" id="product" class="form-select" required>
@@ -404,7 +400,6 @@ dsafdf<!DOCTYPE html>
                         </div>
     
                         <!-- Espacio para escribir un mensaje inicial de contacto -->
-                        <!-- Le puse clase 'form-control' por inercia. ***REVISAR*** -->
                         <div class="form-control">
     
                             <label for="message">Comentanos tu duda *</label>
@@ -413,8 +408,8 @@ dsafdf<!DOCTYPE html>
                         </div>
     
                         <!-- Descargo de responsabilidad -->
-                        <p>
-                            Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. No vamos a enviarte promociones ni mensajes de otro tipo.
+                        <p class="letra-chica">
+                            Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. <strong>No vamos a enviarte promociones ni mensajes de otro tipo</strong>.
                         </p>
     
                         <div class="form-terms">
