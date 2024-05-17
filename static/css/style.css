@@ -217,6 +217,7 @@ section {
 .container {
     max-width: 1200px;
     margin: 0px auto;
+    margin-top: 20px;
 }
 
 
@@ -339,6 +340,7 @@ button:focus, input:focus, select:focus, textarea:focus {
 .descripcion {
     max-width: 720px;
     text-align: center;
+    margin-top: 20px;
 }
 
 .tarjetas {
