@@ -29,6 +29,13 @@
 
 /* Efectos */
 
+/* Trancisiones */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 /* Elevaciones */
 
 .elevacion-1 {
@@ -254,7 +261,6 @@ section {
 .container {
     max-width: 1200px;
     margin: 0px auto;
-    margin-top: 20px;
 }
 
 .tarjetas {
@@ -335,7 +341,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 }
 
 #hero-banner .container {
-    height: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
