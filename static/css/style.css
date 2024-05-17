@@ -441,19 +441,28 @@ button:focus, input:focus, select:focus, textarea:focus {
 /* # Formulario */
 
 #contacto .container {
-    display:flex;
+    display: flex;
+    gap; 48px;
 }
 
-#contacto .descripcion {
+#contacto .container > * {
+    flex-basis: 100%;
+}
+
+/* #contacto .container {
+    display:flex;
+} */
+
+/* #contacto .descripcion {
     text-align: left;
     padding: 0 48px 0 0;
-}
+} */
 
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
-}
+} */
 
 input, select, textarea {
     padding: 14px;
