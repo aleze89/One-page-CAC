@@ -341,7 +341,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 }
 
 #hero-banner .container {
-    height: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
