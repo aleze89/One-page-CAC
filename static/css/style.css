@@ -29,6 +29,13 @@
 
 /* Efectos */
 
+/* Trancisiones */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 /* Elevaciones */
 
 .elevacion-1 {
