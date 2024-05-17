@@ -27,6 +27,23 @@
     text-decoration: none;
 }
 
+/* Efectos */
+
+/* Elevaciones */
+
+.elevacion-1 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.elevacion-2 {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.elevacion-3 {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Iconos pequeños */
 .material-symbols-outlined {
   font-variation-settings:
@@ -42,7 +59,7 @@
     font-size: 36px; 
     font-variation-settings:
     'FILL' 1,
-    'wght' 600,
+    'wght' 700,
     'GRAD' 0,
     'opsz' 36
 }
@@ -239,6 +256,22 @@ section {
     margin: 0px auto;
 }
 
+.tarjetas {
+    display:flex;
+    gap: 24px
+}
+
+.tarjetas > * {
+    flex-basis: 100%;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 24px;
+}
 
 /* ## Botones */
 
@@ -284,7 +317,7 @@ button {
     outline: transparent;
 }
 
-button:focus, input:focus, select:focus, textarea:focus {
+button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus {
     box-shadow: 0 0 7px var(--tertiary-color-focus);
 }
 
@@ -361,24 +394,6 @@ button:focus, input:focus, select:focus, textarea:focus {
     text-align: center;
 }
 
-.tarjetas {
-    display:flex;
-    gap: 24px
-}
-
-.tarjetas > * {
-    flex-basis: 100%;
-}
-
-.tarjeta {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 24px;
-}
-
 /* Estoy tratando de que queden en la misma linea y se visualicen como pastillas. */
 .tarjeta li {
     display: flex;
@@ -449,7 +464,6 @@ button:focus, input:focus, select:focus, textarea:focus {
     display: flex;
     padding: 48px;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .imagen-curso {
@@ -553,8 +567,14 @@ textarea {
 
 /* ## Comportamientos */
 
+#ponete-en-contacto  .dato-contacto:hover {
+    background-color: var(--primary-color-hover);
+    color:black;
+}
 
-
+#ponete-en-contacto  .dato-contacto:hover  span {
+    color:var(--tertiary-color-hover);
+}
 
 /* # Pie de página */
 
