@@ -27,12 +27,24 @@
     text-decoration: none;
 }
 
+/* Iconos pequeños */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
   'wght' 600,
   'GRAD' 0,
   'opsz' 24
+}
+
+/* Iconos grandes */
+.iconos-grandes {
+    color: var(--tertiary-color);
+    font-size: 36px; 
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 36
 }
 
 
@@ -466,16 +478,6 @@ button:focus, input:focus, select:focus, textarea:focus {
     margin-top: 24px;
 }
 
-#ponete-en-contacto span {
-    color: var(--tertiary-color);
-    font-size: 36px; 
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 600,
-    'GRAD' 0,
-    'opsz' 36
-}
-
 #ponete-en-contacto .nuestros-datos {
     display: block;
 }
@@ -548,6 +550,10 @@ textarea {
         padding-bottom: 16px;
     }
 }
+
+/* ## Comportamientos */
+
+
 
 
 /* # Pie de página */
