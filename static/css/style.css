@@ -455,7 +455,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     padding: 8px 16px;
 }
 
-@media(max-width:850px) {
+@media(max-width:940px) {
     .tarjetas {
         display: block;
         min-width: 300px;
