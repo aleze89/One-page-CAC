@@ -547,7 +547,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #detalles-cursos .pros li:before{
     list-style: none;
     content: '✓ ';
-    padding-left: 16px;
+    padding-left: 32px;
   }
 
 
