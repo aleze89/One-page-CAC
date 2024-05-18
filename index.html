@@ -101,10 +101,9 @@
 
                 <div class="descripcion">
 
-                    <h4>Nuestros Cursos</h4>
                     <h2>Desarrollo web: de cero a especialista</h2>
                     <p>
-                        Ofrecemos una variedad de opciones para que puedas elegir el camino de aprendizaje que mejor se adapte a tus necesidades y objetivo:
+                        Elige el camino de aprendizaje que mejor se adapte a tus necesidades y objetivo:
                     </p>
 
                 </div>
@@ -112,59 +111,71 @@
                 <div class="tarjetas">
 
                     <div class="curso-inicial tarjeta elevacion-2">
-                        <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
-                        <h4>Nivel inicial</h4>
-                        <h3>Fundamentos</h3>
-                        <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
-                        Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
-                        <ul class="">
-                            <li>90 hs</li>
-                            <li>Asincrónico</li>
-                        </ul>
+
+                        <h4 class="pildora">Nivel inicial</h4>
+                        <h3>Fundamentos de programación</h3>
                         <p>
-                            Aprende los fundamentos de la programación, domina el lenguaje nativo de Internet e ingresa al mundo del desarrollo web.
+                            Aprende las bases de la programación, familiarizate con el pensamiento logico y computacional. <br>Domina el lenguaje nativo de Internet e ingresa al mundo del desarrollo web.
                         </p>
+                        <ul>
+                            <li><span class="material-symbols-outlined">stacks</span>
+                                <p>8 Modulos</p>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">schedule</span>
+                                <p>24hs</p>
+                            </li>
+                        </ul>
                         <a href="#curso-inicial">
                             <button class="outlined" type="button">Más información</button>
                         </a>
-    
+
                     </div>
-    
+
                     <div class="curso-intermedio tarjeta elevacion-2">
-                        <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
-                        <h4>Nivel intermedio</h4>
-                        <h3>Front-end</h3>
-                        <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
-                        Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
-                        <ul class="">
-                            <li>120 hs</li>
-                            <li>Sincrónico</li>
-                        </ul>
+
+                        <h4 class="pildora">Nivel intermedio</h4>
+                        <h3>Desarrollo web <br>Front-End</h3>
                         <p>
                             Domina el desarrollo del lado del cliente y descubre cómo crear interfaces impactantes, profesionales y optimizadas. Aprende a utilizar JavaScript para crear experiencias altamente interactivas.
                         </p>
+                        <ul>
+                            <li><span class="material-symbols-outlined">stacks</span>
+                                <p>16 Modulos</p>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">schedule</span>
+                                <p>48hs</p>
+                            </li>
+                        </ul>
                         <a href="#curso-intermedio">
                             <button class="outlined" type="button">Más información</button>
                         </a>
+
                     </div>
-    
+
                     <div class="curso-avanzado tarjeta elevacion-2">
-                        <!-- Por el momento la volanta (lo que va arriba del titulo) lo desarrollo como un h4, pero el estilo dependera de como desarrollemos la hoja de estilo (ver referencias). -->
-                        <h4>Nivel avanzado</h4>
-                        <h3>Full stack</h3>
-                        <!-- La siguiente linea podria ser resuelta como una lista desordenada, pero como no tendra interactividad, no creo que tenga mucho sentido.
-                        Sin embargo, agrego este comentario para recordar que mas adelante tiene que tener un estilo diferente al cuerpo de texto. (ver referencias) -->
-                        <ul class="">
-                            <li>240 hs</li>
-                            <li>Sincrónico</li>
-                        </ul>
+
+                        <h4 class="pildora">Nivel avanzado</h4>
+                        <h3>Desarrollo web <br>Full Stack</h3>
                         <p>
-                            Domina las tecnologías del front-end y del back-end; aprende a trabajar con bases de datos, APIs y herramientas profesionales para crear proyectos complejos y de alto impacto.
+                            Conquista las tecnologías del front-end y del back-end; aprende a trabajar con bases de datos, APIs y herramientas profesionales para crear proyectos complejos y de alto impacto.
+
                         </p>
-                        
+                        <ul>
+                            <li><span class="material-symbols-outlined">stacks</span>
+                                <p>32 Modulos</p>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">schedule</span>
+                                <p>96hs</p>
+                            </li>
+                        </ul>
                         <a href="#curso-avanzado">
                             <button class="outlined" type="button">Más información</button>
                         </a>
+
+                    </div>
     
                     </div>
 
@@ -302,14 +313,14 @@
                     <!-- Agregar más adelante un script para copiar el dato al hacer click -->
                     <div class="nuestros-datos">
 
-                        <div class="dato-contacto tarjeta elevacion-1">
+                        <div class="dato-contacto tarjeta interactiva elevacion-1">
                             <span class="material-symbols-outlined iconos-grandes">call</span>
                             <div class="dato">
                                 <p><b>Número de telefono</b></p>
                                 <p>+54 9 011 1234-567</p>
                             </div>
                         </div>
-                        <div class="dato-contacto tarjeta elevacion-1">
+                        <div class="dato-contacto tarjeta interactiva elevacion-1">
                             <span class="material-symbols-outlined iconos-grandes">mail</span>
                             <div class="dato">
                                 <p><b>Buzón de correo</b></p>
@@ -389,8 +400,7 @@
                                 <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
                             
                                 <label for="contact-choice-2">Correo electrónico</label>
-                                <input type="radio" id="contact-choice-2" name="contact-choice" value="email">
-    
+                                <input type="radio" id="contact-choice-2" name="contact-choice" value="email">    
                             </div>
     
                         </fieldset>
