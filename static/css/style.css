@@ -119,18 +119,26 @@ h4 {
     font-weight: 400;
 }
 
-/* li {
-    
-} */
+.lista-items span {
+    color: var(--tertiary-color);
+}
 
-/* img {
+.lista-items ul {
+    display: inline-flex;
+    gap: 24px;
+    /* margin-bottom: 8px; */
+}
 
-} */
+.lista-items li {
+    display: inline-flex;
+    gap:8px;
+    align-items: center;
+    list-style: none;
+}
 
-
-/* # Componentes */
-
-/* ## Barra de navegacion */
+.lista-items p {
+    font-weight:700
+}
 
 header {
     /* background-color: transparent; */
@@ -281,23 +289,6 @@ section {
     background-color: var(--primary-color);
     border-radius: 20px;
     padding: 24px;
-}
-
-.tarjeta ul {
-    display: inline-flex;
-    gap: 24px;
-    /* margin-bottom: 8px; */
-}
-
-.tarjeta li {
-    display: inline-flex;
-    gap:8px;
-    align-items: center;
-    list-style: none;
-}
-
-.tarjeta span {
-    color: var(--tertiary-color);
 }
 
 /* ## Comportamientos */
