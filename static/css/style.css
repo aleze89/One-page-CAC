@@ -528,6 +528,15 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     border-radius: 20px;
 }
 
+#detalles-cursos li{
+    list-style: none;
+  }
+
+#detalles-cursos .pros li:before{
+    list-style: none;
+    content: '✓ ';
+  }
+
 
 /* # Formulario */
 
