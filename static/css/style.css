@@ -255,7 +255,7 @@ nav hr {
 /* ## Contenedores */
 
 section {
-    padding: 70px 20px;
+    padding: 60px 20px;
 }
 
 .container {
@@ -438,7 +438,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 48px
+    gap: 24px;
 }
 
 #nuestros-cursos .descripcion {
