@@ -457,7 +457,8 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 
 @media(max-width:940px) {
     .tarjetas {
-        display: block;
+        display: flex;
+        flex-direction: column;
         min-width: 300px;
     }
 }
