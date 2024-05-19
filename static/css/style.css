@@ -648,6 +648,15 @@ textarea {
     font-size: small;
 }
 
+#formregister > #error{
+    width: 200px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin: auto;
+    padding: 15px;
+}
+
 ::placeholder, .placeholder {
     color: var(--color-neutral-60);
     font-weight: 400;
