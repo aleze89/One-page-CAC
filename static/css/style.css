@@ -558,23 +558,11 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
   } 
 
 #detalles-cursos button {
-    margin: 8px;
+    margin: 8px 16px 0 0;
     padding: 16px 18px;
 }
 
-
-/* ## Responsive */
-
-/* @media(max-width:940px) {
-
-    #detalles-cursos .imagen-curso {
-        width:fit-content;
-    }
-
-    #detalles-cursos .pros {
-        padding-left: 15px;
-    }
-} */
+/* # Comportamiento Responsive */
 
 @media(max-width:940px) {
 
