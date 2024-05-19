@@ -517,39 +517,68 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 
 /* # Detalles cursos */
 
-#detalles-cursos {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
 #detalles-cursos .container {
     max-width: 1080px;
-    background-color: var(--primary-color);
-    display: flex;
+    display:flex;
+    gap: 36px;
     padding: 48px;
     border-radius: 20px;
 }
 
-.imagen-curso {
-    margin-right: 48px;
-    border-radius: 20px;
+#detalles-cursos .container.reverse {
+    flex-direction: row-reverse;
+}
+
+#detalles-cursos .texto-curso {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#detalles-cursos img {
+    border-radius: 10px;
+    height: 100%;
+    width: 25vw;
+    object-fit: cover;    
 }
 
 #detalles-cursos h4 {
     font-weight: 700;
 }
 
-#detalles-cursos li{
+#detalles-cursos .pros {
+    padding-left: 30px;
     list-style: none;
-  }
+}
 
 #detalles-cursos .pros li:before{
-    list-style: none;
     content: '✓ ';
-    padding-left: 32px;
-  }
+    color: var(--tertiary-color);
+    font-weight: 900;
+  } 
 
+#detalles-cursos button {
+    margin: 8px 16px 0 0;
+    padding: 16px 18px;
+}
+
+/* # Comportamiento Responsive */
+
+@media(max-width:940px) {
+
+    #detalles-cursos .imagen-curso {
+        display:none
+    }
+
+    #detalles-cursos .container {
+        max-width: 720px;
+        gap: 0px;
+    }
+
+    #detalles-cursos .pros li:before {
+        padding-left: 0px;
+    }
+} 
 
 /* # Formulario */
 
@@ -578,14 +607,12 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #ponete-en-contacto .tarjeta {
     margin: 8px 0;
     width: fit-content;
-    cursor: pointer;
 }
 
 #ponete-en-contacto  .dato-contacto  {
     display: flex;
     flex-direction: row;
     gap: 16px; 
-    /* padding-bottom: 16px; */
 }
 
 /* Parche texto */
@@ -651,12 +678,12 @@ textarea {
 
 /* ## Comportamientos */
 
-#ponete-en-contacto  .dato-contacto:hover {
+#ponete-en-contacto  .interactiva.dato-contacto:hover {
     background-color: var(--primary-color-hover);
     color:black;
 }
 
-#ponete-en-contacto  .dato-contacto:hover  span {
+#ponete-en-contacto  .interactiva.dato-contacto:hover  span {
     color:var(--tertiary-color-hover);
 }
 
