@@ -598,10 +598,6 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     flex-direction: column;
 }
 
-#te-contactamos .letra-chica{
-    font-size: small;
-}
-
 input, select, textarea, fieldset {
     padding: 14px;
     border: 2px solid var(--color-neutral-80);
@@ -612,8 +608,17 @@ input, select, textarea, fieldset {
     cursor: pointer;
 }
 
+fieldset input {
+    margin-bottom: 0px;
+}
+
+
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+#te-contactamos .letra-chica{
+    font-size: small;
 }
 
 ::placeholder, .placeholder {
