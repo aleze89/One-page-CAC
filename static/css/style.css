@@ -525,15 +525,12 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     border-radius: 20px;
 }
 
-
-
-/* .texto-curso > :not(ul) {
-    color: #ba1a1a;
-    align-items: start;
-    justify-content: space-between;
+#detalles-cursos .texto-curso {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
     
-} */
+}
 
 
 #detalles-cursos img {
@@ -541,8 +538,6 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     height: 100%;
     object-fit: cover;    
 }
-
-
 
 #detalles-cursos h4 {
     font-weight: 700;
@@ -561,7 +556,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 /* ## Responsive */
 
 
-@media(max-width:720px) {
+@media(max-width:1025px) {
 
     #detalles-cursos .imagen-curso {
         height: 0px;
