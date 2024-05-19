@@ -517,24 +517,32 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 
 /* # Detalles cursos */
 
-#detalles-cursos {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
 #detalles-cursos .container {
     max-width: 1080px;
-    background-color: var(--primary-color);
-    display: flex;
+    display:flex;
+    gap: 48px;
     padding: 48px;
     border-radius: 20px;
 }
 
-.imagen-curso {
-    margin-right: 48px;
-    border-radius: 20px;
+
+
+/* .texto-curso > :not(ul) {
+    color: #ba1a1a;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+    
+} */
+
+
+#detalles-cursos img {
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;    
 }
+
+
 
 #detalles-cursos h4 {
     font-weight: 700;
@@ -548,8 +556,27 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     list-style: none;
     content: '✓ ';
     padding-left: 32px;
-  }
+  } 
 
+/* ## Responsive */
+
+
+@media(max-width:720px) {
+
+    #detalles-cursos .imagen-curso {
+        height: 0px;
+        width: 0px;
+        visibility: hidden;
+    }
+
+    #detalles-cursos .container {
+        gap: 0px;
+    }
+
+    #detalles-cursos .pros li:before {
+        padding-left: 0px;
+    }
+}
 
 /* # Formulario */
 
