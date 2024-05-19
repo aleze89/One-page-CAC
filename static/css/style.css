@@ -578,14 +578,12 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #ponete-en-contacto .tarjeta {
     margin: 8px 0;
     width: fit-content;
-    cursor: pointer;
 }
 
 #ponete-en-contacto  .dato-contacto  {
     display: flex;
     flex-direction: row;
     gap: 16px; 
-    /* padding-bottom: 16px; */
 }
 
 /* Parche texto */
@@ -651,12 +649,12 @@ textarea {
 
 /* ## Comportamientos */
 
-#ponete-en-contacto  .dato-contacto:hover {
+#ponete-en-contacto  .interactiva.dato-contacto:hover {
     background-color: var(--primary-color-hover);
     color:black;
 }
 
-#ponete-en-contacto  .dato-contacto:hover  span {
+#ponete-en-contacto  .interactiva.dato-contacto:hover  span {
     color:var(--tertiary-color-hover);
 }
 
