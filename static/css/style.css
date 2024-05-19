@@ -525,6 +525,10 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     border-radius: 20px;
 }
 
+#detalles-cursos .container.reverse {
+    flex-direction: row-reverse;
+}
+
 #detalles-cursos .texto-curso {
     display: flex;
     flex-direction: column;
@@ -536,6 +540,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #detalles-cursos img {
     border-radius: 10px;
     height: 100%;
+    width: 360px;
     object-fit: cover;    
 }
 
