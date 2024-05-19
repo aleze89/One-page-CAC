@@ -429,23 +429,22 @@
                     </p>
     
                     <form action="#" id="formregister" method="get" novalidate>
+                        
                         <div class="form-control">
                             <label for="firstname">Nombre *</label>
                             <input id="firstname" name="firstname" type="text" placeholder="Hugo">
                         </div>
-                        <p id="error-firstname" class="error"></p>
-                        
                         
     
                         <div class="form-control">
                             <label for="lastname">Apellido *</label>
-                            <input type="text" id="lastname" name="lastname" required placeholder="Gonzalez">
+                            <input id="lastname" name="lastname" type="text" placeholder="Gonzalez">
                         </div>
                         <div class="error" id="error-lastname"></div>
     
                         <div class="form-control">
                             <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" name="email" required placeholder="hugo-gonzalez@ejemplo.com">
+                            <input id="email" name="email" type="email" placeholder="hugo-gonzalez@ejemplo.com">
                         </div>
                         <div class="error" id="error-email"></div>
     
@@ -474,7 +473,7 @@
     
                         <div class="form-control">
                             <label for="phone">Número de teléfono *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="+54 123 4567">
+                            <input id="phone" name="phone" type="tel" placeholder="+54 123 4567">
                         </div>
                         <div class="error" id="error-phone"></div>
     
@@ -484,7 +483,7 @@
                         <fieldset>
     
     
-                            <div class="Form-control-preference">
+                            <div id="comunicacion" class="Form-control-preference">
     
                                 <label for="contact-choice-1">Whatsapp</label>
                                 <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
@@ -499,7 +498,7 @@
                         Ref: https://codespaceacademy.com/contacto/ -->
                          <div class="form-control">
                             <label for="product">¿Qué curso te interesa? *</label>
-                            <select name="product" id="product" class="form-select" required>
+                            <select name="product" id="product" class="form-select">
                                 <option value="" class="placeholder">Seleccioná un curso...</option>
                                 <option value="N1">Fundamentos de la programación</option>
                                 <option value="N2">Desarrollo web Front End</option>
@@ -530,6 +529,8 @@
     
                             </div>
                         </div>
+
+                        <p id="error" class="error"></p>
     
                         <!-- Aca deberia ir la imagen para controlar que no es un bot.
                         Si mal no me acuerdo, es parte de la consigna del TP ***REVISAR*** -->

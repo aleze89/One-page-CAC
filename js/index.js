@@ -1,8 +1,12 @@
 const formRegister=document.getElementById("formregister")
 const inputNombre=document.getElementById("firstname");
+const inputApellido=document.getElementById("lastname");
 const inputEmail=document.getElementById("email");
-const inputTurno=document.getElementById("turno");
-const parrafo=document.getElementById("error-firstname");
+const inputTelefono=document.getElementById("phone");
+const inputComunicacion=document.getElementById("comunicacion");
+const inputCurso=document.getElementById("product");
+const inputMensaje=document.getElementById("message");
+const parrafo=document.getElementById("error");
 
 // console.log(inputNombre);
 
@@ -18,15 +22,35 @@ if(inputNombre.value.length<3){
    valor=true;
 }
 
-// if(!regexEmail.test(inputEmail.value)){
-//     warning+=`El email no es valido<br>`
-//     valor=true;
-// }
-// if(inputTurno.value=="default"){
-//     warning+=`Elija una opcion <br>`
-//     valor=true;
-// }
+if(inputApellido.value.length<3){
+    warning+=`El apellido es corto<br>`
+    valor=true;
+}
 
+if(!regexEmail.test(inputEmail.value)){
+    warning+=`El email no es valido<br>`
+    valor=true;
+}
+
+if(inputTelefono.value.length<10) {
+    warning+=`El teléfono no es valido<br>`
+    valor=true;
+}
+
+if(inputComunicacion.value=="default"){
+    warning+=`Elija una opcion <br>`
+    valor=true;
+}
+
+if(inputCurso.value=="default"){
+    warning+=`Elija una opcion <br>`
+    valor=true;
+}
+
+if(inputMensaje.value.length<10) {
+    warning+=`Que mensaje quiere dejarnos?<br>`
+    valor=true;
+}
 
 if(valor){
     parrafo.innerHTML=warning;
