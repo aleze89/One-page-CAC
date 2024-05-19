@@ -431,9 +431,11 @@
                     <form action="#" id="formregister" method="get" novalidate>
                         <div class="form-control">
                             <label for="firstname">Nombre *</label>
-                            <input type="text" id="firstname" name="firstname" required placeholder="Hugo">
+                            <input id="firstname" name="firstname" type="text" placeholder="Hugo">
                         </div>
-                        <div class="error" id="error-firstname"></div>
+                        <p id="error-firstname" class="error"></p>
+                        
+                        
     
                         <div class="form-control">
                             <label for="lastname">Apellido *</label>
@@ -538,7 +540,7 @@
                         </div> -->                   
     
                         <!-- Bóton para enviar consulta -->
-                        <button class="filled" type="button">Ponerse en contacto</button>
+                        <button class="filled" type="submit">Ponerse en contacto</button>
                         
                     </form>  
     
@@ -592,5 +594,7 @@
         </div>
 
     </footer>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
