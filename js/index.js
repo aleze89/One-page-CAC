@@ -8,7 +8,6 @@ const inputCurso=document.getElementById("product");
 const inputMensaje=document.getElementById("message");
 const parrafo=document.getElementById("error");
 
-// console.log(inputNombre);
 
 formRegister.addEventListener("submit",e=>{
 e.preventDefault();
@@ -16,6 +15,8 @@ let warning="";
 let valor=false;
 parrafo.innerHTML="";
 let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+let regexPhone = /^\d+$/;
+
 
 if(inputNombre.value.length<3){
    warning+=`El nombre es corto<br>`
@@ -32,9 +33,13 @@ if(!regexEmail.test(inputEmail.value)){
     valor=true;
 }
 
-if(inputTelefono.value.length<10) {
-    warning+=`El teléfono no es valido<br>`
-    valor=true;
+if (!regexPhone.test(inputTelefono.value) || inputTelefono.value.length < 10) {
+    if (!regexPhone.test(inputTelefono.value)) {
+        warning += `El teléfono solo debe contener números<br>`;
+    } else {
+        warning += `El teléfono no es valido<br>`;
+    }
+    valor = true;
 }
 
 if(inputComunicacion.value=="default"){
