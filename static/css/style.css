@@ -616,6 +616,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 }
 
 /* Parche texto */
+
 #ponete-en-contacto  .dato-contacto p  {
     padding-bottom: 0px;
 }
@@ -630,7 +631,7 @@ input, select, textarea, fieldset {
     border: 2px solid var(--color-neutral-80);
     border-radius: 7px;
     font-size: 16px;
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
     color: var(--secondary-color);
     cursor: pointer;
 }
@@ -648,14 +649,52 @@ textarea {
     font-size: small;
 }
 
-#formregister > #error{
+.form-control .lastname {
+    margin-top: 15px;
+}
+
+.form-control .email {
+    margin-top: 15px;
+}
+
+.form-control .phone {
+    margin-top: 15px;
+}
+
+div .comunicacion {
+    margin-top: 15px;
+}
+
+.form-control .product {
+    margin-top: 15px;
+}
+
+.form-control .message {
+    margin-top: 15px;
+}
+/* #formregister > #error{
     width: 200px;
     text-align: center;
     color: red;
     font-weight: bold;
     margin: auto;
     padding: 15px;
+} */
+
+        /*Mensaje de Error y Envio en formulario*/
+
+.error {
+    color:red;
+    font-size: 0.9em;
+    margin-top: 2px;
 }
+
+.status-message {
+    color: green;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
 
 ::placeholder, .placeholder {
     color: var(--color-neutral-60);

@@ -6,20 +6,22 @@ const inputTelefono=document.getElementById("phone");
 const inputComunicacion=document.getElementById("comunicacion");
 const inputCurso=document.getElementById("product");
 const inputMensaje=document.getElementById("message");
-const parrafo=document.getElementById("error");
+const statusMessage=document.getElementById("status-message");
 
 
 formRegister.addEventListener("submit",e=>{
-e.preventDefault();
-let warning="";
-let valor=false;
-parrafo.innerHTML="";
-let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-let regexPhone = /^\d+$/;
+    e.preventDefault();
+    let valor=false;
+    
+    document.querySelectorAll('.error').forEach(el => el.innerHTML = '');
+    statusMessage.innerHTML='';
+
+    let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let regexPhone = /^\d+$/;
 
 
 if(inputNombre.value.length<3){
-   warning+=`El nombre es corto<br>`
+   document.getElementById("error-firstname").innerHTML = `El nombre es corto`;
    valor=true;
 }
 
