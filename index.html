@@ -437,22 +437,23 @@
                     <form action="#" id="formregister" method="get" novalidate>
                         
                         <div class="form-control">
-                            <label for="firstname">Nombre *</label>
+                            <label for="firstname" class="firstname">Nombre *</label>
                             <input id="firstname" name="firstname" type="text" placeholder="Hugo">
+                            <div class="error" id="error-firstname"></div>
                         </div>
                         
     
                         <div class="form-control">
-                            <label for="lastname">Apellido *</label>
+                            <label for="lastname" class="lastname">Apellido *</label>
                             <input id="lastname" name="lastname" type="text" placeholder="Gonzalez">
+                            <div class="error" id="error-lastname"></div>
                         </div>
-                        <div class="error" id="error-lastname"></div>
     
                         <div class="form-control">
-                            <label for="email">Correo electrónico *</label>
+                            <label for="email" class="email">Correo electrónico *</label>
                             <input id="email" name="email" type="email" placeholder="hugo-gonzalez@ejemplo.com">
+                            <div class="error" id="error-email"></div>
                         </div>
-                        <div class="error" id="error-email"></div>
     
                         <!-- En los formularios de contacto dan la opcion de elegir el pais para determinar el GTM para responder y precargar el código de acceso internacional.
     
@@ -478,46 +479,48 @@
                         </div> -->
     
                         <div class="form-control">
-                            <label for="phone">Número de teléfono *</label>
-                            <input id="phone" name="phone" type="tel" placeholder="+54 123 4567">
+                            <label for="phone" class="phone">Número de teléfono *</label>
+                            <input id="phone" name="phone" type="tel" placeholder="+54 9112473 4567">
+                            <div class="error" id="error-phone"></div>
                         </div>
-                        <div class="error" id="error-phone"></div>
     
                         <!-- Input para elegir la preferencia de contacto. 
                         Ref: https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' -->
-                        <legend>¿Cómo nos comunicamos?</legend>
+                        <div class="comunicacion">¿Cómo nos comunicamos?</div>
                         <fieldset>
 
     
                             <div id="comunicacion" class="Form-control-preference">                    
     
-                                <label for="contact-choice-1">Whatsapp</label>
+                                <label for="contact-choice-1" >Whatsapp</label>
                                 <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
                             
-                                <label for="contact-choice-2">Correo electrónico</label>
+                                <label for="contact-choice-2" >Correo electrónico</label>
                                 <input type="radio" id="contact-choice-2" name="contact-choice" value="email">    
                             </div>
-    
+                            
                         </fieldset>
+                        <div class="error" id="error-comunicacion"></div>
     
                         <!-- Item para consultar / pedir asesoria sobre un curso
                         Ref: https://codespaceacademy.com/contacto/ -->
                          <div class="form-control">
-                            <label for="product">¿Qué curso te interesa? *</label>
+                            <label for="product" class="product">¿Qué curso te interesa? *</label>
                             <select name="product" id="product" class="form-select">
                                 <option value="" class="placeholder">Seleccioná un curso...</option>
                                 <option value="N1">Fundamentos de la programación</option>
                                 <option value="N2">Desarrollo web Front End</option>
                                 <option value="N3">Desarrollo web Back-end</option>
                             </select>
+                            <div class="error" id="error-product"></div>
                         </div>
     
                         <!-- Espacio para escribir un mensaje inicial de contacto -->
                         <div class="form-control">
     
-                            <label for="message">Comentanos tu duda *</label>
+                            <label for="message" class="message">Comentanos tu duda *</label>
                             <textarea id="message" name="message" required cols="30" rows="10" placeholder="Hola, necesito ayuda para..."></textarea>
-    
+                            <div class="error" id="error-message"></div>
                         </div>
     
                         <!-- Descargo de responsabilidad -->
@@ -532,11 +535,11 @@
                                 <input type="checkbox" id="terms">
                                 <label for="terms">Estoy de acuerdo con la <a href="templates/privacy.html">política de privacidad</a>
                                 </label>
-    
+                                <div class="error" id="error-terms"></div>
                             </div>
                         </div>
 
-                        <p id="error" class="error"></p>
+                        <p id="status-message" class="status-message"></p>
     
                         <!-- Aca deberia ir la imagen para controlar que no es un bot.
                         Si mal no me acuerdo, es parte de la consigna del TP ***REVISAR*** -->
