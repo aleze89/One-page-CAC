@@ -68,7 +68,7 @@ formRegister.addEventListener("submit",e=>{
 
     //Terminos
     if(!inputTerms.checked) {
-        statusMessage.innerHTML = "Debe aceptar la política de privacidad";
+        document.getElementById("error-terms").innerHTML = "Debe aceptar la política de privacidad";
         valor = true;
     }
 
