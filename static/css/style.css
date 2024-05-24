@@ -276,7 +276,7 @@ section {
 
 .tarjetas {
     display:flex;
-    gap: 24px
+    gap: 24px;
 }
 
 .tarjetas > * {
@@ -287,8 +287,6 @@ section {
 .tarjeta {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    gap:16px;
     background-color: var(--primary-color);
     border-radius: 20px;
     padding: 24px;
@@ -456,6 +454,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #nuestros-cursos .tarjeta {
     max-width: 290px;
     min-width: 240px;
+    gap:16px;
 }
 
 #nuestros-cursos button {
