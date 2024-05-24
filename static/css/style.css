@@ -226,13 +226,13 @@ nav hr {
     color: var(--primary-color);
 }
 
-.nav-links .button-cta {
+.nav-links button {
     padding: 10px 15px; 
     border-radius: 10px;
     cursor: pointer;
     background-color: var(--tertiary-color-active);
     border-color: var(--tertiary-color-active);
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
@@ -255,7 +255,7 @@ nav hr {
     color: var(--tertiary-color);
 }
 
-.nav-links .button-cta:hover{
+.nav-links button:hover{
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
 }
