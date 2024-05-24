@@ -87,15 +87,15 @@ a{
     font-weight: bold;
     display: flex;
     align-self: center;
+    gap: 12px;
 }
 
 #logo img {
-    width: 36px;
-    margin-right: 8px;
+    width: 40px;
 }
 
 #logo a {
-    font-size: 18px;
+    font-size: 21px;
 }
 
 h1 {
