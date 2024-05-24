@@ -131,13 +131,14 @@ h4 {
 
 .lista-items li {
     display: inline-flex;
-    gap:8px;
+    gap: 8px;
     align-items: center;
     list-style: none;
+    margin-right: 16px;
 }
 
 .lista-items p {
-    font-weight:700
+    font-weight:700;
 }
 
 header {
