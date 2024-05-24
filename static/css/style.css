@@ -18,6 +18,7 @@
     --color-neutral-60: DarkGrey;
     --color-neutral-50: hsl(0, 0%, 50%);
     --color-neutral-40: DimGrey;
+    --color-neutral-30: hsl(0, 0%, 30%);
 }
 
 * {
@@ -87,15 +88,15 @@ a{
     font-weight: bold;
     display: flex;
     align-self: center;
+    gap: 12px;
 }
 
 #logo img {
-    width: 36px;
-    margin-right: 8px;
+    width: 40px;
 }
 
 #logo a {
-    font-size: 18px;
+    font-size: 21px;
 }
 
 h1 {
@@ -119,6 +120,11 @@ h4 {
     font-weight: 400;
 }
 
+fieldset {
+    display: flex;
+    gap: 16px;
+}
+
 .lista-items span {
     color: var(--tertiary-color);
 }
@@ -126,18 +132,18 @@ h4 {
 .lista-items ul {
     display: inline-flex;
     gap: 24px;
-    /* margin-bottom: 8px; */
 }
 
 .lista-items li {
     display: inline-flex;
-    gap:8px;
+    gap: 8px;
     align-items: center;
     list-style: none;
+    margin-right: 16px;
 }
 
 .lista-items p {
-    font-weight:700
+    font-weight:700;
 }
 
 header {
@@ -218,22 +224,24 @@ nav hr {
 
 .nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 16px;
 }
 
 .nav-links a {
     color: var(--primary-color);
 }
 
-.nav-links .button-cta {
+.nav-links button {
     padding: 10px 15px; 
     border-radius: 10px;
     cursor: pointer;
     background-color: var(--tertiary-color-active);
     border-color: var(--tertiary-color-active);
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 600;
+    margin: 0 0;
 }
 
 
@@ -255,7 +263,7 @@ nav hr {
     color: var(--tertiary-color);
 }
 
-.nav-links .button-cta:hover{
+.nav-links button:hover{
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
 }
@@ -273,7 +281,7 @@ section {
 
 .tarjetas {
     display:flex;
-    gap: 24px
+    gap: 24px;
 }
 
 .tarjetas > * {
@@ -284,8 +292,6 @@ section {
 .tarjeta {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    gap:16px;
     background-color: var(--primary-color);
     border-radius: 20px;
     padding: 24px;
@@ -317,15 +323,11 @@ button {
     cursor: pointer;
 }
 
-.pildora {
-    width: fit-content;
-    font-size: small;
+.volanta {
+    font-size: medium;
     font-weight: 600;
-    color: var(--color-neutral-50);
+    color: var(--color-neutral-40);
     display:inline;
-    padding: 6px 12px;
-    border: var(--color-neutral-60) solid 1px;
-    border-radius: 25px;
 }
 
 .chips {
@@ -457,10 +459,12 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #nuestros-cursos .tarjeta {
     max-width: 290px;
     min-width: 240px;
+    gap:16px;
 }
 
-#nuestros-cursos button {
-    padding: 8px 16px;
+#nuestros-cursos .tarjeta button {
+    margin: 0 auto;
+    width: 100%;
 }
 
 @media(max-width:940px) {
@@ -542,8 +546,8 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     object-fit: cover;    
 }
 
-#detalles-cursos h4 {
-    font-weight: 700;
+#detalles-cursos .volanta {
+    font-size:large;
 }
 
 #detalles-cursos .pros {
@@ -609,13 +613,15 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     width: fit-content;
 }
 
-#ponete-en-contacto  .dato-contacto  {
+#ponete-en-contacto .dato-contacto  {
     display: flex;
     flex-direction: row;
-    gap: 16px; 
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
 }
 
-/* Parche texto */
+/* Arreglos */
 
 #ponete-en-contacto  .dato-contacto p  {
     padding-bottom: 0px;
@@ -626,65 +632,37 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     flex-direction: column;
 }
 
+.form-control {
+    margin-top: 16px;
+}
+
 input, select, textarea, fieldset {
-    padding: 14px;
+    padding: 12px;
     border: 2px solid var(--color-neutral-80);
     border-radius: 7px;
     font-size: 16px;
-    /*margin-bottom: 15px;*/
     color: var(--secondary-color);
     cursor: pointer;
 }
 
-fieldset input {
-    margin-bottom: 0px;
-}
-
-
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
+    margin-bottom: 16px;
 }
 
 #te-contactamos .letra-chica{
     font-size: small;
 }
 
-.form-control .lastname {
-    margin-top: 15px;
+#te-contactamos button {
+    margin: 0 auto;
+    width: 100%;
 }
 
-.form-control .email {
-    margin-top: 15px;
-}
-
-.form-control .phone {
-    margin-top: 15px;
-}
-
-div .comunicacion {
-    margin-top: 15px;
-}
-
-.form-control .product {
-    margin-top: 15px;
-}
-
-.form-control .message {
-    margin-top: 15px;
-}
-/* #formregister > #error{
-    width: 200px;
-    text-align: center;
-    color: red;
-    font-weight: bold;
-    margin: auto;
-    padding: 15px;
-} */
-
-        /*Mensaje de Error y Envio en formulario*/
+/* Comportamiento - Mensajes de error */
 
 .error {
-    color:red;
+    color: var(--error-color);
     font-size: 0.9em;
     margin-top: 2px;
 }
@@ -721,6 +699,13 @@ div .comunicacion {
     #ponete-en-contacto  .dato-contacto  {
         display: block;
         padding-bottom: 16px;
+    }
+}
+
+@media(max-width:460px) {
+    #ponete-en-contacto .nuestros-datos {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -872,7 +857,7 @@ hr {
 .tema-oscuro .filled {
     background-color: var(--tertiary-color-active);
     border-color: var(--tertiary-color-active);
-    color: var(--secondary-color)
+    /* color: var(--secondary-color) */
 }
 
 .tema-oscuro .filled:hover {
@@ -881,8 +866,8 @@ hr {
 }
 
 .tema-oscuro .outlined {
-    border: 2px solid var(--color-neutral-50);
-    color: var(--color-neutral-60);
+    border: 2px solid var(--color-neutral-60);
+    color: var(--color-neutral-80);
 }
 
 .tema-oscuro .outlined:hover {

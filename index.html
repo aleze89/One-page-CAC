@@ -42,7 +42,7 @@
                     <li><a href="#acerca-de">¿Por qué elergirnos?</a></li>
                     <li><a href="#nuestros-cursos">Nuestros cursos</a></li>
                     <!-- <li><a href="#testimonios">Testimonnios</a></li> -->
-                    <li><a href="#contacto" class="button-cta filled">¡Asesorate!</a></li>
+                    <li><a href="#contacto"><button class="filled">¡Asesorate!</button></a></li>
             </ul>
             </div>
         <!-- Agregar script con JS para que se apliquen las reglas '.scrolled' al abandonar la seccion #hero-banner -->
@@ -112,7 +112,7 @@
 
                     <div class="curso-inicial tarjeta elevacion-2">
 
-                        <h4 class="pildora">Nivel inicial</h4>
+                        <h4 class="volanta">Nivel inicial</h4>
                         <h3>Fundamentos de programación</h3>
                         <p>
                             Aprende las bases de la programación, familiarizate con el pensamiento logico y computacional. <br>Domina el lenguaje nativo de Internet e ingresa al mundo del desarrollo web.
@@ -134,7 +134,7 @@
 
                     <div class="curso-intermedio tarjeta elevacion-2">
 
-                        <h4 class="pildora">Nivel intermedio</h4>
+                        <h4 class="volanta">Nivel intermedio</h4>
                         <h3>Desarrollo web <br>Front-End</h3>
                         <p>
                             Domina el desarrollo del lado del cliente y descubre cómo crear interfaces impactantes, profesionales y optimizadas. Aprende a utilizar JavaScript para crear experiencias altamente interactivas.
@@ -156,7 +156,7 @@
 
                     <div class="curso-avanzado tarjeta elevacion-2">
 
-                        <h4 class="pildora">Nivel avanzado</h4>
+                        <h4 class="volanta">Nivel avanzado</h4>
                         <h3>Desarrollo web <br>Back-End</h3>
                         <p>
                             Aprende a desarrollar del lado del servidor, bases de datos y arquitecturas web escalables. <br> Aprende a usar lenguajes como Java para crear la lógica y funcionalidad que dan vida a las aplicaciones web.
@@ -219,7 +219,7 @@
                 </div>
 
                 <div class="texto-curso">
-                    <h4 class="pildora">Nivel inicial</h4>
+                    <h4 class="volanta">Nivel inicial</h4>
                     <h2>Fundamentos de programación</h2>
                     
                     <p>
@@ -276,7 +276,7 @@
                 </div>
 
                 <div class="texto-curso">
-                    <h4 class="pildora">Nivel: Intermedio</h4>
+                    <h4 class="volanta">Nivel Intermedio</h4>
                     <h2>Desarrollo web Front-End</h2>
 
                     <p>
@@ -335,7 +335,7 @@
                 </div>
 
                 <div class="texto-curso">
-                    <h4 class="pildora">Nivel: Avanzado</h4>
+                    <h4 class="volanta">Nivel Avanzado</h4>
                     <h2>Desarrollo web Back-End</h2>
                     
                     <p>                     
@@ -404,17 +404,17 @@
                         Estamos aca para atenderte, llamanos o mandanos un correo y te respondemos <strong>lo antes posible</strong>.
                     </p>
 
-                    <!-- Agregar más adelante un script para copiar el dato al hacer click. Agregar a cada div la clase 'interactiva' -->
+
                     <div class="nuestros-datos">
 
-                        <div class="dato-contacto tarjeta elevacion-1">
+                        <div class="dato-contacto">
                             <span class="material-symbols-outlined iconos-grandes">call</span>
                             <div class="dato">
                                 <p><b>Número de telefono</b></p>
                                 <p id="nuestro-telefono">+54 9 011 1234-567</p>
                             </div>
                         </div>
-                        <div class="dato-contacto tarjeta elevacion-1">
+                        <div class="dato-contacto">
                             <span class="material-symbols-outlined iconos-grandes">mail</span>
                             <div class="dato">
                                 <p><b>Buzón de correo</b></p>
@@ -486,20 +486,20 @@
     
                         <!-- Input para elegir la preferencia de contacto. 
                         Ref: https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' -->
-                        <div class="comunicacion">¿Cómo nos comunicamos?</div>
-                        <fieldset>
+                        <div class="form-control">
+                            <label for="preference">¿Cómo nos comunicamos?</label>
+                            <fieldset>
+                                <span>
+                                    <label for="contact-choice-1" >Whatsapp</label>
+                                    <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
+                                </span>
+                                <span>
+                                    <label for="contact-choice-2" >Correo electrónico</label>
+                                    <input type="radio" id="contact-choice-2" name="contact-choice" value="email">
+                                </span>
+                            </fieldset>
+                        </div>
 
-    
-                            <div id="comunicacion" class="Form-control-preference">                    
-    
-                                <label for="contact-choice-1" >Whatsapp</label>
-                                <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
-                            
-                                <label for="contact-choice-2" >Correo electrónico</label>
-                                <input type="radio" id="contact-choice-2" name="contact-choice" value="email">    
-                            </div>
-                            
-                        </fieldset>
                         <div class="error" id="error-comunicacion"></div>
     
                         <!-- Item para consultar / pedir asesoria sobre un curso
