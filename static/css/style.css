@@ -120,6 +120,11 @@ h4 {
     font-weight: 400;
 }
 
+fieldset {
+    display: flex;
+    gap: 16px;
+}
+
 .lista-items span {
     color: var(--tertiary-color);
 }
@@ -627,6 +632,10 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     flex-direction: column;
 }
 
+.form-control {
+    margin-top: 16px;
+}
+
 input, select, textarea, fieldset {
     padding: 12px;
     border: 2px solid var(--color-neutral-80);
@@ -643,10 +652,6 @@ textarea {
 
 #te-contactamos .letra-chica{
     font-size: small;
-}
-
-.form-control {
-    margin-top: 16px;
 }
 
 /* Comportamiento - Mensajes de error */
