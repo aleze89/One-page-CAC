@@ -319,15 +319,11 @@ button {
     cursor: pointer;
 }
 
-.pildora {
-    /* width: fit-content; */
+.volanta {
     font-size: medium;
     font-weight: 600;
     color: var(--color-neutral-40);
     display:inline;
-    /* padding: 6px 12px; */
-    /* border: var(--color-neutral-60) solid 1px; */
-    /* border-radius: 25px; */
 }
 
 .chips {
@@ -544,8 +540,8 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     object-fit: cover;    
 }
 
-#detalles-cursos h4 {
-    font-weight: 700;
+#detalles-cursos .volanta {
+    font-size:large;
 }
 
 #detalles-cursos .pros {
