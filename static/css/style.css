@@ -457,8 +457,9 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     gap:16px;
 }
 
-#nuestros-cursos button {
-    padding: 8px 16px;
+#nuestros-cursos .tarjeta button {
+    margin: 0 auto;
+    width: 100%;
 }
 
 @media(max-width:940px) {
