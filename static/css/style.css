@@ -613,7 +613,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     width: fit-content;
 }
 
-#ponete-en-contacto  .dato-contacto  {
+#ponete-en-contacto .dato-contacto  {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -621,7 +621,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     padding: 16px;
 }
 
-/* Parche texto */
+/* Arreglos */
 
 #ponete-en-contacto  .dato-contacto p  {
     padding-bottom: 0px;
@@ -641,17 +641,22 @@ input, select, textarea, fieldset {
     border: 2px solid var(--color-neutral-80);
     border-radius: 7px;
     font-size: 16px;
-    /*margin-bottom: 15px;*/
     color: var(--secondary-color);
     cursor: pointer;
 }
 
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
+    margin-bottom: 16px;
 }
 
 #te-contactamos .letra-chica{
     font-size: small;
+}
+
+#te-contactamos button {
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* Comportamiento - Mensajes de error */
