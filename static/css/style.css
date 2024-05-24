@@ -725,6 +725,13 @@ div .comunicacion {
     }
 }
 
+@media(max-width:460px) {
+    #ponete-en-contacto .nuestros-datos {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* ## Comportamientos */
 
 #ponete-en-contacto  .interactiva.dato-contacto:hover {
