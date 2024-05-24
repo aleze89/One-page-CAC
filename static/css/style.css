@@ -126,7 +126,6 @@ h4 {
 .lista-items ul {
     display: inline-flex;
     gap: 24px;
-    /* margin-bottom: 8px; */
 }
 
 .lista-items li {
@@ -220,7 +219,7 @@ nav hr {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 16px;
 }
 
 .nav-links a {
