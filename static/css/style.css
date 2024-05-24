@@ -18,6 +18,7 @@
     --color-neutral-60: DarkGrey;
     --color-neutral-50: hsl(0, 0%, 50%);
     --color-neutral-40: DimGrey;
+    --color-neutral-30: hsl(0, 0%, 30%);
 }
 
 * {
@@ -319,14 +320,14 @@ button {
 }
 
 .pildora {
-    width: fit-content;
-    font-size: small;
+    /* width: fit-content; */
+    font-size: medium;
     font-weight: 600;
-    color: var(--color-neutral-50);
+    color: var(--color-neutral-40);
     display:inline;
-    padding: 6px 12px;
-    border: var(--color-neutral-60) solid 1px;
-    border-radius: 25px;
+    /* padding: 6px 12px; */
+    /* border: var(--color-neutral-60) solid 1px; */
+    /* border-radius: 25px; */
 }
 
 .chips {
