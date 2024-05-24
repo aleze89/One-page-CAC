@@ -628,7 +628,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 }
 
 input, select, textarea, fieldset {
-    padding: 14px;
+    padding: 12px;
     border: 2px solid var(--color-neutral-80);
     border-radius: 7px;
     font-size: 16px;
@@ -650,42 +650,14 @@ textarea {
     font-size: small;
 }
 
-.form-control .lastname {
-    margin-top: 15px;
+.form-control {
+    margin-top: 16px;
 }
 
-.form-control .email {
-    margin-top: 15px;
-}
-
-.form-control .phone {
-    margin-top: 15px;
-}
-
-div .comunicacion {
-    margin-top: 15px;
-}
-
-.form-control .product {
-    margin-top: 15px;
-}
-
-.form-control .message {
-    margin-top: 15px;
-}
-/* #formregister > #error{
-    width: 200px;
-    text-align: center;
-    color: red;
-    font-weight: bold;
-    margin: auto;
-    padding: 15px;
-} */
-
-        /*Mensaje de Error y Envio en formulario*/
+/* Comportamiento - Mensajes de error */
 
 .error {
-    color:red;
+    color: var(--error-color);
     font-size: 0.9em;
     margin-top: 2px;
 }
