@@ -235,6 +235,7 @@ nav hr {
     border-color: var(--tertiary-color-active);
     color: var(--primary-color);
     font-weight: 600;
+    margin: 0 0;
 }
 
 
