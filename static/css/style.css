@@ -265,7 +265,7 @@ nav hr {
 
 .nav-links button:hover{
     background-color: var(--tertiary-color);
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* ## Contenedores */
