@@ -611,7 +611,9 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #ponete-en-contacto  .dato-contacto  {
     display: flex;
     flex-direction: row;
-    gap: 16px; 
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
 }
 
 /* Parche texto */
