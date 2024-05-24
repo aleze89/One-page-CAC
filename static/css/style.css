@@ -637,11 +637,6 @@ input, select, textarea, fieldset {
     cursor: pointer;
 }
 
-fieldset input {
-    margin-bottom: 0px;
-}
-
-
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
