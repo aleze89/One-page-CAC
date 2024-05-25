@@ -7,10 +7,10 @@
     --secondary-color-hover: hsl(216, 8%, 9%);
     --secondary-color-focus: hwb(216 11% 87% / 0.302); 
     --secondary-color-active: hsl(216, 8%, 6%);
-    --tertiary-color: #00b7ff;
-    --tertiary-color-hover: hsl(197, 100%, 47%);
-    --tertiary-color-focus: hwb(197 0% 0% / 0.302);
-    --tertiary-color-active: hsl(197, 100%, 44%);
+    --tertiary-color:hsl(280, 100%, 50%);
+    --tertiary-color-hover: hsl(280, 100%, 47%);
+    --tertiary-color-focus: hwb(280 0% 0% / 0.302);
+    --tertiary-color-active: hsl(280, 100%, 44%);
     --error-color: #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-95: hsl(216, 8%, 95%);
@@ -93,6 +93,7 @@ a{
 
 #logo img {
     width: 40px;
+    color: var(--error-color);
 }
 
 #logo a {
@@ -123,6 +124,10 @@ h4 {
 fieldset {
     display: flex;
     gap: 16px;
+}
+
+input[type='radio'] {
+    accent-color: var(--tertiary-color);
 }
 
 .lista-items span {
