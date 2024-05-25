@@ -179,6 +179,8 @@ nav hr {
     background-color: var(--secondary-color);
 }
 
+/*MENU hamburguesa*/
+
 @media(max-width:720px) {
     nav {
         display: inline-block;
@@ -211,8 +213,21 @@ nav hr {
     nav hr {
         visibility: visible;
         margin: 0 0 0 0;
-        
     }
+    
+    /* .top-bar{
+        flex-direction: column;
+    }
+
+    .menu-hamburguesa{
+        position: absolute;
+        left: 89%;
+    }
+
+    #menu-hamburguesa:checked ~ .menu-desplegable{
+        display: block;
+        flex-direction: column;
+    } */
 }
 
 /* ### Botones */
