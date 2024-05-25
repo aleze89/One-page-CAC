@@ -637,8 +637,8 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     flex-direction: column;
 }
 
-.form-control {
-    margin-top: 16px;
+.form-control, .form-terms {
+    margin: 16px 0;
 }
 
 input, select, textarea, fieldset {
@@ -652,8 +652,9 @@ input, select, textarea, fieldset {
 
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
-    margin-bottom: 16px;
 }
+
+
 
 #te-contactamos .letra-chica{
     font-size: small;
@@ -672,12 +673,12 @@ textarea {
     margin-top: 2px;
 }
 
+
 .status-message {
     color: green;
     font-size: 1em;
     margin-top: 10px;
 }
-
 
 ::placeholder, .placeholder {
     color: var(--color-neutral-60);
