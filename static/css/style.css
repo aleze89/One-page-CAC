@@ -7,7 +7,9 @@
     --secondary-color-hover: hsl(216, 8%, 9%);
     --secondary-color-focus: hwb(216 11% 87% / 0.302); 
     --secondary-color-active: hsl(216, 8%, 6%);
-    --tertiary-color: hsl(280, 100%, 50%);
+
+    --tertiary-color:hsl(280, 100%, 50%);
+
     --tertiary-color-hover: hsl(280, 100%, 47%);
     --tertiary-color-focus: hwb(280 0% 0% / 0.302);
     --tertiary-color-active: hsl(280, 100%, 44%);
@@ -93,6 +95,7 @@ a{
 
 #logo img {
     width: 40px;
+    color: var(--error-color);
 }
 
 #logo a {
@@ -123,6 +126,10 @@ h4 {
 fieldset {
     display: flex;
     gap: 16px;
+}
+
+input[type='radio'] {
+    accent-color: var(--tertiary-color);
 }
 
 .lista-items span {
@@ -706,8 +713,8 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
     flex-direction: column;
 }
 
-.form-control {
-    margin-top: 16px;
+.form-control, .form-terms {
+    margin: 16px 0;
 }
 
 input, select, textarea, fieldset {
@@ -721,8 +728,9 @@ input, select, textarea, fieldset {
 
 textarea {
     font-family: Inter, Arial, Helvetica, sans-serif;
-    margin-bottom: 16px;
 }
+
+
 
 #te-contactamos .letra-chica{
     font-size: small;
@@ -741,12 +749,12 @@ textarea {
     margin-top: 2px;
 }
 
+
 .status-message {
     color: green;
     font-size: 1em;
     margin-top: 10px;
 }
-
 
 ::placeholder, .placeholder {
     color: var(--color-neutral-60);
@@ -948,4 +956,3 @@ hr {
     color: var(--primary-color-hover);
     border-color: var(--color-neutral-80);
 }
-
