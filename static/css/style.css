@@ -535,6 +535,7 @@ button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus 
 #nuestros-cursos .descripcion {
     max-width: 720px;
     text-align: center;
+    margin-bottom: 24px;
 }
 
 #nuestros-cursos .tarjeta {
