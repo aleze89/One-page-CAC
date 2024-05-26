@@ -809,6 +809,10 @@ textarea {
     padding: 100px 0 50px 0;
 }
 
+#footer .descripcion {
+    text-align: left;
+}
+
 .footer-link {
     display: flex;
     padding: 30PX;
