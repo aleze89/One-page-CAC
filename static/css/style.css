@@ -887,9 +887,21 @@ hr {
     color: var(--color-neutral-60);
 }
 
+.footer-link form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* ## Comportamientos */
+
 .footer-text a:hover {
     color: var(--tertiary-color);
 }
+
+/* ## Responsive */
 
 @media(max-width:720px) {
 
