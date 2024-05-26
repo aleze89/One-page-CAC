@@ -86,19 +86,19 @@ a{
     text-decoration: none;
 }
 
-#logo {
+.logo {
     font-weight: bold;
     display: flex;
     align-self: center;
     gap: 12px;
 }
 
-#logo img {
+.logo img {
     width: 40px;
     color: var(--error-color);
 }
 
-#logo a {
+.logo a {
     font-size: 21px;
 }
 
@@ -259,7 +259,7 @@ nav hr {
         position: relative;
     }
 
-    nav #logo {
+    nav .logo {
         margin-block: 28px;
     }
 
@@ -321,14 +321,14 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 /* ### Botones */
 
-#logo a{
+.logo a{
     color: white;
     text-decoration: none;
 }
 
 /* ### Comportamientos */
  
-#logo:hover {
+header .logo:hover {
     animation: tilt-n-move-shaking 0.25s infinite;
 }
  
@@ -807,26 +807,23 @@ textarea {
 
 #footer {
     padding: 100px 0 50px 0;
+    
 }
 
-#footer .descripcion {
+#footer .link {
+    width: 33%;
+    text-align: center;
+}
+
+#footer .descripcion p {
     text-align: left;
+    padding-top: 16px;
 }
 
 .footer-link {
     display: flex;
     padding: 30PX;
     justify-content:space-evenly;
-}
-
-.link {
-    width: 300px;
-    /*
-    Responsive <--------------------------
-    En tamaño escritorio deberia visualizarse con:
-    text-align: left; 
-    */
-    text-align: center;
 }
 
 .link h3 {
@@ -911,7 +908,22 @@ hr {
 
     #footer {
         padding: 30px;
-    }    
+    }   
+    
+    #footer .link {
+        width: 100%;
+    }
+
+    #footer .descripcion {
+        text-align: center;
+    }
+
+    #footer .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
     .footer-link {
         flex-direction: column;
