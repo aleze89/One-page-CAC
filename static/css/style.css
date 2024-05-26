@@ -7,10 +7,10 @@
     --secondary-color-hover: hsl(216, 8%, 9%);
     --secondary-color-focus: hwb(216 11% 87% / 0.302); 
     --secondary-color-active: hsl(216, 8%, 6%);
-    --tertiary-color: #00b7ff;
-    --tertiary-color-hover: hsl(197, 100%, 47%);
-    --tertiary-color-focus: hwb(197 0% 0% / 0.302);
-    --tertiary-color-active: hsl(197, 100%, 44%);
+    --tertiary-color: hsl(280, 100%, 50%);
+    --tertiary-color-hover: hsl(280, 100%, 47%);
+    --tertiary-color-focus: hwb(280 0% 0% / 0.302);
+    --tertiary-color-active: hsl(280, 100%, 44%);
     --error-color: #ba1a1a;
     --color-neutral-99: GhostWhite;
     --color-neutral-95: hsl(216, 8%, 95%);
@@ -146,9 +146,9 @@ fieldset {
     font-weight:700;
 }
 
+/* Agregar un script en JS para que pase de Transparente al color secundariuo al abandonar la pocision inicial; usar la regla '.scrolled' */
+
 header {
-    /* background-color: transparent; */
-        /* Agregar un script en JS para que pase de Transparente al color secundariuo al abandonar la pocision inicial; usar la regla '.scrolled' */
     color: var(--primary-color);
     position: fixed;
     top: 0;
@@ -170,72 +170,20 @@ nav hr {
 }
 
 .menu-hamburguesa {
-    position: fixed;
-    visibility: hidden;
+    display: none;
+    position: relative;
+    filter: invert();
+    cursor: pointer;
 }
 
-/* Agregar un script en JS para que al abandonar el banner hero, el fondo se tiña del color secundario. */
-.scrolled {
-    background-color: var(--secondary-color);
+.menu-hamburguesa img {
+    width: 30px;
+    height: 30px;
 }
 
-/*MENU hamburguesa*/
-
-@media(max-width:720px) {
-    nav {
-        display: inline-block;
-        height: fit-content; 
-        width: 100%;
-    } 
-
-    .menu-hamburguesa {
-        position: relative;
-        visibility: visible;
-        filter: invert();
-        cursor: pointer;
-    }
-    nav .top-bar {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    nav #logo, .menu-hamburguesa {
-        margin-block: 28px;
-    }
-
-    nav .nav-links {
-        display: flex;
-        flex-direction: column;
-        margin: 24px 0;
-        width: fit-content;
-    }
-
-    nav hr {
-        visibility: visible;
-        margin: 0 0 0 0;
-    }
-    
-    /* .top-bar{
-        flex-direction: column;
-    }
-
-    .menu-hamburguesa{
-        position: absolute;
-        left: 89%;
-    }
-
-    #menu-hamburguesa:checked ~ .menu-desplegable{
-        display: block;
-        flex-direction: column;
-    } */
-}
-
-/* ### Botones */
-
-#logo a{
-    color: white;
-    text-decoration: none;
-}
+.menu-desplegable {
+    display: flex;
+} 
 
 .nav-links {
     display: flex;
@@ -246,26 +194,137 @@ nav hr {
 
 .nav-links a {
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 .nav-links button {
-    padding: 10px 15px; 
+    padding: 10px 15px;
     border-radius: 10px;
     cursor: pointer;
     background-color: var(--tertiary-color-active);
     border-color: var(--tertiary-color-active);
     color: var(--primary-color);
     font-weight: 600;
-    margin: 0 0;
+    margin: 0;
 }
 
+/* Agregar un script en JS para que al abandonar el banner hero, el fondo se tiña del color secundario. */
+.scrolled {
+    background-color: var(--secondary-color);
+}
+
+/*MENU hamburguesa*/
+
+@media (max-width: 720px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    } 
+
+    .menu-hamburguesa {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .menu-desplegable {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .menu-desplegable.open {
+        display: flex;
+    }
+
+    nav .top-bar {
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    nav #logo {
+        margin-block: 28px;
+    }
+
+    nav .nav-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+        
+
+    nav hr {
+        visibility: visible;
+        margin: 0;
+    }
+
+}
+
+button {
+    border-radius: 10px;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 16px 8px;
+    cursor:  pointer;
+}
+
+.filled {
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.filled:hover {
+    background-color: var(--color-neutral-50);
+    border-color: var(--tertiary-color-hover);
+}
+
+.outlined {
+    border: 2px solid var(--color-neutral-50);
+    background-color: transparent;
+    color: var(--color-neutral-40);
+}
+
+.outlined:hover {
+    color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+}
+
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+    outline: transparent;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 7px var(--tertiary-color-focus);
+}
+
+/* ### Botones */
+
+#logo a{
+    color: white;
+    text-decoration: none;
+}
 
 /* ### Comportamientos */
-
+ 
 #logo:hover {
     animation: tilt-n-move-shaking 0.25s infinite;
 }
-
+ 
 @keyframes tilt-n-move-shaking {
     0% { transform: translate(0, 0) rotate(0deg); }
     25% { transform: translate(5px, 5px) rotate(5deg); }
@@ -273,11 +332,11 @@ nav hr {
     75% { transform: translate(-5px, 5px) rotate(-5deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
 }
-
-.nav-links a:hover{
+ 
+.nav-links a:hover {
     color: var(--tertiary-color);
 }
-
+ 
 .nav-links button:hover{
     background-color: var(--tertiary-color);
     color: var(--primary-color);
