@@ -807,17 +807,18 @@ textarea {
 
 #footer {
     padding: 100px 0 50px 0;
-    
 }
 
 #footer .link {
-    width: 33%;
+    width: 360px;
     text-align: center;
 }
 
 #footer .descripcion p {
+    width: 360px;
     text-align: left;
     padding-top: 16px;
+    margin-bottom: 24px;
 }
 
 .footer-link {
@@ -914,7 +915,8 @@ hr {
         width: 100%;
     }
 
-    #footer .descripcion {
+    #footer .descripcion p {
+        width: 100%;
         text-align: center;
     }
 
