@@ -23,29 +23,33 @@
                 <!-- logo -->
                 <div id="logo">
                     <img src="static\img\logo.svg" alt="Signo gráfico de la marca">
-                    <a href="/">
+                    <a href="#hero-banner">
                         <span>aprenDEV</span>
                     </a>
                 </div>
                 <!-- Icono menu hamburguesa. Estado inicial: Hidden -->
-                <div class="menu-hamburguesa">
-                    <img src="static\img\menu.svg" alt="Icono menu hamburguesa">
+                
+                <div class="menu-hamburguesa" id="menu-hamburguesa">
+                    <img src="static/img/menu.svg" alt="Icono menu hamburguesa">
                 </div>
-
-            </div>
-
+                
+            </div>                         
+    
+            <!-- Menu antes de los cambios -->
             <!-- Separador (Menu responsive) -->
             <hr>
-            <!-- Hipervinculos para el menu -->
-            <div id="links">
+            
+            <!--Hipervinculos para el menu -->
+            <div class="menu-desplegable" id="menu-desplegable">
+
                 <ul class="nav-links">
                     <li><a href="#acerca-de">¿Por qué elergirnos?</a></li>
                     <li><a href="#nuestros-cursos">Nuestros cursos</a></li>
-                    <!-- <li><a href="#testimonios">Testimonnios</a></li> -->
                     <li><a href="#contacto"><button class="filled">¡Asesorate!</button></a></li>
-            </ul>
+                </ul>
+
             </div>
-        <!-- Agregar script con JS para que se apliquen las reglas '.scrolled' al abandonar la seccion #hero-banner -->
+            <!-- Agregar script con JS para que se apliquen las reglas '.scrolled' al abandonar la seccion #hero-banner -->
         </nav>
     </header>
 
@@ -559,13 +563,15 @@
 
                 <div class="link">
                     <h3>Nosotros</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, assumenda!</p>
+                    <p>No importa tu punto de partida, con nuestros cursos  podrás alcanzar tus metas profesionales.</p>
                 </div>
 
-                <div class="link">
+                <!-- Lo dejo comentado para no repetir los mismos datos q en el formulario de arriba, se puede modificar de hacer falta. -->
+                <!-- <div class="link">
                     <h3>Contáctanos</h3>
+                    <li><a href="#acerca-de">¿Por qué elergirnos?</a></li>
                     <a href="/">mail</a>
-                </div>
+                </div> -->
 
                 <div class="link">
                     <h3>Redes Sociales</h3>

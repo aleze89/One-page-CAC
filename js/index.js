@@ -80,3 +80,16 @@ formRegister.addEventListener("submit",e=>{
         formRegister.reset();
     }
 });
+
+
+/*menu hamburguesa*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuHamburguesa = document.getElementById('menu-hamburguesa');
+    const menuDesplegable = document.getElementById('menu-desplegable');
+
+    menuHamburguesa.addEventListener('click', function () {
+        menuDesplegable.classList.toggle('open');
+    });
+
+});
