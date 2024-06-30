@@ -30,11 +30,15 @@ CREATE TABLE cursos (
 CREATE TABLE certificados (
     id_certificado int(12),
     fecha_emision date,
-    nota_final decimal(2,1)
+    nota_final decimal(2,1),
+    dni int(11),
+    id_curso int(2)
 );
 
 CREATE TABLE testimonios (
     id_testimonio int(12),
     comentario varchar(400),
-    fecha_publicacion date
+    fecha_publicacion date,
+    dni int(11),
+    id_curso int(2)
 );
