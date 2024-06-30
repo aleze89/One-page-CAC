@@ -30,12 +30,12 @@ CREATE TABLE cursos (
 ) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE certificados (
-    id_certificado int(12),
-    fecha_emision date,
-    nota_final decimal(2,1),
-    dni int(11),
-    id_curso int(2)
-);
+    id_certificado int(12) NOT NULL AUTO_INCREMENT,
+    fecha_emision date DEFAULT NULL,
+    nota_final decimal(2,1) DEFAULT NULL,
+    dni int(11) NOT NULL,
+    id_curso int(2) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE testimonios (
     id_testimonio int(12),
