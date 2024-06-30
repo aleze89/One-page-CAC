@@ -12,7 +12,7 @@ CREATE TABLE estudiantes (
     pais varchar(50) NOT NULL,
     foto_perfil varchar(255) DEFAULT NULL,
     PRIMARY KEY (dni)
-) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /* En 'foto_perfil' ¿Convendria agregar un valor por defecto? "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"*/
 
@@ -29,7 +29,7 @@ CREATE TABLE cursos (
     url_temario varchar(255) NOT NULL,
     url_venta varchar(255) NOT NULL,
     PRIMARY KEY (id_curso)
-) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE certificados (
     id_certificado int(12) NOT NULL AUTO_INCREMENT,
@@ -40,7 +40,7 @@ CREATE TABLE certificados (
     PRIMARY KEY (id_certificado),
     FOREIGN KEY (dni) REFERENCES estudiantes(dni),
     FOREIGN KEY (id_curso) REFERENCES cursos(id_curso)
-) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE testimonios (
     id_testimonio int(12) NOT NULL AUTO_INCREMENT,
@@ -51,4 +51,4 @@ CREATE TABLE testimonios (
     PRIMARY KEY (id_testimonio),
     FOREIGN KEY (dni) REFERENCES estudiantes(dni),
     FOREIGN KEY (id_curso) REFERENCES cursos(id_curso)
-) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
