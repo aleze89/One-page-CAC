@@ -13,7 +13,19 @@ CREATE TABLE estudiantes (
     foto_perfil varchar(255)
 );
 
-CREATE TABLE cursos ();
+CREATE TABLE cursos (
+    id_curso int(2),
+    nombre varchar(32),
+    nivel_dificultad enum('Básico', 'Intermedio', 'Avanzado'),
+    descripcion varchar(400),
+    modulos int(2),
+    duracion int(3),
+    precio double,
+    beneficios varchar(400),
+    tecnologias varchar(200),
+    url_temario varchar(255),
+    url_venta varchar(255)
+);
 
 CREATE TABLE certificados ();
 
