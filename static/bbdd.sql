@@ -33,4 +33,8 @@ CREATE TABLE certificados (
     nota_final decimal(2,1)
 );
 
-CREATE TABLE testimonios ();
+CREATE TABLE testimonios (
+    id_testimonio int(12),
+    comentario varchar(400),
+    fecha_publicacion date
+);
