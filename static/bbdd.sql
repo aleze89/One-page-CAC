@@ -38,9 +38,9 @@ CREATE TABLE certificados (
 ) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE testimonios (
-    id_testimonio int(12),
-    comentario varchar(400),
-    fecha_publicacion date,
-    dni int(11),
-    id_curso int(2)
-);
+    id_testimonio int(12) NOT NULL AUTO_INCREMENT,
+    comentario varchar(400) DEFAULT NULL,
+    fecha_publicacion date DEFAULT NULL,
+    dni int(11) NOT NULL,
+    id_curso int(2) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
