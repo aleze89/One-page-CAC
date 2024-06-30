@@ -16,18 +16,18 @@ CREATE TABLE estudiantes (
 /* En 'foto_perfil' ¿Convendria agregar un valor por defecto? "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"*/
 
 CREATE TABLE cursos (
-    id_curso int(2),
-    nombre varchar(32),
-    nivel_dificultad enum('Básico', 'Intermedio', 'Avanzado'),
-    descripcion varchar(400),
-    modulos int(2),
-    duracion int(3),
-    precio double,
-    beneficios varchar(400),
-    tecnologias varchar(200),
-    url_temario varchar(255),
-    url_venta varchar(255)
-);
+    id_curso int(2) NOT NULL AUTO_INCREMENT,
+    nombre varchar(32) NOT NULL,
+    nivel_dificultad enum('Básico', 'Intermedio', 'Avanzado') NOT NULL,
+    descripcion varchar(400) NOT NULL,
+    modulos int(2) NOT NULL,
+    duracion int(3) NOT NULL,
+    precio double NOT NULL,
+    beneficios varchar(400) NOT NULL,
+    tecnologias varchar(200) NOT NULL,
+    url_temario varchar(255) NOT NULL,
+    url_venta varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE certificados (
     id_certificado int(12),
