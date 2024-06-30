@@ -27,6 +27,10 @@ CREATE TABLE cursos (
     url_venta varchar(255)
 );
 
-CREATE TABLE certificados ();
+CREATE TABLE certificados (
+    id_certificado int(12),
+    fecha_emision date,
+    nota_final decimal(2,1)
+);
 
 CREATE TABLE testimonios ();
