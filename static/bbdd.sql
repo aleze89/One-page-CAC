@@ -3,15 +3,17 @@ CREATE DATABASE aprendev;
 USE aprendev;
 
 CREATE TABLE estudiantes (
-    dni int(11),
-    nombre varchar(30),
-    apellido varchar(30),
+    dni int(11) NOT NULL,
+    nombre varchar(30) DEFAULT NULL,
+    apellido varchar(30) DEFAULT NULL,
     fecha_nacimiento date,
-    correo_electronico varchar(45),
-    telefono varchar(20),
-    pais varchar(50),
-    foto_perfil varchar(255)
-);
+    correo_electronico varchar(45) NOT NULL,
+    telefono varchar(20) NOT NULL,
+    pais varchar(50) NOT NULL,
+    foto_perfil varchar(255) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+/* En 'foto_perfil' ¿Convendria agregar un valor por defecto? "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"*/
 
 CREATE TABLE cursos (
     id_curso int(2),
