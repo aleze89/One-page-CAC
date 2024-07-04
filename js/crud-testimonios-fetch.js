@@ -264,3 +264,12 @@ document.addEventListener('DOMContentLoaded',function(){
     btnSaveMovie.addEventListener('click',saveMovie);
     showMovies();
     });
+
+// // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
+// // contenido del DOM ha sido completamente cargado y parseado.
+// document.addEventListener('DOMContentLoaded',function(){
+//     const btnSaveMovie = document.querySelector('#btn-save-movie');
+//     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
+//     btnSaveMovie.addEventListener('click',saveMovie);
+//     showMovies();
+//     });
