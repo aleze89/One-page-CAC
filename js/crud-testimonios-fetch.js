@@ -201,8 +201,26 @@ function deleteMovie(id){
 //     });
 //     }
 
-// -------------------------
+// ------------------------- EDITAR UNA PELICULA -------------------------
 
+/**
+* Function que permite cargar el formulario con los datos de la pelicula
+* para su edición
+* @param {number} id Id de la pelicula que se quiere editar
+*/
+async function updateMovie(id){
+    //Buscamos en el servidor la pelicula de acuerdo al id
+    let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'GET');
+    const idMovie = document.querySelector('#id-movie');
+    const title = document.querySelector('#title');
+    const director = document.querySelector('#director');
+    const releaseDate = document.querySelector('#release-date');
+    const banner = document.querySelector('#banner-form');
+    idMovie.value = response.id_movie;
+    title.value = response.title;
+    director.value = response.director;
+    releaseDate.value = response.release_date;
+    ban
 
 
 // -------------------------
