@@ -126,7 +126,7 @@ async function saveTestimonio(){
     result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     }
 
-    const formTestimonio = document.querySelector('#form-testimonio'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#form-movie' en el original ⚠️
+    const formTestimonio = document.querySelector('#form-testimonio');
     formTestimonio.reset();
     Swal.fire({
         title: 'Exito!',
