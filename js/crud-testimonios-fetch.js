@@ -41,12 +41,6 @@ async function saveMovie(){
     const director = document.querySelector('#director').value;
     const releaseDate = document.querySelector('#release-date').value;
     const banner = document.querySelector('#banner-form').value;
-// async function saveTestimonio(){
-    // const idTestimonio = document.querySelector('#id-testimonio').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    // const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    // const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    // const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    // const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
 
     //VALIDACION DE FORMULARIO
     if (!title || !director || !releaseDate || !banner) {
@@ -58,6 +52,46 @@ async function saveMovie(){
     });
     return;
     }
+
+    // Crea un objeto con los datos de la película
+    const movieData = {
+    title: title,
+    director: director,
+    release_date: releaseDate,
+    banner: banner,
+    };
+    
+    let result = null;
+
+    // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
+    if(idMovie!==""){
+    result = await fetchData(`${BASEURL}/api/movies/${idMovie}`, 'PUT', movieData);
+    }else{
+    
+
+    // Si no hay idMovie, realiza una petición POST para crear una nueva película
+    result = await fetchData(`${BASEURL}/api/movies/`, 'POST', movieData);
+    }
+
+    const formMovie = document.querySelector('#form-movie');
+    formMovie.reset();
+    Swal.fire({
+    title: 'Exito!',
+    text: result.message,
+    icon: 'success',
+    confirmButtonText: 'Cerrar'
+    })
+
+    showMovies();
+
+    // async function saveTestimonio(){
+    // const idTestimonio = document.querySelector('#id-testimonio').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+
+    // //VALIDACION DE FORMULARIO
     // if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
     //     Swal.fire({
     //     title: 'Error!',
@@ -68,44 +102,25 @@ async function saveMovie(){
     // return;
     // }
 
-    // Crea un objeto con los datos de la película
-    const movieData = {
-    title: title,
-    director: director,
-    release_date: releaseDate,
-    banner: banner,
-    };
+    // // Crea un objeto con los datos de la película
     // const testimoniosData = {
     //     estudiante: estudiante,
     //     comentario: comentario,
     //     fecha_publicacion: fechaPublicacion,
     //     foto_perfil: fotoPerfil,
     // };
-    
-    let result = null;
 
-    // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
-    if(idMovie!==""){
-    result = await fetchData(`${BASEURL}/api/movies/${idMovie}`, 'PUT', movieData);
-    }else{
+    // let result = null;
+
+    // // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
     // if(idTestimonio!==""){
     // result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     // }else{
 
-    // Si no hay idMovie, realiza una petición POST para crear una nueva película
-    result = await fetchData(`${BASEURL}/api/movies/`, 'POST', movieData);
-    }
+    // // Si no hay idMovie, realiza una petición POST para crear una nueva película
     // result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     // }
 
-    const formMovie = document.querySelector('#form-movie');
-    formMovie.reset();
-    Swal.fire({
-    title: 'Exito!',
-    text: result.message,
-    icon: 'success',
-    confirmButtonText: 'Cerrar'
-    })
     // const formTestimonio = document.querySelector('#form-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
     // formTestimonio.reset();
     // Swal.fire({
@@ -115,7 +130,6 @@ async function saveMovie(){
     // confirmButtonText: 'Cerrar'
     // })
     
-    showMovies();
     // showTestimonios();
     }
 // ------------------------- MOSTRAR TESTIMONIOS EN LA TABLA -------------------------
