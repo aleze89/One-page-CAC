@@ -102,7 +102,7 @@ async function saveMovie(){
     // return;
     // }
 
-    // // Crea un objeto con los datos de la película
+    // // Crea un objeto con los datos del testimonio
     // const testimoniosData = {
     //     estudiante: estudiante,
     //     comentario: comentario,
@@ -112,12 +112,12 @@ async function saveMovie(){
 
     // let result = null;
 
-    // // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
+    // // Si hay un idTestimonio, realiza una petición PUT para actualizar el testimonio existente
     // if(idTestimonio!==""){
     // result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     // }else{
 
-    // // Si no hay idMovie, realiza una petición POST para crear una nueva película
+    // // Si no hay idTestimonio, realiza una petición POST para crear un nuevo testimonio
     // result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     // }
 
@@ -230,30 +230,37 @@ async function updateMovie(id){
     const director = document.querySelector('#director');
     const releaseDate = document.querySelector('#release-date');
     const banner = document.querySelector('#banner-form');
+
     idMovie.value = response.id_movie;
     title.value = response.title;
     director.value = response.director;
     releaseDate.value = response.release_date;
     banner.value = response.banner;
 }
-// async function updateMovie(id){
-//     //Buscamos en el servidor la pelicula de acuerdo al id
-//     let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'GET');
-//     const idMovie = document.querySelector('#id-movie');
-//     const title = document.querySelector('#title');
-//     const director = document.querySelector('#director');
-//     const releaseDate = document.querySelector('#release-date');
-//     const banner = document.querySelector('#banner-form');
-//     idMovie.value = response.id_movie;
-//     title.value = response.title;
-//     director.value = response.director;
-//     releaseDate.value = response.release_date;
-//     banner.value = response.banner;
+// async function updateTestimonio(id){
+//     //Buscamos en el servidor el testimonio de acuerdo al id
+//     let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️
+//     const idTestimonio = document.querySelector('#id-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+//     const estudiante = document.querySelector('#estudiante'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+//     const comentario = document.querySelector('#comentario'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+//     const fechaPublicacion = document.querySelector('#fecha-publicacion'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+//     const fotoPerfil = document.querySelector('#foto-perfil'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+
+//     idTestimonio.value = response.id_testimonio;
+//     estudiante.value = response.estudiante;
+//     comentario.value = response.comentario;
+//     fechaPublicacion.value = response.fecha_publicacion;
+//     FotoPerfil.value = response.foto_perfil;
 // }
 
 
-// -------------------------
+// ------------------------- INICIALIZACION -------------------------
 
-
-
-// -------------------------
+// Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
+// contenido del DOM ha sido completamente cargado y parseado.
+document.addEventListener('DOMContentLoaded',function(){
+    const btnSaveMovie = document.querySelector('#btn-save-movie');
+    //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
+    btnSaveMovie.addEventListener('click',saveMovie);
+    showMovies();
+    });
