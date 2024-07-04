@@ -89,13 +89,13 @@ async function saveMovie(){
     result = await fetchData(`${BASEURL}/api/movies/${idMovie}`, 'PUT', movieData);
     }else{
     // if(idTestimonio!==""){
-    // result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonio/" es la misma que usaste al desarrollar el backend ⚠️ 
+    // result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     // }else{
 
     // Si no hay idMovie, realiza una petición POST para crear una nueva película
     result = await fetchData(`${BASEURL}/api/movies/`, 'POST', movieData);
     }
-    // result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonio/" es la misma que usaste al desarrollar el backend ⚠️ 
+    // result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     // }
 
     const formMovie = document.querySelector('#form-movie');
@@ -146,7 +146,7 @@ async function showMovies(){
   }
 
 // async function showTestimonios(){
-//     let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonio/" es la misma que usaste al desarrollar el backend ⚠️ 
+//     let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
 //     const tableTestimonios = document.querySelector('#list-table-testimonios tbody'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
 //     tableTestimonios.innerHTML='';
 //     movies.forEach((movie) => {
@@ -187,15 +187,15 @@ function deleteMovie(id){
     }
     });
     }
-// function deleteMovie(id){
+// function deleteTestimonio(id){
 //     Swal.fire({
-//     title: "Esta seguro de eliminar la pelicula?",
+//     title: "Esta seguro de eliminar el testimonio?",
 //     showCancelButton: true,
 //     confirmButtonText: "Eliminar",
 //     }).then(async (result) => {
 //     if (result.isConfirmed) {
-//     let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'DELETE');
-//     showMovies();
+//     let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'DELETE'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️
+//     showTestimonios();
 //     Swal.fire(response.message, "", "success");
 //     }
 //     });
