@@ -92,10 +92,10 @@ alert('An error occurred while fetching data. Please try again.');
 // Función para comunicarse con el servidor para poder Crear o Actualizar un registro de testimonio @returns.
 async function saveTestimonio(){
     const idTestimonio = document.querySelector('#id-testimonio').value;
-    const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#title' en el original ⚠️
-    const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#director' en el original ⚠️
-    const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#release-date' en el original ⚠️
-    const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#banner' en el original ⚠️
+    const estudiante = document.querySelector('#estudiante').value;
+    const comentario = document.querySelector('#comentario').value;
+    const fechaPublicacion = document.querySelector('#fecha-publicacion').value; 
+    const fotoPerfil = document.querySelector('#foto-perfil-form').value; 
 
     //VALIDACION DE FORMULARIO
     if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
@@ -176,7 +176,7 @@ async function saveTestimonio(){
 
 async function showTestimonios(){
     let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
-    const tableTestimonios = document.querySelector('#list-table-testimonios tbody'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#list-table-movies' en el original ⚠️
+    const tableTestimonios = document.querySelector('#list-table-testimonios tbody');
     tableTestimonios.innerHTML='';
     testimonios.forEach((testimonio) => {
         let tr = `<tr>
@@ -274,10 +274,10 @@ async function updateTestimonio(id){
     //Buscamos en el servidor el testimonio de acuerdo al id
     let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️
     const idTestimonio = document.querySelector('#id-testimonio');
-    const estudiante = document.querySelector('#estudiante'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#title' en el original ⚠️
-    const comentario = document.querySelector('#comentario'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#director' en el original ⚠️
-    const fechaPublicacion = document.querySelector('#fecha-publicacion'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#release-date' en el original ⚠️
-    const fotoPerfil = document.querySelector('#foto-perfil'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#banner' en el original ⚠️
+    const estudiante = document.querySelector('#estudiante'); 
+    const comentario = document.querySelector('#comentario'); 
+    const fechaPublicacion = document.querySelector('#fecha-publicacion'); 
+    const fotoPerfil = document.querySelector('#foto-perfil-form');
 
     idTestimonio.value = response.id_testimonio;
     estudiante.value = response.estudiante;
