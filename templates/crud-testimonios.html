@@ -57,26 +57,28 @@
     </header>
 
     <main> 
-        <section id="form" class="container ">
-            <h2 class="search-title">Gestión de peliculas</h2>
-            <p class="description" >En esta sección se podra llevar a cabo la gestión de las peliculas del portal</p>
+        <br>
+        <br>
+        <section id="form" class="container tema-oscuro">
+            <h2 class="search-title">Gestión de testimonios</h2>
+            <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios de los estudiantes</p>
             <form action="#"  id="form-movie">
                 <div class="d-flex">
                     <div class="form-control d-flex-column">
-                        <label for="title">Título</label>
+                        <label for="title">Estudiante</label>
                         <input type="text" class="input-search" name="title" id="title">
                     </div>
                     <div class="form-control d-flex-column">
-                        <label for="director">Director</label>
+                        <label for="director">Comentario</label>
                         <input type="text" class="input-search" name="director" id="director">
                     </div>
                     
                     <div class="form-control d-flex-column">
-                        <label for="release-date">Fecha Lanzamiento</label>
+                        <label for="release-date">Fecha de publicación</label>
                         <input type="date" class="input-search" name="release_date" id="release-date">
                     </div>
                     <div class="form-control d-flex-column">
-                        <label for="banner">Banner</label>
+                        <label for="banner">Foto de perfil</label>
                         <input type="url" class="input-search" name="banner" id="banner-form">
                     </div>                
                     <input type="hidden"  name="id" id="id-movie">
@@ -84,15 +86,15 @@
                 </div>
             </form> 
         </section>
-        <section id="list" class="container">
-            <h3 class="subtitle">Listado de peliculas</h3>
+        <section id="list" class="container tema-oscuro">
+            <h3 class="subtitle">Listado de testimonios</h3>
             <table id="list-table-movies" class="table">
                 <thead>
                     <tr>
-                        <th>Titulo</th>
-                        <th>Director</th>
-                        <th>Fecha de lanzamiento</th>
-                        <th>Banner</th>
+                        <th>Estudiante</th>
+                        <th>Comentario</th>
+                        <th>Fecha de publicación</th>
+                        <th>Foto de perfil</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
