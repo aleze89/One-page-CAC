@@ -82,3 +82,56 @@ async function saveMovie(){
     //     foto_perfil: fotoPerfil,
     // };
     
+    let result = null;
+
+    // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
+    if(idMovie!==""){
+    result = await fetchData(`${BASEURL}/api/movies/${idMovie}`, 'PUT', movieData);
+    }else{
+    // if(idTestimonio!==""){
+    // result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonio/" es la misma que usaste al desarrollar el backend ⚠️ 
+    // }else{
+
+    // Si no hay idMovie, realiza una petición POST para crear una nueva película
+    result = await fetchData(`${BASEURL}/api/movies/`, 'POST', movieData);
+    }
+    // result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonio/" es la misma que usaste al desarrollar el backend ⚠️ 
+    // }
+
+    const formMovie = document.querySelector('#form-movie');
+    formMovie.reset();
+    Swal.fire({
+    title: 'Exito!',
+    text: result.message,
+    icon: 'success',
+    confirmButtonText: 'Cerrar'
+    })
+    // const formTestimonio = document.querySelector('#form-testimonio');
+    // formTestimonio.reset();
+    // Swal.fire({
+    // title: 'Exito!',
+    // text: result.message,
+    // icon: 'success',
+    // confirmButtonText: 'Cerrar'
+    // })
+    
+    showMovies(); // ←◄ ⚠️ TODOS: ¿Donde se definio este metodo? ⚠️
+    // showTestimonios();
+    }
+// -------------------------
+
+
+
+// -------------------------
+
+
+
+// -------------------------
+
+
+
+// -------------------------
+
+
+
+// -------------------------
