@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="../static/img/favicon-32x32.ico" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/crud-movies.css">
     <title>AprenDEV</title>
 </head>
 <body>
@@ -55,107 +56,51 @@
         </nav>
     </header>
 
-    <main>           
-        
+    <main> 
         <section id="form" class="container ">
-            <h2 class="search-title">Gestión de testimonios</h2>
-            <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios que se visualizan en el portal</p>
-
-            <div class="container">
-
-                <!-- Formulario para agregar / modificar testimonios -->
-                <form action="" id="form-movie">
-                 <!-- <form action="" id="form-testimonio">  -->
-                    <div class="d-flex">
-
-                        <div class="form-control d-flex-column">
-                            <label for="">Título</label>
-                            <input type="text" class="input-search" name="title" id="title">
-                            <!-- 
-                            <input type="text" class="input-search" name="estudiante" id="estudiante"> 
-                            <label for="">Estudiante</label>
-                            -->
-                        </div>
-
-                        <div class="form-control d-flex-column">
-                            <label for="">Director</label>
-                            <input type="text" class="input-search" name="director" id="director">
-                            <!--                             
-                            <label for="">Comentario</label>
-                            <input type="text" class="input-search" name="comentario" id="comentario"> 
-                             -->
-                        </div>
-
-                        <div class="form-control d-flex-column">
-                            <label for="">Fecha Lanzamiento</label>
-                            <input type="date" class="input-search" name="release_date" id="release-date">
-                            <!-- 
-                            <label for="">Fecha de publicación</label>
-                            <input type="date" class="input-search" name="fecha_publicacion" id="fecha_publicacion">
-                            -->
-                        </div>
-
-                        <div class="form-control d-flex-column">
-                            <label for="">Banner</label>
-                            <input type="url" class="input-search" name="banner" id="banner-form">
-                            <!-- 
-                            <label for="">Foto de perfil</label>
-                            <input type="url" class="input-search" name="foto_perfil" id="foto_perfil-form">
-                            -->
-                        </div>
-
-                        <input type="hidden" name="id_movie" id="id-movie">
-                        <!-- <input type="hidden" name="id_testimonio" id="id-testimonio"> -->
-
-                        <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
-                        <!-- <button class="btn-cac" type="button" id="btn-save-testimonio">Agregar</button> -->
+            <h2 class="search-title">Gestión de peliculas</h2>
+            <p class="description" >En esta sección se podra llevar a cabo la gestión de las peliculas del portal</p>
+            <form action="#"  id="form-movie">
+                <div class="d-flex">
+                    <div class="form-control d-flex-column">
+                        <label for="title">Título</label>
+                        <input type="text" class="input-search" name="title" id="title">
                     </div>
-                </form>
+                    <div class="form-control d-flex-column">
+                        <label for="director">Director</label>
+                        <input type="text" class="input-search" name="director" id="director">
+                    </div>
                     
-
-            </div>
-
-            <div class="container">
-
-                <section id="list" class="container">
-
-                    <h3 class="subtitle">Listado de testimonios</h3>
-
-                    <!-- Tabla donde se visualizaran los resultados -->
-                    <table id="list-table-movies" class="table">
-                    <!-- <table id="list-table-testimonios" class="table"> -->
-
-                        <!-- Encabezado de la tabla -->
-                        <thead>
-                            <tr>
-                                <th>Título</th>
-                                <th>Director</th>
-                                <th>Fecha Lanzamiento</th>
-                                <th>Banner</th>
-                                <!--                                 
-                                <th>Estudiante</th>
-                                <th>Comentario</th>
-                                <th>Fecha de publicación</th>
-                                <th>Foto de perfil</th>
-                                -->
-                                <th>Opciones</th>
-
-                            </tr>
-                        </thead>
-
-                        <!-- Resultados de la tabla -->
-                         
-                        <tbody>
-                        </tbody>
-
-                    </table>
-
-                </section>
-
-            </div>
-       
+                    <div class="form-control d-flex-column">
+                        <label for="release-date">Fecha Lanzamiento</label>
+                        <input type="date" class="input-search" name="release_date" id="release-date">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="banner">Banner</label>
+                        <input type="url" class="input-search" name="banner" id="banner-form">
+                    </div>                
+                    <input type="hidden"  name="id" id="id-movie">
+                    <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
+                </div>
+            </form> 
         </section>
-
+        <section id="list" class="container">
+            <h3 class="subtitle">Listado de peliculas</h3>
+            <table id="list-table-movies" class="table">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Director</th>
+                        <th>Fecha de lanzamiento</th>
+                        <th>Banner</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-movies">
+                    
+                </tbody>
+            </table>
+        </section>  
     </main>
 
     <footer id="footer" class="tema-oscuro">
@@ -169,6 +114,8 @@
 
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../static/js/crud-testimonios-fetch.js"></script>
+    <script src="../static/js/index.js"></script>
 </body>
 </html>
