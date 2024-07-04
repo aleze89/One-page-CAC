@@ -222,6 +222,20 @@ async function updateMovie(id){
     releaseDate.value = response.release_date;
     banner.value = response.banner;
 }
+// async function updateMovie(id){
+//     //Buscamos en el servidor la pelicula de acuerdo al id
+//     let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'GET');
+//     const idMovie = document.querySelector('#id-movie');
+//     const title = document.querySelector('#title');
+//     const director = document.querySelector('#director');
+//     const releaseDate = document.querySelector('#release-date');
+//     const banner = document.querySelector('#banner-form');
+//     idMovie.value = response.id_movie;
+//     title.value = response.title;
+//     director.value = response.director;
+//     releaseDate.value = response.release_date;
+//     banner.value = response.banner;
+// }
 
 
 // -------------------------
