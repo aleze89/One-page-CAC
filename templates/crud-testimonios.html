@@ -60,35 +60,44 @@
         <br>
         <br>
         <section id="form" class="container tema-oscuro">
+
             <h2 class="search-title">Gestión de testimonios</h2>
+
             <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios de los estudiantes</p>
-            <form action="#"  id="form-movie">
+
+            <form action="#"  id="form-testimonio"> <!-- ⚠️ Revisar si esta igual que en el JS // "form-movies"-->
+
                 <div class="d-flex">
                     <div class="form-control d-flex-column">
-                        <label for="title">Estudiante</label>
-                        <input type="text" class="input-search" name="title" id="title">
+                        <label for="estudiante">Estudiante</label>
+                        <input type="text" class="input-search" name="estudiante" id="estudiante">
                     </div>
+
                     <div class="form-control d-flex-column">
-                        <label for="director">Comentario</label>
-                        <input type="text" class="input-search" name="director" id="director">
+                        <label for="comentario">Comentario</label>
+                        <input type="text" class="input-search" name="comentario" id="comentario">
                     </div>
                     
                     <div class="form-control d-flex-column">
                         <label for="release-date">Fecha de publicación</label>
-                        <input type="date" class="input-search" name="release_date" id="release-date">
+                        <input type="date" class="input-search" name="fecha_publicacion" id="fecha-publicacion">
                     </div>
+
                     <div class="form-control d-flex-column">
-                        <label for="banner">Foto de perfil</label>
-                        <input type="url" class="input-search" name="banner" id="banner-form">
-                    </div>                
-                    <input type="hidden"  name="id" id="id-movie">
-                    <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
+                        <label for="foto-perfil">Foto de perfil</label>
+                        <input type="url" class="input-search" name="foto_perfil" id="foto-perfil-form"> <!-- ⚠️ Revisar si esta igual que en el JS // "???"-->
+                    </div>  
+
+                    <input type="hidden"  name="id" id="id-testimonio">
+                    <button class="btn-cac" type="button" id="btn-save-testimonio">Agregar</button> <!-- ⚠️ Revisar si esta igual que en el JS // "btn-save-movie"-->
+
                 </div>
             </form> 
         </section>
+
         <section id="list" class="container tema-oscuro">
             <h3 class="subtitle">Listado de testimonios</h3>
-            <table id="list-table-movies" class="table">
+            <table id="list-table-testimonios" class="table"> <!-- ⚠️ Revisar si esta igual que en el JS // "list-table-movies"-->
                 <thead>
                     <tr>
                         <th>Estudiante</th>
@@ -98,7 +107,7 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="tbody-table-movies">
+                <tbody id="tbody-table-testimonios"> <!-- ⚠️ Revisar si esta igual que en el JS-->
                     
                 </tbody>
             </table>
