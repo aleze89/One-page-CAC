@@ -28,7 +28,7 @@ alert('An error occurred while fetching data. Please try again.');
 }
 }
 
-// -------------------------
+// ------------------------- GUARDAR TESTIMONIO -------------------------
 
 /**
 * Función para comunicarse con el servidor para poder Crear o Actualizar
@@ -118,7 +118,7 @@ async function saveMovie(){
     showMovies();
     // showTestimonios();
     }
-// -------------------------
+// ------------------------- MOSTRAR TESTIMONIOS EN LA TABLA -------------------------
 
 /**
  * Funcion que permite crear un elemento <tr> para la tabla de peliculas
@@ -166,9 +166,26 @@ async function showMovies(){
 //     });
 //   }
 
-// -------------------------
+// ------------------------- BORRAR TESTIMONIO -------------------------
 
-
+/**
+* Function que permite eliminar una pelicula del array del localstorage
+* de acuedo al indice del mismo
+* @param {number} id posición del array que se va a eliminar
+*/
+function deleteMovie(id){
+    Swal.fire({
+    title: "Esta seguro de eliminar la pelicula?",
+    showCancelButton: true,
+    confirmButtonText: "Eliminar",
+    }).then(async (result) => {
+    if (result.isConfirmed) {
+    let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'DELETE');
+    showMovies();
+    Swal.fire(response.message, "", "success");
+    }
+    });
+    }
 
 // -------------------------
 
