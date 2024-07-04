@@ -1,6 +1,5 @@
 const BASEURL = 'http://127.0.0.1:5000'; // Conectar con Python Anywhere; explicacion clase 30 → https://youtu.be/s1sgQPDggyo?list=PL3jC5zn-KQJZDWMxxz-oM7iFX_y1vpuda&t=3581
 
-
 /**
 * Función para realizar una petición fetch con JSON.
 * @param {string} url - La URL a la que se realizará la petición.
@@ -28,7 +27,11 @@ alert('An error occurred while fetching data. Please try again.');
 }
 }
 
+
+
 // ------------------------- GUARDAR TESTIMONIO -------------------------
+
+// Codigo original → EMPIEZA
 
 // /**
 // * Función para comunicarse con el servidor para poder Crear o Actualizar
@@ -84,55 +87,63 @@ alert('An error occurred while fetching data. Please try again.');
 
 //     showMovies();
 
-    // Función para comunicarse con el servidor para poder Crear o Actualizar un registro de testimonio @returns.
-    async function saveTestimonio(){
-        const idTestimonio = document.querySelector('#id-testimonio').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-        const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-        const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-        const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-        const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+// Codigo original → TERMINA
 
-        //VALIDACION DE FORMULARIO
-        if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
-            Swal.fire({
-            title: 'Error!',
-            text: 'Por favor completa todos los campos.',
-            icon: 'error',
-            confirmButtonText: 'Cerrar'
-        });
-        return;
-        }
+// Función para comunicarse con el servidor para poder Crear o Actualizar un registro de testimonio @returns.
+async function saveTestimonio(){
+    const idTestimonio = document.querySelector('#id-testimonio').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
 
-        // Crea un objeto con los datos del testimonio
-        const testimoniosData = {
-            estudiante: estudiante,
-            comentario: comentario,
-            fecha_publicacion: fechaPublicacion,
-            foto_perfil: fotoPerfil,
-        };
-        let result = null;
-
-        // Si hay un idTestimonio, realiza una petición PUT para actualizar el testimonio existente
-        if(idTestimonio!==""){
-        result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
-        }else{
-
-        // Si no hay idTestimonio, realiza una petición POST para crear un nuevo testimonio
-        result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
-        }
-
-        const formTestimonio = document.querySelector('#form-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-        formTestimonio.reset();
+    //VALIDACION DE FORMULARIO
+    if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
         Swal.fire({
-            title: 'Exito!',
-            text: result.message,
-            icon: 'success',
-            confirmButtonText: 'Cerrar'
-        })
-    
-        showTestimonios();
+        title: 'Error!',
+        text: 'Por favor completa todos los campos.',
+        icon: 'error',
+        confirmButtonText: 'Cerrar'
+    });
+    return;
     }
+
+    // Crea un objeto con los datos del testimonio
+    const testimoniosData = {
+        estudiante: estudiante,
+        comentario: comentario,
+        fecha_publicacion: fechaPublicacion,
+        foto_perfil: fotoPerfil,
+    };
+    let result = null;
+
+    // Si hay un idTestimonio, realiza una petición PUT para actualizar el testimonio existente
+    if(idTestimonio!==""){
+    result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
+    }else{
+
+    // Si no hay idTestimonio, realiza una petición POST para crear un nuevo testimonio
+    result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
+    }
+
+    const formTestimonio = document.querySelector('#form-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    formTestimonio.reset();
+    Swal.fire({
+        title: 'Exito!',
+        text: result.message,
+        icon: 'success',
+        confirmButtonText: 'Cerrar'
+    })
+    
+    showTestimonios();
+
+}
+
+
+
 // ------------------------- MOSTRAR TESTIMONIOS EN LA TABLA -------------------------
+
+// Codigo original → EMPIEZA
 
 /**
  * Funcion que permite crear un elemento <tr> para la tabla de peliculas
@@ -159,6 +170,8 @@ alert('An error occurred while fetching data. Please try again.');
 //     });
 //   }
 
+// Codigo original → TERMINA
+
 // Funcion que permite crear un elemento <tr> para la tabla de testimonios por medio del uso de template string de JS.
 
 async function showTestimonios(){
@@ -182,7 +195,11 @@ async function showTestimonios(){
     });
 }
 
+
+
 // ------------------------- BORRAR TESTIMONIO -------------------------
+
+// Codigo original → EMPIEZA
 
 /**
 * Function que permite eliminar una pelicula del array del localstorage
@@ -204,6 +221,8 @@ async function showTestimonios(){
 //     });
 //     }
 
+// Codigo original → TERMINA
+
 // Funcion que permite eliminar un testimonio del array del localstorage de acuedo al indice del mismo @param {number} id posición del array que se va a eliminar.
 
 function deleteTestimonio(id){
@@ -220,7 +239,11 @@ function deleteTestimonio(id){
     });
 }
 
+
+
 // ------------------------- EDITAR UNA PELICULA -------------------------
+
+// Codigo original → EMPIEZA
 
 /**
 * Function que permite cargar el formulario con los datos de la pelicula
@@ -243,6 +266,8 @@ function deleteTestimonio(id){
 //     banner.value = response.banner;
 // }
 
+// Codigo original → TERMINA
+
 // Funcion que permite cargar el formulario con los datos del testimonio para su edición @param {number} id Id del testimonio que se quiere editar.
 
 async function updateTestimonio(id){
@@ -264,6 +289,8 @@ async function updateTestimonio(id){
 
 // ------------------------- INICIALIZACION -------------------------
 
+// Codigo original → EMPIEZA
+
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el contenido del DOM ha sido completamente cargado y parseado.
 // document.addEventListener('DOMContentLoaded',function(){
 //     const btnSaveMovie = document.querySelector('#btn-save-movie');
@@ -271,6 +298,8 @@ async function updateTestimonio(id){
 //     btnSaveMovie.addEventListener('click',saveMovie);
 //     showMovies();
 //     });
+
+// Codigo original → TERMINA
 
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener('DOMContentLoaded',function(){
