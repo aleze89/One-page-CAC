@@ -220,7 +220,8 @@ async function updateMovie(id){
     title.value = response.title;
     director.value = response.director;
     releaseDate.value = response.release_date;
-    ban
+    banner.value = response.banner;
+}
 
 
 // -------------------------
