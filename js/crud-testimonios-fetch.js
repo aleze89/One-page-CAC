@@ -84,6 +84,7 @@ async function saveMovie(){
 
     showMovies();
 
+    // Función para comunicarse con el servidor para poder Crear o Actualizar un registro de testimonio @returns.
     // async function saveTestimonio(){
     // const idTestimonio = document.querySelector('#id-testimonio').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
     // const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
@@ -159,6 +160,8 @@ async function showMovies(){
     });
   }
 
+// Funcion que permite crear un elemento <tr> para la tabla de testimonios por medio del uso de template string de JS.
+
 // async function showTestimonios(){
 //     let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
 //     const tableTestimonios = document.querySelector('#list-table-testimonios tbody'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
@@ -201,6 +204,9 @@ function deleteMovie(id){
     }
     });
     }
+
+// Funcion que permite eliminar un testimonio del array del localstorage de acuedo al indice del mismo @param {number} id posición del array que se va a eliminar.
+
 // function deleteTestimonio(id){
 //     Swal.fire({
 //     title: "Esta seguro de eliminar el testimonio?",
@@ -237,6 +243,9 @@ async function updateMovie(id){
     releaseDate.value = response.release_date;
     banner.value = response.banner;
 }
+
+// Funcion que permite cargar el formulario con los datos del testimonio para su edición @param {number} id Id del testimonio que se quiere editar.
+
 // async function updateTestimonio(id){
 //     //Buscamos en el servidor el testimonio de acuerdo al id
 //     let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️
@@ -256,8 +265,7 @@ async function updateMovie(id){
 
 // ------------------------- INICIALIZACION -------------------------
 
-// Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
-// contenido del DOM ha sido completamente cargado y parseado.
+// Escuchar el evento 'DOMContentLoaded' que se dispara cuando el contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener('DOMContentLoaded',function(){
     const btnSaveMovie = document.querySelector('#btn-save-movie');
     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
@@ -265,8 +273,7 @@ document.addEventListener('DOMContentLoaded',function(){
     showMovies();
     });
 
-// // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
-// // contenido del DOM ha sido completamente cargado y parseado.
+// // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el contenido del DOM ha sido completamente cargado y parseado.
 // document.addEventListener('DOMContentLoaded',function(){
 //     const btnSaveTestimonio = document.querySelector('#btn-save-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
 //     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
