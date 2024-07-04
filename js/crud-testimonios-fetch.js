@@ -41,6 +41,12 @@ async function saveMovie(){
     const director = document.querySelector('#director').value;
     const releaseDate = document.querySelector('#release-date').value;
     const banner = document.querySelector('#banner-form').value;
+// async function saveTestimonio(){
+    // const idTestimonio = document.querySelector('#id-testimonio').value;
+    // const estudiante = document.querySelector('#estudiante').value;
+    // const comentario = document.querySelector('#comentario').value;
+    // const fechaPublicacion = document.querySelector('#fecha-publicacion').value;
+    // const fotoPerfil = document.querySelector('#foto-perfil').value;
 
     //VALIDACION DE FORMULARIO
     if (!title || !director || !releaseDate || !banner) {
@@ -52,6 +58,16 @@ async function saveMovie(){
     });
     return;
     }
+    // if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
+    //     Swal.fire({
+    //     title: 'Error!',
+    //     text: 'Por favor completa todos los campos.',
+    //     icon: 'error',
+    //     confirmButtonText: 'Cerrar'
+    // });
+    // return;
+    // }
+
     // Crea un objeto con los datos de la película
     const movieData = {
     title: title,
@@ -59,4 +75,10 @@ async function saveMovie(){
     release_date: releaseDate,
     banner: banner,
     };
+    // const testimoniosData = {
+    //     estudiante: estudiante,
+    //     comentario: comentario,
+    //     fecha_publicacion: fechaPublicacion,
+    //     foto_perfil: fotoPerfil,
+    // };
     
