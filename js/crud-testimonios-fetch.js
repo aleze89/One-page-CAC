@@ -195,7 +195,7 @@ async function showTestimonios(){
     });
 }
 
-
+// ⚠️ Esta desarrollado como se resuelve en el PDF y en la plantilla "limpia". Si llegara a pasar que, por alguna razon no muestra correctamente los elementos en la tabla, entonces habria que ver si es necesario agregar el codigo que desarrollo en el archivo de ejemplo. Si es asi, recordar descomentar la linea con el ID en el elemento <tbody> del HTML 'drud-testimonios.html ⚠️
 
 // ------------------------- BORRAR TESTIMONIO -------------------------
 
