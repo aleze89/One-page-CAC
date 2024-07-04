@@ -145,7 +145,26 @@ async function showMovies(){
     });
   }
 
-
+// async function showMovies(){
+//     let movies =  await fetchData(BASEURL+'/api/movies/', 'GET');
+//     const tableMovies = document.querySelector('#list-table-movies tbody');
+//     tableMovies.innerHTML='';
+//     movies.forEach((movie) => {
+//       let tr = `<tr>
+//                     <td>${movie.title}</td>
+//                     <td>${movie.director}</td>
+//                     <td>${movie.release_date}</td>
+//                     <td>
+//                         <img src="${movie.banner}" width="30%">
+//                     </td>
+//                     <td>
+//                         <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><i class="fa fa-pencil" ></button></i>
+//                         <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><i class="fa fa-trash" ></button></i>
+//                     </td>
+//                   </tr>`;
+//       tableMovies.insertAdjacentHTML("beforeend",tr);
+//     });
+//   }
 
 // -------------------------
 
