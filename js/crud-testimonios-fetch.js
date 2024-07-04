@@ -42,11 +42,11 @@ async function saveMovie(){
     const releaseDate = document.querySelector('#release-date').value;
     const banner = document.querySelector('#banner-form').value;
 // async function saveTestimonio(){
-    // const idTestimonio = document.querySelector('#id-testimonio').value;
-    // const estudiante = document.querySelector('#estudiante').value;
-    // const comentario = document.querySelector('#comentario').value;
-    // const fechaPublicacion = document.querySelector('#fecha-publicacion').value;
-    // const fotoPerfil = document.querySelector('#foto-perfil').value;
+    // const idTestimonio = document.querySelector('#id-testimonio').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    // const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
 
     //VALIDACION DE FORMULARIO
     if (!title || !director || !releaseDate || !banner) {
@@ -106,7 +106,7 @@ async function saveMovie(){
     icon: 'success',
     confirmButtonText: 'Cerrar'
     })
-    // const formTestimonio = document.querySelector('#form-testimonio');
+    // const formTestimonio = document.querySelector('#form-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
     // formTestimonio.reset();
     // Swal.fire({
     // title: 'Exito!',
@@ -145,24 +145,24 @@ async function showMovies(){
     });
   }
 
-// async function showMovies(){
-//     let movies =  await fetchData(BASEURL+'/api/movies/', 'GET');
-//     const tableMovies = document.querySelector('#list-table-movies tbody');
-//     tableMovies.innerHTML='';
+// async function showTestimonios(){
+//     let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonio/" es la misma que usaste al desarrollar el backend ⚠️ 
+//     const tableTestimonios = document.querySelector('#list-table-testimonios tbody'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+//     tableTestimonios.innerHTML='';
 //     movies.forEach((movie) => {
 //       let tr = `<tr>
-//                     <td>${movie.title}</td>
-//                     <td>${movie.director}</td>
-//                     <td>${movie.release_date}</td>
+//                     <td>${testimonio.estudiante}</td>
+//                     <td>${testimonio.comentario}</td>
+//                     <td>${testimonio.fecha_publicacion}</td>
 //                     <td>
-//                         <img src="${movie.banner}" width="30%">
+//                         <img src="${testimonio.foto_perfil}" width="30%"> // ←◄ ⚠️ Tadeo: Cambiar despues tamaño de la foto de perfil ⚠️
 //                     </td>
 //                     <td>
-//                         <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><i class="fa fa-pencil" ></button></i>
-//                         <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><i class="fa fa-trash" ></button></i>
+//                         <button class="btn-cac" onclick='updateTestimonio(${testimonio.id_testimonio})'><i class="fa fa-pencil" ></button></i>
+//                         <button class="btn-cac" onclick='deleteTestimonio(${testimonio.id_testimonio})'><i class="fa fa-trash" ></button></i>
 //                     </td>
 //                   </tr>`;
-//       tableMovies.insertAdjacentHTML("beforeend",tr);
+//       tableTestimonios.insertAdjacentHTML("beforeend",tr);
 //     });
 //   }
 
