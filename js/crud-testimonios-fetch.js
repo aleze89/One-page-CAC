@@ -109,7 +109,7 @@ async function saveTestimonio(){
     }
 
     // Crea un objeto con los datos del testimonio
-    const testimoniosData = {
+    const testimonioData = {
         estudiante: estudiante,
         comentario: comentario,
         fecha_publicacion: fechaPublicacion,
