@@ -173,6 +173,7 @@ async function showMovies(){
 * de acuedo al indice del mismo
 * @param {number} id posición del array que se va a eliminar
 */
+
 function deleteMovie(id){
     Swal.fire({
     title: "Esta seguro de eliminar la pelicula?",
@@ -186,6 +187,19 @@ function deleteMovie(id){
     }
     });
     }
+// function deleteMovie(id){
+//     Swal.fire({
+//     title: "Esta seguro de eliminar la pelicula?",
+//     showCancelButton: true,
+//     confirmButtonText: "Eliminar",
+//     }).then(async (result) => {
+//     if (result.isConfirmed) {
+//     let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'DELETE');
+//     showMovies();
+//     Swal.fire(response.message, "", "success");
+//     }
+//     });
+//     }
 
 // -------------------------
 
