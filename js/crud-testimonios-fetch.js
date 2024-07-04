@@ -268,8 +268,8 @@ document.addEventListener('DOMContentLoaded',function(){
 // // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el
 // // contenido del DOM ha sido completamente cargado y parseado.
 // document.addEventListener('DOMContentLoaded',function(){
-//     const btnSaveMovie = document.querySelector('#btn-save-movie');
+//     const btnSaveTestimonio = document.querySelector('#btn-save-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
 //     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
-//     btnSaveMovie.addEventListener('click',saveMovie);
-//     showMovies();
+//     btnSaveTestimonio.addEventListener('click',saveTestimonio);
+//     showTestimonios();
 //     });
