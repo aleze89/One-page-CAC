@@ -65,7 +65,7 @@
 
             <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios de los estudiantes</p>
 
-            <form action="#"  id="form-testimonio"> <!-- ⚠️ Revisar si esta igual que en el JS // "form-movies"-->
+            <form action="#"  id="form-testimonio">
 
                 <div class="d-flex">
                     <div class="form-control d-flex-column">
@@ -85,11 +85,11 @@
 
                     <div class="form-control d-flex-column">
                         <label for="foto-perfil">Foto de perfil</label>
-                        <input type="url" class="input-search" name="foto_perfil" id="foto-perfil-form"> <!-- ⚠️ Revisar si esta igual que en el JS // "???"-->
+                        <input type="url" class="input-search" name="foto_perfil" id="foto-perfil-form">
                     </div>  
 
                     <input type="hidden"  name="id" id="id-testimonio">
-                    <button class="btn-cac" type="button" id="btn-save-testimonio">Agregar</button> <!-- ⚠️ Revisar si esta igual que en el JS // "btn-save-movie"-->
+                    <button class="btn-cac" type="button" id="btn-save-testimonio">Agregar</button>
 
                 </div>
             </form> 
@@ -97,7 +97,7 @@
 
         <section id="list" class="container tema-oscuro">
             <h3 class="subtitle">Listado de testimonios</h3>
-            <table id="list-table-testimonios" class="table"> <!-- ⚠️ Revisar si esta igual que en el JS // "list-table-movies"-->
+            <table id="list-table-testimonios" class="table">
                 <thead>
                     <tr>
                         <th>Estudiante</th>
@@ -107,7 +107,8 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="tbody-table-testimonios"> <!-- ⚠️ Revisar si esta igual que en el JS-->
+                <tbody>
+                <!-- <tbody id="tbody-table-testimonios"> En la version sin el script de alertas, es diferente. En nuestro caso, que seguimos las instrucciones del PDF, este ID es innecesario.-->
                     
                 </tbody>
             </table>
