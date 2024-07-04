@@ -57,40 +57,51 @@
 
     <main>           
         
-        <section>
+        <section id="form" class="container ">
+            <h2 class="search-title">Gestión de testimonios</h2>
+            <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios que se visualizan en el portal</p>
 
             <div class="container">
 
                 <!-- Formulario para agregar / modificar testimonios -->
-                <form action="" id="form-movie"> <!-- form-testimonio-->
+                <form action="" id="form-movie">
+                 <!-- <form action="" id="form-testimonio">  -->
                     <div class="d-flex">
 
                         <div class="form-control d-flex-column">
                             <label for="">Título</label>
-                            <!-- <label for="">Estudiante</label> -->
                             <input type="text" class="input-search" name="title" id="title">
-                            <!-- <input type="text" class="input-search" name="estudiante" id="estudiante"> -->
+                            <!-- 
+                            <input type="text" class="input-search" name="estudiante" id="estudiante"> 
+                            <label for="">Estudiante</label>
+                            -->
                         </div>
 
                         <div class="form-control d-flex-column">
                             <label for="">Director</label>
-                            <!-- <label for="">Comentario</label> -->
                             <input type="text" class="input-search" name="director" id="director">
-                            <!-- <input type="text" class="input-search" name="comentario" id="comentario"> -->
+                            <!--                             
+                            <label for="">Comentario</label>
+                            <input type="text" class="input-search" name="comentario" id="comentario"> 
+                             -->
                         </div>
 
                         <div class="form-control d-flex-column">
                             <label for="">Fecha Lanzamiento</label>
-                            <!-- <label for="">Fecha de publicación</label> -->
                             <input type="date" class="input-search" name="release_date" id="release-date">
-                            <!-- <input type="date" class="input-search" name="fecha_publicacion" id="fecha_publicacion"> -->
+                            <!-- 
+                            <label for="">Fecha de publicación</label>
+                            <input type="date" class="input-search" name="fecha_publicacion" id="fecha_publicacion">
+                            -->
                         </div>
 
                         <div class="form-control d-flex-column">
                             <label for="">Banner</label>
-                            <!-- <label for="">Foto de perfil</label> -->
                             <input type="url" class="input-search" name="banner" id="banner-form">
-                            <!-- <input type="url" class="input-search" name="foto_perfil" id="foto_perfil-form"> -->
+                            <!-- 
+                            <label for="">Foto de perfil</label>
+                            <input type="url" class="input-search" name="foto_perfil" id="foto_perfil-form">
+                            -->
                         </div>
 
                         <input type="hidden" name="id_movie" id="id-movie">
@@ -108,8 +119,7 @@
 
                 <section id="list" class="container">
 
-                    <h3 class="subtitle">Listado de peliculas</h3>
-                    <!-- <h3 class="subtitle">Listado de testimonios</h3> -->
+                    <h3 class="subtitle">Listado de testimonios</h3>
 
                     <!-- Tabla donde se visualizaran los resultados -->
                     <table id="list-table-movies" class="table">
@@ -122,7 +132,7 @@
                                 <th>Director</th>
                                 <th>Fecha Lanzamiento</th>
                                 <th>Banner</th>
-<!--                                 
+                                <!--                                 
                                 <th>Estudiante</th>
                                 <th>Comentario</th>
                                 <th>Fecha de publicación</th>
@@ -134,9 +144,12 @@
                         </thead>
 
                         <!-- Resultados de la tabla -->
+                         
                         <tbody>
                         </tbody>
+
                     </table>
+
                 </section>
 
             </div>
