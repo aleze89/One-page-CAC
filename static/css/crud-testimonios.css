@@ -79,11 +79,11 @@
     border-bottom: 1px solid #4f4f4f;
 }
 
-#list-div-movies{
+#list-div-movies{ /* ⚠️ ¿Donde esta en el HTML? ⚠️ */
     width: 100%;
 }
 
-.item-movie{
+.item-movie{ /* ⚠️ ¿Donde esta en el HTML? ⚠️ */
     background-color: var(--primary-color);
     border-radius: 10px;
     padding: 20px;
