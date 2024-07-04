@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="../static/img/favicon-32x32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/crud-testimonios.css">
+    <title>AprenDEV | Admin</title>
+</head>
+<body>
+    <header >
+
+        <nav class="nav-bar scrolled">
+
+            <div class="top-bar">
+
+                <!-- logo -->
+                <div class="logo">
+                    <img src="../static/img/logo.svg" alt="Signo gráfico de la marca">
+                    <a href="#hero-banner">
+                        <span>aprenDEV</span>
+                    </a>
+                </div>
+                <!-- Icono menu hamburguesa. Estado inicial: Hidden -->
+                
+                <div class="menu-hamburguesa" id="menu-hamburguesa">
+                    <img src="../static/img/menu.svg" alt="Icono menu hamburguesa">
+                </div>
+                
+            </div>                         
+    
+            <!-- Menu antes de los cambios -->
+            <!-- Separador (Menu responsive) -->
+            <hr>
+            
+            <!--Hipervinculos para el menu -->
+            <div class="menu-desplegable" id="menu-desplegable">
+
+                <ul class="nav-links">
+                        <li >
+                            <a href="/index.html">Cerrar sesion</a>
+                        </li> 
+                    <!-- </button> -->
+                    
+                </ul>
+
+            </div>
+            <!-- Agregar script con JS para que se apliquen las reglas '.scrolled' al abandonar la seccion #hero-banner -->
+        </nav>
+    </header>
+
+    <main> 
+        <br>
+        <br>
+        <section id="form" class="container tema-oscuro">
+
+            <h2 class="search-title">Gestión de testimonios</h2>
+
+            <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios de los estudiantes</p>
+
+            <form action="#"  id="form-testimonio">
+
+                <div class="d-flex">
+                    <div class="form-control d-flex-column">
+                        <label for="estudiante">Estudiante</label>
+                        <input type="text" class="input-search" name="estudiante" id="estudiante">
+                    </div>
+
+                    <div class="form-control d-flex-column">
+                        <label for="comentario">Comentario</label>
+                        <input type="text" class="input-search" name="comentario" id="comentario">
+                    </div>
+                    
+                    <div class="form-control d-flex-column">
+                        <label for="fecha-publicacion">Fecha de publicación</label>
+                        <input type="date" class="input-search" name="fecha_publicacion" id="fecha-publicacion">
+                    </div>
+
+                    <div class="form-control d-flex-column">
+                        <label for="foto-perfil">Foto de perfil</label>
+                        <input type="url" class="input-search" name="foto_perfil" id="foto-perfil-form">
+                    </div>  
+
+                    <input type="hidden"  name="id" id="id-testimonio">
+                    <button class="btn-cac" type="button" id="btn-save-testimonio">Agregar</button>
+
+                </div>
+            </form> 
+        </section>
+
+        <section id="list" class="container tema-oscuro">
+            <h3 class="subtitle">Listado de testimonios</h3>
+            <table id="list-table-testimonios" class="table">
+                <thead>
+                    <tr>
+                        <th>Estudiante</th>
+                        <th>Comentario</th>
+                        <th>Fecha de publicación</th>
+                        <th>Foto de perfil</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- <tbody id="tbody-table-testimonios"> En la version sin el script de alertas, es diferente. En nuestro caso, que seguimos las instrucciones del PDF, este ID es innecesario.-->
+                    
+                </tbody>
+            </table>
+        </section>  
+    </main>
+
+    <footer id="footer" class="tema-oscuro">
+        
+        <div class="container">
+            <div class="footer-text">
+                <a href="templates/privacy.html">Politicas de privacidad</a>
+                <a href="templates/reserved.html">Todos los derechos reservados</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../static/js/crud-testimonios-fetch.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+</html>
