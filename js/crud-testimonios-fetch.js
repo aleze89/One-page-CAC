@@ -30,3 +30,33 @@ alert('An error occurred while fetching data. Please try again.');
 
 // -------------------------
 
+/**
+* Función para comunicarse con el servidor para poder Crear o Actualizar
+* un registro de pelicula
+* @returns
+*/
+async function saveMovie(){
+    const idMovie = document.querySelector('#id-movie').value;
+    const title = document.querySelector('#title').value;
+    const director = document.querySelector('#director').value;
+    const releaseDate = document.querySelector('#release-date').value;
+    const banner = document.querySelector('#banner-form').value;
+
+    //VALIDACION DE FORMULARIO
+    if (!title || !director || !releaseDate || !banner) {
+    Swal.fire({
+    title: 'Error!',
+    text: 'Por favor completa todos los campos.',
+    icon: 'error',
+    confirmButtonText: 'Cerrar'
+    });
+    return;
+    }
+    // Crea un objeto con los datos de la película
+    const movieData = {
+    title: title,
+    director: director,
+    release_date: releaseDate,
+    banner: banner,
+    };
+    
