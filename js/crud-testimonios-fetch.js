@@ -91,11 +91,11 @@ alert('An error occurred while fetching data. Please try again.');
 
 // Función para comunicarse con el servidor para poder Crear o Actualizar un registro de testimonio @returns.
 async function saveTestimonio(){
-    const idTestimonio = document.querySelector('#id-testimonio').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const idTestimonio = document.querySelector('#id-testimonio').value;
+    const estudiante = document.querySelector('#estudiante').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#title' en el original ⚠️
+    const comentario = document.querySelector('#comentario').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#director' en el original ⚠️
+    const fechaPublicacion = document.querySelector('#fecha-publicacion').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#release-date' en el original ⚠️
+    const fotoPerfil = document.querySelector('#foto-perfil').value; // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#banner' en el original ⚠️
 
     //VALIDACION DE FORMULARIO
     if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
@@ -126,7 +126,7 @@ async function saveTestimonio(){
     result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
     }
 
-    const formTestimonio = document.querySelector('#form-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const formTestimonio = document.querySelector('#form-testimonio'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#form-movie' en el original ⚠️
     formTestimonio.reset();
     Swal.fire({
         title: 'Exito!',
@@ -176,7 +176,7 @@ async function saveTestimonio(){
 
 async function showTestimonios(){
     let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️ 
-    const tableTestimonios = document.querySelector('#list-table-testimonios tbody'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const tableTestimonios = document.querySelector('#list-table-testimonios tbody'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#list-table-movies' en el original ⚠️
     tableTestimonios.innerHTML='';
     testimonios.forEach((testimonio) => {
         let tr = `<tr>
@@ -273,11 +273,11 @@ function deleteTestimonio(id){
 async function updateTestimonio(id){
     //Buscamos en el servidor el testimonio de acuerdo al id
     let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'GET'); // ←◄ ⚠️ Alejandro: Revisá si la direccion "/api/testimonios/" es la misma que usaste al desarrollar el backend ⚠️
-    const idTestimonio = document.querySelector('#id-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const estudiante = document.querySelector('#estudiante'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const comentario = document.querySelector('#comentario'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const fechaPublicacion = document.querySelector('#fecha-publicacion'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
-    const fotoPerfil = document.querySelector('#foto-perfil'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const idTestimonio = document.querySelector('#id-testimonio');
+    const estudiante = document.querySelector('#estudiante'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#title' en el original ⚠️
+    const comentario = document.querySelector('#comentario'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#director' en el original ⚠️
+    const fechaPublicacion = document.querySelector('#fecha-publicacion'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#release-date' en el original ⚠️
+    const fotoPerfil = document.querySelector('#foto-perfil'); // ←◄ ⚠️ No lo encuentro en el HTML // Tampoco encuentro '#banner' en el original ⚠️
 
     idTestimonio.value = response.id_testimonio;
     estudiante.value = response.estudiante;
@@ -303,7 +303,7 @@ async function updateTestimonio(id){
 
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener('DOMContentLoaded',function(){
-    const btnSaveTestimonio = document.querySelector('#btn-save-testimonio'); // ←◄ ⚠️ Tadeo: Verficar que tenga el mismo ID ⚠️
+    const btnSaveTestimonio = document.querySelector('#btn-save-testimonio');
     
     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
     btnSaveTestimonio.addEventListener('click',saveTestimonio);
