@@ -15,13 +15,13 @@ CORS(app)
 #permitir solicitudes desde un origen específico
 # CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:5000"}})
 
-# Rutas para el CRUD de la entidad Movie
+# Rutas para el CRUD de la entidad testimonio
 app.route('/', methods=['GET'])(index)
-app.route('/api/movies/', methods=['POST'])(create_movie)
-app.route('/api/movies/', methods=['GET'])(get_all_movies)
-app.route('/api/movies/<int:movie_id>', methods=['GET'])(get_movie)
-app.route('/api/movies/<int:movie_id>', methods=['PUT'])(update_movie)
-app.route('/api/movies/<int:movie_id>', methods=['DELETE'])(delete_movie)
+app.route('/api/testimonios/', methods=['POST'])(create_testimonio)
+app.route('/api/testimonios/', methods=['GET'])(get_all_testimonios)
+app.route('/api/testimonios/<int:testimonio_id>', methods=['GET'])(get_testimonio)
+app.route('/api/testimonios/<int:testimonio_id>', methods=['PUT'])(update_testimonio)
+app.route('/api/testimonios/<int:testimonio_id>', methods=['DELETE'])(delete_testimonio)
 
 if __name__ == '__main__':
     app.run(debug=True)
