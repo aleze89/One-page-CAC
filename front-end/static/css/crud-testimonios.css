@@ -1,97 +1,70 @@
-
-/* General */
-
-:root {
-    --primary-color: #ffffff;
-    --secondary-color: #1b1d20;
-    --tertiary-color:hsl(280, 100%, 50%);
-
-    --color-neutral-80: LightGrey;
-    --color-neutral-90: hwb(0 90% 17%);
-
+.description{
+    color: white;
+    margin: 20px 0px;
 }
 
-.centrar {
-    max-width: 1080px;
-    justify-content: center;
-    /* text-align: center; */
-    align-items: center;
+#form .d-flex{
+    justify-content: space-around;
+}
+
+.d-flex-column{
     display: flex;
     flex-direction: column;
-    gap: 9px;
+}
+
+.form-control label{
+    color: #FFF;
+}
+
+.form-control input {
+    height: 50px;
     width: 100%;
-    margin: 32px 0px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+.form-select {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid white; 
+    border-radius: 25px;
+    margin: 20px 0px;
+
 }
 
-@media(max-width:720px) {
-    .centrar {
-        justify-content: left;
-        align-items: flex-start;
-    }
-}
-/* Formulario */
-
-#form-testimonio {
-    max-width: 1080px;
+.form-select option{
+    color:#2a2a2a;
 }
 
-#form-testimonio .d-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    align-items: flex-end;
+.subtitle{
+    color: white;
+    font-size: 1.5vw;
 }
 
-#form-testimonio .d-flex-column {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 9px;
-    margin-top: 0px;
-}
-
-#form-testimonio input {
-    height: 54px;
-}
-
-#form-testimonio button {
-    height: 54px;
-    margin-left: 0px;
-}
-
-::-webkit-calendar-picker-indicator {
-    filter: invert(1)
-            brightness(72%)
-            sepia(100%)
-            saturate(10000%)
-            hue-rotate(280deg)
-}
-
-
-@media(max-width:720px) {
-    #form-testimonio .d-flex {
-        display: inline;
-        gap: 16px;
-    }
-}
-
-
-/* Tabla */
-
-
-#list {
+#list{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 
 .table {
     margin: 30px 0px;
     width: 100%;
     margin-bottom: 1rem;
+    color: #FFF;
     vertical-align: top;
+    border-color: #dee2e6;
 }
 
 .table th,
@@ -99,37 +72,26 @@
     padding: 8px; 
     text-align: center;
 }
-
 .table th{
-    border-bottom: 2px solid var(--color-neutral-80);
+    border-bottom: 1px solid #ffffff;
 }
-
 .table td{
-    border-bottom: 1px solid var(--color-neutral-90);
+    border-bottom: 1px solid #4f4f4f;
 }
 
-#list-div-movies{ 
+#list-div-movies{ /* ⚠️ ¿Donde esta en el HTML? ⚠️ */
     width: 100%;
 }
 
-/* .item-movie{ 
+.item-movie{ /* ⚠️ ¿Donde esta en el HTML? ⚠️ */
     background-color: var(--primary-color);
     border-radius: 10px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     margin: 10px 0px;
-} */
+}
 
-/* Footer */
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer {
-    margin-top: auto;
-  }
-
+h3{
+    align-self: center;
+}
