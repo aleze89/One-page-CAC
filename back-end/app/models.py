@@ -1,27 +1,27 @@
 from app.database import get_db
 
-class Movie:
+class Testimonio:
     
-    def __init__(self, id_movie=None, title=None, director=None, release_date=None, banner=None):
-        self.id_movie = id_movie
-        self.title = title
-        self.director = director
-        self.release_date = release_date
-        self.banner = banner
+    def __init__(self, id_testimonio=None, estudiante=None, comentario=None, fecha_publicacion=None, foto_perfil=None):
+        self.id_testimonio = id_testimonio
+        self.estudiante = estudiante
+        self.comentario = comentario
+        self.fecha_publicacion = fecha_publicacion
+        self.foto_perfil = foto_perfil
 
     def save(self):
         db = get_db()
         cursor = db.cursor()
-        if self.id_movie:
+        if self.id_testimonio:
             cursor.execute("""
-                UPDATE movies SET title = %s, director = %s, release_date = %s, banner = %s
-                WHERE id_movie = %s
-            """, (self.title, self.director, self.release_date, self.banner, self.id_movie))
+                UPDATE testimonios SET estudiante = %s, comentario = %s, fecha_publicacion = %s, foto_perfil = %s
+                WHERE id_testimonio = %s
+            """, (self.estudiante, self.comentario, self.fecha_publicacion, self.foto_perfil, self.id_testimonio))
         else:
             cursor.execute("""
-                INSERT INTO movies (title, director, release_date, banner) VALUES (%s, %s, %s, %s)
-            """, (self.title, self.director, self.release_date, self.banner))
-            self.id_movie = cursor.lastrowid
+                INSERT INTO testimonios (estudiante, comentario, fecha_publicacion, foto_perfil) VALUES (%s, %s, %s, %s)
+            """, (self.estudiante, self.comentario, self.fecha_publicacion, self.foto_perfil))
+            self.id_testimonio = cursor.lastrowid
         db.commit()
         cursor.close()
 
@@ -29,35 +29,35 @@ class Movie:
     def get_all():
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM movies")
+        cursor.execute("SELECT * FROM testimonios")
         rows = cursor.fetchall()
-        movies = [Movie(id_movie=row[0], title=row[1], director=row[2], release_date=row[3], banner=row[4]) for row in rows]
+        testimonios = [Testimonio(id_testimonio=row[0], estudiante=row[1], comentario=row[2], fecha_publicacion=row[3], foto_perfil=row[4]) for row in rows]
         cursor.close()
-        return movies
+        return testimonios
 
     @staticmethod
-    def get_by_id(movie_id):
+    def get_by_id(testimonio_id):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM movies WHERE id_movie = %s", (movie_id,))
+        cursor.execute("SELECT * FROM testimonios WHERE id_testimonio = %s", (testimonio_id,))
         row = cursor.fetchone()
         cursor.close()
         if row:
-            return Movie(id_movie=row[0], title=row[1], director=row[2], release_date=row[3], banner=row[4])
+            return Testimonio(id_testimonio=row[0], estudiante=row[1], comentario=row[2], fecha_publicacion=row[3], foto_perfil=row[4])
         return None
 
     def delete(self):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("DELETE FROM movies WHERE id_movie = %s", (self.id_movie,))
+        cursor.execute("DELETE FROM testimonios WHERE id_testimonio = %s", (self.id_testimonio,))
         db.commit()
         cursor.close()
 
     def serialize(self):
         return {
-            'id_movie': self.id_movie,
-            'title': self.title,
-            'director': self.director,
-            'release_date': self.release_date.strftime('%Y-%m-%d'),
-            'banner': self.banner
+            'id_testimonio': self.id_testimonio,
+            'estudiante': self.estudiante,
+            'comentario': self.comentario,
+            'fecha_publicacion': self.fecha_publicacion.strftime('%Y-%m-%d'),
+            'foto_perfil': self.foto_perfil
         }

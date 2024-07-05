@@ -1,40 +1,40 @@
 from flask import jsonify, request
-from app.models import Movie
+from app.models import Testimonio
 
 def index():
-    return jsonify({'message': 'Hello World API Cac-movies'})
+    return jsonify({'message': 'Bienvenidos a la prueba de AprendeV'})
 
-def create_movie():
+def create_testimonio():
     data = request.json
-    new_movie = Movie(title=data['title'], director=data['director'], release_date=data['release_date'], banner=data['banner'])
-    new_movie.save()
-    return jsonify({'message': 'Movie created successfully'}), 201
+    new_testimonio = Testimonio(estudiante=data['estudiante'], comentario=data['comentario'], fecha_publicacion=data['fecha_publicacion'], foto_perfil=data['foto_perfil'])
+    new_testimonio.save()
+    return jsonify({'message': 'El Testimonio fue creado correctamente.'}), 201
 
-def get_all_movies():
-    movies = Movie.get_all()
-    return jsonify([movie.serialize() for movie in movies])
+def get_all_testimonios():
+    testimonios = Testimonio.get_all()
+    return jsonify([testimonios.serialize() for testimonio in testimonios])
 
-def get_movie(movie_id):
-    movie = Movie.get_by_id(movie_id)
-    if not movie:
-        return jsonify({'message': 'Movie not found'}), 404
-    return jsonify(movie.serialize())
+def get_testimonio(testimonio_id):
+    testimonio = Testimonio.get_by_id(testimonio_id)
+    if not testimonio:
+        return jsonify({'message': 'Testimonio no Encontrado.'}), 404
+    return jsonify(testimonio.serialize())
 
-def update_movie(movie_id):
-    movie = Movie.get_by_id(movie_id)
-    if not movie:
-        return jsonify({'message': 'Movie not found'}), 404
+def update_testimonio(testimonio_id):
+    testimonio = Testimonio.get_by_id(testimonio_id)
+    if not testimonio:
+        return jsonify({'message': 'Testimonio no Encontrado.'}), 404
     data = request.json
-    movie.title = data['title']
-    movie.director = data['director']
-    movie.release_date = data['release_date']
-    movie.banner = data['banner']
-    movie.save()
-    return jsonify({'message': 'Movie updated successfully'})
+    testimonio.estudiante = data['estudiante']
+    testimonio.comentario = data['comentario']
+    testimonio.fecha_publicacion = data['fecha_publicaion']
+    testimonio.foto_perfil = data['foto_perfil']
+    testimonio.save()
+    return jsonify({'message': 'El Testimonio a sido creado correctamente.'})
 
-def delete_movie(movie_id):
-    movie = Movie.get_by_id(movie_id)
-    if not movie:
-        return jsonify({'message': 'Movie not found'}), 404
-    movie.delete()
-    return jsonify({'message': 'Movie deleted successfully'})
+def delete_testimonio(testimonio_id):
+    testimonio = Testimonio.get_by_id(testimonio_id)
+    if not testimonio:
+        return jsonify({'message': 'Testimonio no encontrado.'}), 404
+    testimonio.delete()
+    return jsonify({'message': 'El testimonio ha sido borrado con exito.'})
