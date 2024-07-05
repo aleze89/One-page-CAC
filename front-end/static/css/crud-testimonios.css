@@ -59,15 +59,18 @@
 
 /* Footer */
 
-main {
-    height: 92vh;
-}
-
-#footer {
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
     margin-top: auto;
-    padding: 0px;
-    margin: 0px;
-}
+  }
+
+
+/* Tabla */
 
 
 /* .description{
