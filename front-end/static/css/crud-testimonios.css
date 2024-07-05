@@ -67,18 +67,6 @@
     }
 }
 
-/* Footer */
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer {
-    margin-top: auto;
-  }
-
 
 /* Tabla */
 
@@ -124,3 +112,16 @@ body {
     justify-content: space-between;
     margin: 10px 0px;
 } */
+
+/* Footer */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+
