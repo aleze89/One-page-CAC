@@ -1,16 +1,45 @@
+
+.centrar {
+    max-width: 1080px;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+    margin: 32px 0px;
+}
+
+#form-testimonio {
+    max-width: 1080px;
+}
+
+#form-testimonio .d-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 18px;
+}
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 /* .description{
     color: white;
     margin: 20px 0px;
 } */
 
-#form .d-flex{
+/* #form .d-flex{
     justify-content: space-around;
-}
+} */
 
-.d-flex-column{
+/* .d-flex-column{
     display: flex;
     flex-direction: column;
-}
+} */
 
 /* .form-control label{
     color: #FFF;
@@ -79,7 +108,7 @@
 /* .table th{
     border-bottom: 1px solid #ffffff;
 } */
- 
+
 /* .table td{
     border-bottom: 1px solid #4f4f4f;
 } */
