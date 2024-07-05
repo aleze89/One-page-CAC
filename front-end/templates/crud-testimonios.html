@@ -59,42 +59,47 @@
     <main> 
         <br>
         <br>
-        <section id="form" class="container tema-claro tonal">
+        <section id="form" class="tema-claro tonal">
 
-           <div class="centrar">
-                <h2 class="search-title">Gestión de testimonios</h2>
-                <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios de los estudiantes</p>
-           </div>
+            <div class="container">
 
-            <form action="#"  id="form-testimonio">
-
-                <div class="d-flex">
-                    <div class="form-control d-flex-column">
-                        <label for="estudiante">Estudiante</label>
-                        <input type="text" class="input-search" name="estudiante" id="estudiante">
+                <div class="centrar">
+                    <h2 class="search-title">Gestión de testimonios</h2>
+                    <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios de los estudiantes</p>
+               </div>
+    
+                <form action="#"  id="form-testimonio">
+    
+                    <div class="d-flex">
+                        <div class="form-control d-flex-column">
+                            <label for="estudiante">Estudiante</label>
+                            <input type="text" class="input-search" name="estudiante" id="estudiante">
+                        </div>
+    
+                        <div class="form-control d-flex-column">
+                            <label for="comentario">Comentario</label>
+                            <input type="text" class="input-search" name="comentario" id="comentario">
+                        </div>
+                        
+                        <div class="form-control d-flex-column">
+                            <label for="fecha-publicacion">Fecha de publicación</label>
+                            <input type="date" class="input-search" name="fecha_publicacion" id="fecha-publicacion">
+                        </div>
+    
+                        <div class="form-control d-flex-column">
+                            <label for="foto-perfil">Foto de perfil</label>
+                            <input type="url" class="input-search" name="foto_perfil" id="foto-perfil-form">
+                        </div>  
+    
+                        <input type="hidden"  name="id" id="id-testimonio">
+                        
+                        <button class="btn-cac filled" type="button" id="btn-save-testimonio">Agregar</button>
+    
                     </div>
+                </form> 
 
-                    <div class="form-control d-flex-column">
-                        <label for="comentario">Comentario</label>
-                        <input type="text" class="input-search" name="comentario" id="comentario">
-                    </div>
-                    
-                    <div class="form-control d-flex-column">
-                        <label for="fecha-publicacion">Fecha de publicación</label>
-                        <input type="date" class="input-search" name="fecha_publicacion" id="fecha-publicacion">
-                    </div>
-
-                    <div class="form-control d-flex-column">
-                        <label for="foto-perfil">Foto de perfil</label>
-                        <input type="url" class="input-search" name="foto_perfil" id="foto-perfil-form">
-                    </div>  
-
-                    <input type="hidden"  name="id" id="id-testimonio">
-                    
-                    <button class="btn-cac filled" type="button" id="btn-save-testimonio">Agregar</button>
-
-                </div>
-            </form> 
+            </div>
+          
         </section>
 
         <section id="list" class="container tema-claro">

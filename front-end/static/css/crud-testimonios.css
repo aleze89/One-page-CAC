@@ -31,10 +31,6 @@
 }
 /* Formulario */
 
-#form-testimonio {
-    /* max-width: 1080px; */
-}
-
 #form-testimonio .d-flex {
     display: flex;
     flex-wrap: wrap;
