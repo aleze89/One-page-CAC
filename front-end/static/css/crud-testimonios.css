@@ -59,6 +59,14 @@
     margin-left: 0px;
 }
 
+::-webkit-calendar-picker-indicator {
+    filter: invert(1)
+            brightness(72%)
+            sepia(100%)
+            saturate(10000%)
+            hue-rotate(280deg)
+}
+
 
 @media(max-width:720px) {
     #form-testimonio .d-flex {
