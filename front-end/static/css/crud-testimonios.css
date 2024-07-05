@@ -32,7 +32,7 @@
 /* Formulario */
 
 #form-testimonio {
-    max-width: 1080px;
+    /* max-width: 1080px; */
 }
 
 #form-testimonio .d-flex {
@@ -97,7 +97,7 @@
 .table th,
 .table td {
     padding: 8px; 
-    text-align: center;
+    text-align: left;
 }
 
 .table th{
@@ -108,18 +108,32 @@
     border-bottom: 1px solid var(--color-neutral-90);
 }
 
-#list-div-movies{ 
-    width: 100%;
+.table tbody th{
+    display: flex;
+    flex-direction: row;
 }
 
-/* .item-movie{ 
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0px;
+/* #list-div-testimonios{ 
+    width: 100%;
 } */
+
+#list button {
+    border-radius: 10px;
+    padding: 12px 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12x 12px;
+    cursor:  pointer;
+    border: 2px solid var(--color-neutral-50);
+    background-color: transparent;
+    color: var(--color-neutral-40);
+}
+
+#list-table-testimonios td:last-child {
+    display: flex;
+    flex-direction: row;
+}
 
 /* Footer */
 
