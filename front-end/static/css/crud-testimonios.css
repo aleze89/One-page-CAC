@@ -1,4 +1,4 @@
-.description{
+/* .description{
     color: white;
     margin: 20px 0px;
 }
@@ -46,10 +46,10 @@
     color:#2a2a2a;
 }
 
-.subtitle{
+/* .subtitle{
     color: white;
     font-size: 1.5vw;
-}
+} */
 
 #list{
     display: flex;
@@ -94,4 +94,4 @@
 
 h3{
     align-self: center;
-}
+} */
