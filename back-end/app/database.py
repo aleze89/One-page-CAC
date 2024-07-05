@@ -3,7 +3,7 @@ import mysql.connector
 from flask import g
 from dotenv import load_dotenv
 
- # Cargar variables de entorno desde el archivo .env
+# Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
 # Configuración de la base de datos usando variables de entorno
