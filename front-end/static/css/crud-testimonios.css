@@ -1,4 +1,6 @@
 
+/* General */
+
 .centrar {
     max-width: 1080px;
     justify-content: center;
@@ -11,21 +13,62 @@
     margin: 32px 0px;
 }
 
+@media(max-width:720px) {
+    .centrar {
+        justify-content: left;
+        align-items: flex-start;
+    }
+}
+/* Formulario */
+
 #form-testimonio {
     max-width: 1080px;
 }
 
 #form-testimonio .d-flex {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 18px;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
 }
 
-.d-flex-column {
+#form-testimonio .d-flex-column {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    gap: 9px;
+    margin-top: 0px;
 }
+
+#form-testimonio input {
+    height: 54px;
+}
+
+#form-testimonio button {
+    height: 54px;
+    margin-left: 0px;
+}
+
+
+@media(max-width:720px) {
+    #form-testimonio .d-flex {
+        display: inline;
+        gap: 16px;
+    }
+}
+
+/* Footer */
+
+main {
+    height: 92vh;
+}
+
+#footer {
+    margin-top: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
 
 /* .description{
     color: white;
