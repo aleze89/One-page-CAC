@@ -12,7 +12,9 @@ def create_testimonio():
 
 def get_all_testimonios():
     testimonios = Testimonio.get_all()
-    return jsonify([testimonios.serialize() for testimonio in testimonios])
+    # return jsonify([testimonios.serialize() for testimonio in testimonios]) Linea anterior
+    # return jsonify([movie.serialize() for movie in movies]) Linea original
+    return jsonify([testimonio.serialize() for testimonio in testimonios])
 
 def get_testimonio(testimonio_id):
     testimonio = Testimonio.get_by_id(testimonio_id)
