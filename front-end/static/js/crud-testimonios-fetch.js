@@ -42,7 +42,7 @@ async function saveTestimonio(){
   //VALIDACION DE FORMULARIO
   if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
     Swal.fire({
-        estudiante: 'Error!',
+        title: 'Error!',
         text: 'Por favor completa todos los campos.',
         icon: 'error',
         confirmButtonText: 'Cerrar'
