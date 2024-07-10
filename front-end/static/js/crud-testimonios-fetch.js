@@ -70,7 +70,7 @@ async function saveTestimonio(){
   const formTestimonio = document.querySelector('#form-testimonio');
   formTestimonio.reset();
   Swal.fire({
-    estudiante: 'Exito!',
+    title: 'Exito!',
     text: result.message,
     icon: 'success',
     confirmButtonText: 'Cerrar'
