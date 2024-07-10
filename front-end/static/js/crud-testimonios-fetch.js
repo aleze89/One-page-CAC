@@ -87,7 +87,7 @@ async function showTestimonios(){
   let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET');
   const tableTestimonios = document.querySelector('#list-table-testimonios tbody');
   tableTestimonios.innerHTML='';
-  testimonios.forEach((testimonio,index) => {
+  testimonios.forEach((testimonio) => {
     let tr = `<tr>
                   <td>${testimonio.estudiante}</td>
                   <td>${testimonio.comentario}</td>
