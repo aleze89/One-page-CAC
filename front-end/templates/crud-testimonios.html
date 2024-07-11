@@ -60,46 +60,34 @@
         <br>
         <br>
         <section id="form" class="tema-claro tonal">
-
             <div class="container">
-
                 <div class="centrar">
                     <h2 class="search-title">Gestión de testimonios</h2>
                     <p class="description" >En esta sección se podra llevar a cabo la gestión de los testimonios de los estudiantes</p>
-               </div>
-    
+               </div>    
                 <form action="#"  id="form-testimonio">
-    
                     <div class="d-flex">
                         <div class="form-control d-flex-column">
                             <label for="estudiante">Estudiante</label>
                             <input type="text" class="input-search" name="estudiante" id="estudiante">
                         </div>
-    
                         <div class="form-control d-flex-column">
                             <label for="comentario">Comentario</label>
                             <input type="text" class="input-search" name="comentario" id="comentario">
                         </div>
-                        
                         <div class="form-control d-flex-column">
                             <label for="fecha-publicacion">Fecha de publicación</label>
                             <input type="date" class="input-search" name="fecha_publicacion" id="fecha-publicacion">
                         </div>
-    
                         <div class="form-control d-flex-column">
                             <label for="foto-perfil">Foto de perfil</label>
                             <input type="url" class="input-search" name="foto_perfil" id="foto-perfil-form">
                         </div>  
-    
                         <input type="hidden"  name="id" id="id-testimonio">
-                        
-                        <button class="btn-cac filled" type="button" id="btn-save-testimonio">Agregar</button>
-    
+                        <button class="btn-cac filled" type="button" id="btn-save-testimonio">Agregar</button>    
                     </div>
                 </form> 
-
-            </div>
-          
+            </div>          
         </section>
 
         <section id="list" class="container tema-claro">
@@ -114,23 +102,20 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                <!-- <tbody id="tbody-table-testimonios"> En la version sin el script de alertas, es diferente. En nuestro caso, que seguimos las instrucciones del PDF, este ID es innecesario.-->
+                <tbody id="tbody-table-movies">
                     
                 </tbody>
             </table>
         </section>  
     </main>
 
-    <footer id="footer" class="tema-oscuro">
-        
+    <footer id="footer" class="tema-oscuro">        
         <div class="container">
             <div class="footer-text">
                 <a href="templates/privacy.html">Politicas de privacidad</a>
                 <a href="templates/reserved.html">Todos los derechos reservados</a>
             </div>
         </div>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
