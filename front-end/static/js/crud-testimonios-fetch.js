@@ -35,15 +35,15 @@ async function fetchData(url, method, data = null) {
  * un registro de pelicula
  * @returns 
  */
-async function saveMovie(){
-  const idMovie = document.querySelector('#id-movie').value;
-  const title = document.querySelector('#title').value;
-  const director = document.querySelector('#director').value;
-  const releaseDate = document.querySelector('#release-date').value;
-  const banner = document.querySelector('#banner-form').value;
+async function saveTestimonio(){
+  const idTestimonio = document.querySelector('#id-testimonio').value;
+  const estudiante = document.querySelector('#estudiante').value;
+  const comentario = document.querySelector('#comentario').value;
+  const fechaPublicacion = document.querySelector('#fecha-publicacion').value;
+  const fotoPerfil = document.querySelector('#foto-perfil-form').value;
 
   //VALIDACION DE FORMULARIO
-  if (!title || !director || !releaseDate || !banner) {
+  if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
     Swal.fire({
         title: 'Error!',
         text: 'Por favor completa todos los campos.',
@@ -53,32 +53,32 @@ async function saveMovie(){
     return;
   }
   // Crea un objeto con los datos de la película
-  const movieData = {
-      title: title,
-      director: director,
-      release_date: releaseDate,
-      banner: banner,
+  const testimonioData = {
+      estudiante: estudiante,
+      comentario: comentario,
+      fecha_publicacion: fechaPublicacion,
+      foto_perfil: fotoPerfil,
   };
 
     
   let result = null;
   // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
-  if(idMovie!==""){
-    result = await fetchData(`${BASEURL}/api/movies/${idMovie}`, 'PUT', movieData);
+  if(idTestimonio!==""){
+    result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData);
   }else{
     // Si no hay idMovie, realiza una petición POST para crear una nueva película
-    result = await fetchData(`${BASEURL}/api/movies/`, 'POST', movieData);
+    result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData);
   }
   
-  const formMovie = document.querySelector('#form-movie');
-  formMovie.reset();
+  const formTestimonio = document.querySelector('#form-testimonio');
+  formTestimonio.reset();
   Swal.fire({
     title: 'Exito!',
     text: result.message,
     icon: 'success',
     confirmButtonText: 'Cerrar'
   })
-  showMovies();
+  showTestimonios();
 }
 
 
@@ -86,24 +86,24 @@ async function saveMovie(){
  * Funcion que permite crear un elemento <tr> para la tabla de peliculas
  * por medio del uso de template string de JS.
  */
-async function showMovies(){
-  let movies =  await fetchData(BASEURL+'/api/movies/', 'GET');
-  const tableMovies = document.querySelector('#list-table-movies tbody');
-  tableMovies.innerHTML='';
-  movies.forEach((movie) => {
+async function showTestimonios(){
+  let testimonios =  await fetchData(BASEURL+'/api/testimonios/', 'GET');
+  const tableTestimonios = document.querySelector('#list-table-testimonios tbody');
+  tableTestimonios.innerHTML='';
+  testimonios.forEach((testimonio) => {
     let tr = `<tr>
-                  <td>${movie.title}</td>
-                  <td>${movie.director}</td>
-                  <td>${movie.release_date}</td>
+                  <td>${testimonio.estudiante}</td>
+                  <td>${testimonio.comentario}</td>
+                  <td>${testimonio.fecha_publicacion}</td>
                   <td>
-                      <img src="${movie.banner}" width="30%">
+                      <img src="${testimonio.foto_perfil}" width="30%">
                   </td>
                   <td>
-                      <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><i class="fa fa-pencil" ></button></i>
-                      <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><i class="fa fa-trash" ></button></i>
+                      <button class="btn-cac" onclick='updateTestimonio(${testimonio.id_testimonio})'><i class="fa fa-pencil" ></button></i>
+                      <button class="btn-cac" onclick='deleteTestimonio(${testimonio.id_testimonio})'><i class="fa fa-trash" ></button></i>
                   </td>
                 </tr>`;
-    tableMovies.insertAdjacentHTML("beforeend",tr);
+    tableTestimonios.insertAdjacentHTML("beforeend",tr);
   });
 }
   
@@ -112,15 +112,15 @@ async function showMovies(){
  * de acuedo al indice del mismo
  * @param {number} id posición del array que se va a eliminar
  */
-function deleteMovie(id){
+function deleteTestimonio(id){
   Swal.fire({
       title: "Esta seguro de eliminar la pelicula?",
       showCancelButton: true,
       confirmButtonText: "Eliminar",
   }).then(async (result) => {
       if (result.isConfirmed) {
-        let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'DELETE');
-        showMovies();
+        let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'DELETE');
+        showTestimonios();
         Swal.fire(response.message, "", "success");
       }
   });
@@ -133,27 +133,27 @@ function deleteMovie(id){
  * para su edición
  * @param {number} id Id de la pelicula que se quiere editar
  */
-async function updateMovie(id){
+async function updateTestimonio(id){
   //Buscamos en el servidor la pelicula de acuerdo al id
-  let response = await fetchData(`${BASEURL}/api/movies/${id}`, 'GET');
-  const idMovie = document.querySelector('#id-movie');
-  const title = document.querySelector('#title');
-  const director = document.querySelector('#director');
-  const releaseDate = document.querySelector('#release-date');
-  const banner = document.querySelector('#banner-form');
+  let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'GET');
+  const idTestimonio = document.querySelector('#id-testimonio');
+  const estudiante = document.querySelector('#estudiante');
+  const comentario = document.querySelector('#comentario');
+  const fechaPublicacion = document.querySelector('#fecha-publicacion');
+  const fotoPerfil = document.querySelector('#foto-perfil-form');
   
-  idMovie.value = response.id_movie;
-  title.value = response.title;
-  director.value = response.director;
-  releaseDate.value = response.release_date;
-  banner.value = response.banner;
+  idTestimonio.value = response.id_testimonio;
+  estudiante.value = response.estudiante;
+  comentario.value = response.comentario;
+  fechaPublicacion.value = response.fecha_publicacion;
+  fotoPerfil.value = response.foto_perfil;
 }
   
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el 
 // contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener('DOMContentLoaded',function(){
-  const btnSaveMovie = document.querySelector('#btn-save-movie');
+  const btnSaveTestimonio = document.querySelector('#btn-save-testimonio');
   //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
-  btnSaveMovie.addEventListener('click',saveMovie);
-  showMovies();
+  btnSaveTestimonio.addEventListener('click',saveTestimonio);
+  showTestimonios();
 });
