@@ -1,4 +1,4 @@
-const BASEURL ='http://127.0.0.1:5000/';
+const BASEURL ='https://tadeoriganti.pythonanywhere.com/';
 
 // const BASEURL='https://com24187.pythonanywhere.com/'
 
