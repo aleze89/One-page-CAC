@@ -2,7 +2,7 @@ from flask import jsonify, request
 from app.models import Testimonio
 
 def index():
-    return jsonify({'message': 'Bienvenidos a la prueba de AprendeV'})
+    return jsonify({'message': 'Bienvenidos a la prueba de AprenDEV'})
 
 def create_testimonio():
     data = request.json
@@ -12,8 +12,6 @@ def create_testimonio():
 
 def get_all_testimonios():
     testimonios = Testimonio.get_all()
-    # return jsonify([testimonios.serialize() for testimonio in testimonios]) Linea anterior
-    # return jsonify([movie.serialize() for movie in movies]) Linea original
     return jsonify([testimonio.serialize() for testimonio in testimonios])
 
 def get_testimonio(testimonio_id):
