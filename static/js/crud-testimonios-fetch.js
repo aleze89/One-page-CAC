@@ -32,7 +32,7 @@ async function fetchData(url, method, data = null) {
 
 /**
  * Función para comunicarse con el servidor para poder Crear o Actualizar
- * un registro de pelicula
+ * un registro del testimonio.
  * @returns 
  */
 async function saveTestimonio(){
@@ -42,7 +42,7 @@ async function saveTestimonio(){
   const fechaPublicacion = document.querySelector('#fecha-publicacion').value;
   const fotoPerfil = document.querySelector('#foto-perfil-form').value;
 
-  //VALIDACION DE FORMULARIO
+  // VALIDACION DE FORMULARIO
   if (!estudiante || !comentario || !fechaPublicacion || !fotoPerfil) {
     Swal.fire({
         title: 'Error!',
@@ -52,7 +52,7 @@ async function saveTestimonio(){
     });
     return;
   }
-  // Crea un objeto con los datos de la película
+  // Crea un objeto con los datos del testimonio.
   const testimonioData = {
       estudiante: estudiante,
       comentario: comentario,
@@ -62,11 +62,11 @@ async function saveTestimonio(){
 
     
   let result = null;
-  // Si hay un idMovie, realiza una petición PUT para actualizar la película existente
+  // Si hay un idTestimonio, realiza una petición PUT para actualizar el testimonio existente
   if(idTestimonio!==""){
     result = await fetchData(`${BASEURL}/api/testimonios/${idTestimonio}`, 'PUT', testimonioData);
   }else{
-    // Si no hay idMovie, realiza una petición POST para crear una nueva película
+    // Si no hay idTestimonio, realiza una petición POST para crear un nuevo testimonio
     result = await fetchData(`${BASEURL}/api/testimonios/`, 'POST', testimonioData);
   }
   
@@ -83,7 +83,7 @@ async function saveTestimonio(){
 
 
 /**
- * Funcion que permite crear un elemento <tr> para la tabla de peliculas
+ * Funcion que permite crear un elemento <tr> para la tabla de testimonios
  * por medio del uso de template string de JS.
  */
 async function showTestimonios(){
@@ -108,13 +108,13 @@ async function showTestimonios(){
 }
   
 /**
- * Function que permite eliminar una pelicula del array del localstorage
+ * Function que permite eliminar un testimonio del array del localstorage
  * de acuedo al indice del mismo
  * @param {number} id posición del array que se va a eliminar
  */
 function deleteTestimonio(id){
   Swal.fire({
-      title: "Esta seguro de eliminar la pelicula?",
+      title: "¿Esta seguro de eliminar el testimonio?",
       showCancelButton: true,
       confirmButtonText: "Eliminar",
   }).then(async (result) => {
@@ -129,12 +129,12 @@ function deleteTestimonio(id){
 
 
 /**
- * Function que permite cargar el formulario con los datos de la pelicula 
+ * Function que permite cargar el formulario con los datos del testimonio
  * para su edición
  * @param {number} id Id de la pelicula que se quiere editar
  */
 async function updateTestimonio(id){
-  //Buscamos en el servidor la pelicula de acuerdo al id
+  //Buscamos en el servidor el testimonio de acuerdo al id
   let response = await fetchData(`${BASEURL}/api/testimonios/${id}`, 'GET');
   const idTestimonio = document.querySelector('#id-testimonio');
   const estudiante = document.querySelector('#estudiante');
