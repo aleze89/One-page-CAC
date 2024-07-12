@@ -20,7 +20,7 @@
     gap: 9px;
     width: 100%;
     margin: 32px 0px;
-}
+} 
 
 @media(max-width:720px) {
     .centrar {
@@ -83,46 +83,52 @@
 }
 
 
-.table {
+table {
     margin: 30px 0px;
     width: 100%;
     margin-bottom: 1rem;
     vertical-align: top;
 }
 
-.table th,
-.table td {
+table th,
+table td {
     padding: 8px; 
     text-align: left;
 }
 
-.table th{
+table th {
     border-bottom: 2px solid var(--color-neutral-80);
 }
 
-.table td{
+table td {
     border-bottom: 1px solid var(--color-neutral-90);
 }
 
-.table tbody th{
-    display: flex;
-    flex-direction: row;
-}
 
+table td:has(button) {
+    width: 120px;
+}
 
 #list button {
     border-radius: 10px;
-    padding: 12px 12px;
+    padding: 8px 10px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    margin: 12x 12px;
+    margin: 4px 4px;
     cursor:  pointer;
     border: 2px solid var(--color-neutral-50);
     background-color: transparent;
     color: var(--color-neutral-40);
 }
 
+/* Permitir que pueda ser usado desde movil */
+ @media (max-width: 720px) {
+    table {
+        margin: 0 auto;
+        display: table;
+    }
+} 
 
 /* Footer */
 
@@ -130,9 +136,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+}
   
-  footer {
+footer {
     margin-top: auto;
-  }
-
+}
