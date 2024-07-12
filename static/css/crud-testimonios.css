@@ -96,21 +96,22 @@ table td {
     text-align: left;
 }
 
-table th{
+table th {
     border-bottom: 2px solid var(--color-neutral-80);
 }
 
-table td{
+table td {
     border-bottom: 1px solid var(--color-neutral-90);
 }
 
+
 table td:has(button) {
-    min-width: 150px;
+    width: 120px;
 }
 
 #list button {
     border-radius: 10px;
-    padding: 8px 8px;
+    padding: 8px 10px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
@@ -121,7 +122,17 @@ table td:has(button) {
     color: var(--color-neutral-40);
 }
 
-
+ @media (max-width: 720px) {
+    table {
+        margin: 0 auto;
+        display: table;
+        /* white-space: normal; */
+        /* table-layout: fixed; */
+        /* width: 100%;
+        overflow-x: auto; */
+        background-color: red;
+    }
+} 
 
 /* Footer */
 
