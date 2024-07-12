@@ -14,7 +14,6 @@
 .centrar {
     max-width: 1080px;
     justify-content: center;
-    /* text-align: center; */
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -29,6 +28,7 @@
         align-items: flex-start;
     }
 }
+
 /* Formulario */
 
 #form-testimonio .d-flex {
@@ -109,9 +109,6 @@
     flex-direction: row;
 }
 
-/* #list-div-testimonios{ 
-    width: 100%;
-} */
 
 #list button {
     border-radius: 10px;
@@ -126,10 +123,6 @@
     color: var(--color-neutral-40);
 }
 
-#list-table-testimonios td:last-child {
-    display: flex;
-    flex-direction: row;
-}
 
 /* Footer */
 
