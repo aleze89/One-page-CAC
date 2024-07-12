@@ -83,29 +83,30 @@
 }
 
 
-.table {
+table {
     margin: 30px 0px;
     width: 100%;
     margin-bottom: 1rem;
     vertical-align: top;
 }
 
-.table th,
-.table td {
+table th,
+table td {
     padding: 8px; 
     text-align: left;
 }
 
-.table th{
+table th{
     border-bottom: 2px solid var(--color-neutral-80);
 }
 
-.table td{
+table td{
     border-bottom: 1px solid var(--color-neutral-90);
 }
 
-
-
+table td:has(button) {
+    min-width: 150px;
+}
 
 #list button {
     border-radius: 10px;
@@ -121,14 +122,15 @@
 }
 
 
+
 /* Footer */
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+}
   
-  footer {
+footer {
     margin-top: auto;
-  }
+}
