@@ -136,3 +136,160 @@
     margin-top: auto;
   } */
 
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.btn-cac{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color:#FFF;
+    cursor: pointer;
+}
+
+/* Pseudoclases */
+.btn-cac:hover{
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+
+.container{
+    max-width: 1200px;
+    /* MARGENES */
+    margin: 120px auto;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.d-form{
+    width: 50%;
+    padding: 0px 40px;
+    text-align: center;
+}
+
+.d-iframe{
+    width: 50%;
+    padding: 0px 40px;
+}
+
+
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    .d-form{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .d-iframe{
+        width: 100%;
+    }
+}
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+    
+    .d-form{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .d-iframe{
+        width: 100%;
+    }
+
+    .btn-cac{
+        font-size: 1vh;
+    }
+
+}
+
+
+#form .d-flex{
+    justify-content: space-around;
+}
+
+.d-flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label{
+    color: #FFF;
+}
+
+.form-control input {
+    height: 50px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+.form-select {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid white; 
+    border-radius: 25px;
+    margin: 20px 0px;
+
+}
+
+.form-select option{
+    color:#2a2a2a;
+}
+
+
+
+#list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    margin: 30px 0px;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #FFF;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+.table th,
+.table td {
+    padding: 8px; 
+    text-align: center;
+}
+.table th{
+    border-bottom: 1px solid #ffffff;
+}
+.table td{
+    border-bottom: 1px solid red;
+}
+
+#list-div-movies{
+    width: 100%;
+}
