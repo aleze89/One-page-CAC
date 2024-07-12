@@ -104,6 +104,9 @@ table td {
     border-bottom: 1px solid var(--color-neutral-90);
 }
 
+table td > img {
+    width: clamp(32px, 64px, 10vh);
+}
 
 table td:has(button) {
     width: 120px;
