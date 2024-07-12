@@ -110,11 +110,11 @@ table td:has(button) {
 
 #list button {
     border-radius: 10px;
-    padding: 12px 12px;
+    padding: 8px 8px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    margin: 12x 12px;
+    margin: 4px 4px;
     cursor:  pointer;
     border: 2px solid var(--color-neutral-50);
     background-color: transparent;
