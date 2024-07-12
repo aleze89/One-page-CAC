@@ -96,7 +96,7 @@ async function showTestimonios(){
                   <td>${testimonio.comentario}</td>
                   <td>${testimonio.fecha_publicacion}</td>
                   <td>
-                      <img src="${testimonio.foto_perfil}" width: clamp(32px, 64px, 30%)>
+                      <img src="${testimonio.foto_perfil}" width: 48px;>
                   </td>
                   <td>
                       <button class="btn-cac" onclick='updateTestimonio(${testimonio.id_testimonio})'><i class="fa fa-pencil" ></button></i>
