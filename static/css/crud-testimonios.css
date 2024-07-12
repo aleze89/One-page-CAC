@@ -11,7 +11,14 @@
 
 }
 
-/* .centrar {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.centrar {
     max-width: 1080px;
     justify-content: center;
     align-items: center;
@@ -20,18 +27,18 @@
     gap: 9px;
     width: 100%;
     margin: 32px 0px;
-} */
+} 
 
-/* @media(max-width:720px) {
+@media(max-width:720px) {
     .centrar {
         justify-content: left;
         align-items: flex-start;
     }
-} */
+}
 
 /* Formulario */
 
-/* #form-testimonio .d-flex {
+#form-testimonio .d-flex {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -69,13 +76,13 @@
         display: inline;
         gap: 16px;
     }
-} */
+}
 
 
 /* Tabla */
 
 
-/* #list {
+#list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,12 +128,12 @@
     border: 2px solid var(--color-neutral-50);
     background-color: transparent;
     color: var(--color-neutral-40);
-} */
+}
 
 
 /* Footer */
 
-/* body {
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -134,14 +141,9 @@
   
   footer {
     margin-top: auto;
-  } */
+  }
 
-  *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-}
+
 
 
 .btn-cac{
