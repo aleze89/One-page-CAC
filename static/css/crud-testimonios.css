@@ -122,15 +122,11 @@ table td:has(button) {
     color: var(--color-neutral-40);
 }
 
+/* Permitir que pueda ser usado desde movil */
  @media (max-width: 720px) {
     table {
         margin: 0 auto;
         display: table;
-        /* white-space: normal; */
-        /* table-layout: fixed; */
-        /* width: 100%;
-        overflow-x: auto; */
-        background-color: red;
     }
 } 
 
