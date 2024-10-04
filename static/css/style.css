@@ -360,6 +360,10 @@ section {
     margin: 0px auto;
 }
 
+.content > * {
+    padding: .5rem;
+}
+
 .tarjetas {
     display:flex;
     gap: 24px;
